@@ -33,7 +33,7 @@ class SeoMetaHelper
 
         return [
             'title' => $name . ' - Investment Opportunity',
-            'metaDescription' => $description ?: "Invest in {$name} through Shuruup. Access exclusive equity and pre-IPO opportunities.",
+            'metaDescription' => $description ?: "Invest in {$name} through PrivateDeals. Access exclusive equity and pre-IPO opportunities.",
             'metaKeywords' => Str::limit($keywords, 200),
             'ogImage' => $logo ?? asset('core/images/default-company.png'),
         ];

@@ -82,7 +82,7 @@ class InvestorMorningDeadlineReminderCommand extends Command
                 'Action Required — Transaction Expiring Soon',
                 UtillsHelper::paramsToTemplate(
                     $params,
-                    'This is an urgent reminder from Shuru-Up regarding your ongoing transaction (ID: {{2}}). 🕐 Only 4 hours are remaining out of your 24-hour window to complete your transaction. If not completed in time, your transaction will be automatically cancelled and will cease to exist. Please log in to your account and complete the process immediately to avoid cancellation.'
+                    'This is an urgent reminder from PrivateDeals regarding your ongoing transaction (ID: {{2}}). 🕐 Only 4 hours are remaining out of your 24-hour window to complete your transaction. If not completed in time, your transaction will be automatically cancelled and will cease to exist. Please log in to your account and complete the process immediately to avoid cancellation.'
                 )
             );
 

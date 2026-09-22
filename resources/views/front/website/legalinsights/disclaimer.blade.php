@@ -14,10 +14,10 @@ Disclaimer
         <div
             style="background: #0a0a0a; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); margin-bottom: 30px; border: 1px solid #3a3a3a;">
             <p style="line-height: 1.8; margin-bottom: 25px; font-size: 16px; color: #e0e0e0; text-align: justify;">
-                Shuru-Up is an information platform owned and operated by Shuru Advisory Private Limited. The content
+                PrivateDeals is an information platform owned and operated by Shuru Advisory Private Limited. The content
                 provided in this website/application is strictly for informational purposes and should not be construed
                 as
-                investment advice or an indication of investment availability. Shuru-Up affirms that research reports
+                investment advice or an indication of investment availability. PrivateDeals affirms that research reports
                 and
                 data published on this platform are intended solely to educate clients about the business model and are
                 not
@@ -29,7 +29,7 @@ Disclaimer
             </p>
 
             <p style="line-height: 1.8; margin-bottom: 25px; font-size: 16px; color: #e0e0e0; text-align: justify;">
-                Shuru-Up makes no advise, offer to sell, or solicitation to buy any specific start-up shares whether any
+                PrivateDeals makes no advise, offer to sell, or solicitation to buy any specific start-up shares whether any
                 primary or secondary shares, unlisted shares/pre-IPO, private equity, or any other investments.
                 Investing in
                 private markets and securities entails inherent risks, including the possibility of financial loss, and
@@ -40,18 +40,18 @@ Disclaimer
                 other type of professional advice.</p>
 
             <p style="line-height: 1.8; margin-bottom: 25px; font-size: 16px; color: #e0e0e0; text-align: justify;">
-                Shuru-Up is a fully integrated software platform that enables transactions between users and third
+                PrivateDeals is a fully integrated software platform that enables transactions between users and third
                 parties in
                 start-up shares whether any primary or secondary shares, unlisted shares/pre-IPO, private equity, or any
                 other investments. It does not serve as a marketplace and is mainly intended to aid in the transactions
-                inside its integrated framework. Shuru-Up is not accountable for any monetary or other damages incurred
+                inside its integrated framework. PrivateDeals is not accountable for any monetary or other damages incurred
                 by
                 the user or any affiliated party as outcome of the information supplied herein.</p>
 
             <p style="line-height: 1.8; margin-bottom: 25px; font-size: 16px; color: #e0e0e0; text-align: justify;">
-                Shuru-Up is neither a stock exchange, nor does it aspire to be recognized as one under the Securities
-                Contracts Regulation Act 1956. The capital markets authority has not authorised Shuru-Up to seek
-                investments. Securities traded on these platforms are not listed on a regulated exchange. Shuru-Up is
+                PrivateDeals is neither a stock exchange, nor does it aspire to be recognized as one under the Securities
+                Contracts Regulation Act 1956. The capital markets authority has not authorised PrivateDeals to seek
+                investments. Securities traded on these platforms are not listed on a regulated exchange. PrivateDeals is
                 not an
                 investment counselling portal and does not make any investment recommendations, therefore it does not
                 require a permit from SEBI/RBI or any other regulatory organisation in India. Investors are cautioned to
@@ -60,13 +60,13 @@ Disclaimer
             <p style="line-height: 1.8; margin-bottom: 25px; font-size: 16px; color: #e0e0e0; text-align: justify;">
                 All the registered trademarks and logos, mentioned or referenced herein on this website/application are
                 the
-                property of Shuru-Up or its clients. These trademarks and logos are used purely for information and
+                property of PrivateDeals or its clients. These trademarks and logos are used purely for information and
                 instructional reasons.
             </p>
 
             <p
                 style="line-height: 1.8; margin-bottom: 0; font-size: 16px; color: #b0b0b0; text-align: center; font-weight: 600; padding-top: 20px; border-top: 1px solid #404040;">
-                Trademark 2022 – Shuru-Up - All Rights Reserved
+                Trademark 2022 – PrivateDeals - All Rights Reserved
             </p>
         </div>
 

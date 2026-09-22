@@ -828,7 +828,7 @@
                     'financial_projection' => 'Financial Projection',
                     'dd_report' => 'DD Report',
                     'dpiit_report' => 'DPIIT Certificate',
-                    'shuruup_research_report' => 'Shuruup Research Report',
+                    'shuruup_research_report' => 'PrivateDeals Research Report',
                     'valuation_report' => 'Valuation Report',
                     'pitch_video' => 'Pitch Video',
                     'product_video' => 'Product Video'

@@ -563,7 +563,7 @@
 
             <!-- Footer -->
             {{-- <div class="footer">
-                Generated on {{ \Carbon\Carbon::now()->format('d M Y \a\t H:i:s') }} | SHURU-UP Investment Platform
+                Generated on {{ \Carbon\Carbon::now()->format('d M Y \a\t H:i:s') }} | PrivateDeals Investment Platform
             </div> --}}
         </div>
     </div>

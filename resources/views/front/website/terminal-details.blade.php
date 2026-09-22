@@ -64,9 +64,9 @@ Smart Investing
             </div>
             <div class="col-lg-6 col-sm-12 col-md-12 order-1 order-lg-2 slide-from-right">
                 <div class="terminal-functions-content">
-                    <h1 class="heading"><span class="highlight-blue">Invest Smarter with the</span> Shuru-Up App</h1>
+                    <h1 class="heading"><span class="highlight-blue">Invest Smarter with the</span> PrivateDeals App</h1>
                     <p class="paragraph">
-                        Explore India’s booming private markets with Shuru-Up — your gateway to exclusive opportunities
+                        Explore India’s booming private markets with PrivateDeals — your gateway to exclusive opportunities
                         in Pre-IPOs, startups, and private equity. Invest early, grow smarter, and manage it all
                         seamlessly through one powerful app.
                     </p>
@@ -124,7 +124,7 @@ Smart Investing
                     payments</span> products
             </h1>
             <p>
-                At Shuru–Up, we are redefining how private equity investments are made. Our mission is simple –
+                At PrivateDeals, we are redefining how private equity investments are made. Our mission is simple –
                 unlocking
                 opportunities in private markets by providing investors exclusive access to high-potential private
                 companies.
@@ -135,7 +135,7 @@ Smart Investing
                 have the potential for exponential growth.
             </p>
             <div class="store-buttons">
-                <a href="https://play.google.com/store/apps/developer?id=Shuru-Up" class="store-button play-store"
+                <a href="https://play.google.com/store/apps/developer?id=PrivateDeals" class="store-button play-store"
                     target="_blank" onclick="addRipple(event, this)">
                     <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor">
                         <path
@@ -169,8 +169,8 @@ Smart Investing
         <div class="row d-flex align-items-center">
             <div class="col-lg-3 col-md-12">
                 <h6 class="">About Terminal</h6>
-                <h1 class="heading">Shuru-Up Terminal Functions</h1>
-                <p style="paragraph">Shuruup focuses on connecting retail investors and startups in the
+                <h1 class="heading">PrivateDeals Terminal Functions</h1>
+                <p style="paragraph">PrivateDeals focuses on connecting retail investors and startups in the
                     unlisted
                     space.
                     Our ecosystem fosters a healthy investment flow and enables startups to secure the funds they
@@ -182,7 +182,7 @@ Smart Investing
             <div class="col-lg-6 col-md-12 mb-4">
                 <div class="img-container">
                     <img src="{{ asset('website-assets/images/terminal-details/invest-details.svg') }}"
-                        alt="Shuru-Up Terminal Functions" class="p-5">
+                        alt="PrivateDeals Terminal Functions" class="p-5">
                 </div>
             </div>
 
@@ -337,7 +337,7 @@ Smart Investing
                 <div class="feature">
                     <h3>One-Stop Solution for Your Private Equity Needs
                     </h3>
-                    <p>Shuru-Up provides wealth managers with a comprehensive, customizable platform to manage and
+                    <p>PrivateDeals provides wealth managers with a comprehensive, customizable platform to manage and
                         optimize clients' private equity investments seamlessly.</p>
                 </div>
             </div>

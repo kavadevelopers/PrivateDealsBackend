@@ -1398,7 +1398,7 @@ class InvestorRepository
         //     $investor->email = $request->email;
         //     $investor->address = "N/A";
         //     $investor->investor_type = "Individual";
-        //     $investor->password = Hash::make('Shuru@123');
+        //     $investor->password = Hash::make('PrivateDeals@123');
         //     $investor->registration_step = 3;
         //     $investor->ask_password_change = 1;
 

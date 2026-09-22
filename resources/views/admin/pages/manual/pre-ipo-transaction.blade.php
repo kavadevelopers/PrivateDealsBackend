@@ -82,10 +82,10 @@
                             </div>
 
                             <div class="fv-row w-100 flex-md-root">
-                                <label class="required form-label">Shuru Price</label>
+                                <label class="required form-label">PrivateDeals Price</label>
                                 <input name="shuru_price"
                                     class="form-control mb-2 input input-decimal-number input-number-words"
-                                    placeholder="Enter Shuru Price" tabindex="0" type="text"
+                                    placeholder="Enter PrivateDeals Price" tabindex="0" type="text"
                                     value="{{ old('shuru_price') }}">
                                 @include('admin.partials.form.input-error-message', [
                                 'key' => 'shuru_price',

@@ -53,17 +53,17 @@ class EnsureSeoMetaTags
     {
         $defaults = [
             'front.home' => 'Invest in startups, primary market, secondary market, and pre-IPO opportunities on India\'s leading equity investment platform. Start your investment journey today.',
-            'front.abt' => 'Learn about Shuruup - India\'s premier platform for startup investments, pre-IPO trading, and equity opportunities.',
+            'front.abt' => 'Learn about PrivateDeals - India\'s premier platform for startup investments, pre-IPO trading, and equity opportunities.',
             'front.terminal' => 'Smart Investing Terminal - Advanced tools and insights for modern investors.',
-            'front.cards.startup' => 'Startup Investment Opportunities - Invest in India\'s most promising startups with Shuruup.',
+            'front.cards.startup' => 'Startup Investment Opportunities - Invest in India\'s most promising startups with PrivateDeals.',
             'front.cards.primary' => 'Primary Market Investments - Access new equity offerings from established companies.',
             'front.cards.secondary' => 'Secondary Market - Trade pre-IPO and unlisted shares on India\'s leading platform.',
             'front.cards.preipo' => 'Pre-IPO Investments - Invest in companies before their IPO with verified opportunities.',
-            'front.team' => 'Meet the Shuruup team - Experts dedicated to making equity investment accessible to all Indians.',
-            'front.contactus.get' => 'Contact Shuruup - Get in touch with our team for any questions or support.',
-            'front.disclaimer' => 'Important disclaimer and risk disclosures for equity investments on Shuruup.',
-            'front.privacypolicy' => 'Privacy Policy - How Shuruup protects and handles your personal information.',
-            'front.termsofuse' => 'Terms of Use - Shuruup\'s terms and conditions for using our platform.',
+            'front.team' => 'Meet the PrivateDeals team - Experts dedicated to making equity investment accessible to all Indians.',
+            'front.contactus.get' => 'Contact PrivateDeals - Get in touch with our team for any questions or support.',
+            'front.disclaimer' => 'Important disclaimer and risk disclosures for equity investments on PrivateDeals.',
+            'front.privacypolicy' => 'Privacy Policy - How PrivateDeals protects and handles your personal information.',
+            'front.termsofuse' => 'Terms of Use - PrivateDeals\'s terms and conditions for using our platform.',
             'front.riskdisclouser' => 'Risk Disclosure - Understanding the risks of equity investment opportunities.',
         ];
 

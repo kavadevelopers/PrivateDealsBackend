@@ -35,7 +35,7 @@ Home
                     </p>
                     <div class="store-buttons hero-context desktop-only">
 
-                        <a href="https://play.google.com/store/apps/developer?id=Shuru-Up"
+                        <a href="https://play.google.com/store/apps/developer?id=PrivateDeals"
                             class="store-button play-store hero-context" target="_blank"
                             onclick="addRipple(event, this)">
                             <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor">
@@ -98,7 +98,7 @@ Home
             </div>
 
             <div class="store-buttons hero-context mobile-only">
-                <a href="https://play.google.com/store/apps/developer?id=Shuru-Up"
+                <a href="https://play.google.com/store/apps/developer?id=PrivateDeals"
                     class="store-button play-store hero-context" target="_blank" onclick="addRipple(event, this)">
                     <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor">
                         <path
@@ -151,7 +151,7 @@ Home
                     </p>
                     <div class="store-buttons hero-context">
 
-                        <a href="https://play.google.com/store/apps/developer?id=Shuru-Up"
+                        <a href="https://play.google.com/store/apps/developer?id=PrivateDeals"
                             class="store-button play-store hero-context" target="_blank"
                             onclick="addRipple(event, this)">
                             <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor">
@@ -301,7 +301,7 @@ Home
                     <h1 class="heading animate-child"><span class="highlight-blue">Startup Investment </span> Access
                     </h1>
                     <p class="paragraph animate-child" style="margin-bottom: 3.5rem;">
-                        Discover and request access to high-growth, early-stage startups. Shuru-Up makes it seamless for
+                        Discover and request access to high-growth, early-stage startups. PrivateDeals makes it seamless for
                         advisors to facilitate investor interest in private deals — from curated pitch decks to
                         structured allocations. Let your clients invest in the next big thing, before the rest of the
                         world notices.
@@ -341,7 +341,7 @@ Home
                     payments</span> products
             </h1>
             <p>
-                At Shuru–Up, we are redefining how private equity investments are made. Our mission is simple –
+                At PrivateDeals, we are redefining how private equity investments are made. Our mission is simple –
                 unlocking
                 opportunities in private markets by providing investors exclusive access to high-potential private
                 companies.
@@ -365,7 +365,7 @@ Home
                     <img src="{{ asset('website-assets/images/mockups/home/track_and_invest.png') }}"
                         alt="track and invest" />
                     <div class="store-buttons animate-child">
-                        <a href="https://play.google.com/store/apps/developer?id=Shuru-Up"
+                        <a href="https://play.google.com/store/apps/developer?id=PrivateDeals"
                             class="store-button play-store" target="_blank" onclick="addRipple(event, this)">
                             <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor">
                                 <path
@@ -397,7 +397,7 @@ Home
                 <h1 class="heading animate-child"><span class="highlight-blue">Empower Partners </span> Opportunity with
                     us!</h1>
                 <p class="paragraph animate-child">
-                    The Shuru-Up Partner Terminal simplifies private market investing — wealth managers and advisors can
+                    The PrivateDeals Partner Terminal simplifies private market investing — wealth managers and advisors can
                     explore deals, track performance, and invest on behalf of clients, all in one secure platform.
                 </p>
             </div>
@@ -418,7 +418,7 @@ Home
                 <p class="short-description paragraph">Raise Capital</p>
                 <p class="long-description paragraph">
                     Investing in start-ups is about more than just returns—it's about supporting innovation, disruption,
-                    and the next generation of industry leaders. At Shuru-Up, we provide exclusive access to
+                    and the next generation of industry leaders. At PrivateDeals, we provide exclusive access to
                     high-potential early-stage companies that are poised to shape the future. By investing in start-ups,
                     you become part of their growth story, driving both economic progress and personal wealth creation.
                 </p>
@@ -466,9 +466,9 @@ Home
     <div class="container">
         <div class="row d-flex align-items-center">
             <div class="col-lg-5 col-sm-12 col-md-12">
-                <h6 class="mb-2">About Shuruup</h6>
+                <h6 class="mb-2">About PrivateDeals</h6>
                 <h1 class="mb-2 heading">Providing a better way to invest</h1>
-                <p class="paragraph">At Shuru-Up, we are redefining how private equity investments are made. Our mission
+                <p class="paragraph">At PrivateDeals, we are redefining how private equity investments are made. Our mission
                     is simple -
                     unlocking opportunities in private markets by providing investors exclusive access to high-potential
                     private companies. We aim to bridge the gap between investors and exceptional private companies,
@@ -479,7 +479,7 @@ Home
             </div>
             <div class="col-lg-6 col-sm-12 col-md-12">
                 <div class="img-container">
-                    <img src="{{ asset('website-assets/images/about_shuru.svg') }}" alt="About Shuru">
+                    <img src="{{ asset('website-assets/images/about_shuru.svg') }}" alt="About PrivateDeals">
                 </div>
             </div>
         </div>
@@ -493,13 +493,13 @@ Home
                 <h6 class="mb-2">About Terminals</h6>
                 <h1 class="mb-2 heading">Unlock New Heights in Your Private Equity.
                 </h1>
-                <p class="paragraph">The Shuru-Up Terminal is an innovative transactive platform designed to empower
+                <p class="paragraph">The PrivateDeals Terminal is an innovative transactive platform designed to empower
                     investors in the
                     private equity space. By combining robust analytics with seamless transaction capabilities, we
                     provide you with everything you need to navigate the complexities of private investments confidently
                     and efficiently.</p>
                 <div class="store-icons">
-                    <a href="https://play.google.com/store/apps/developer?id=Shuru-Up" class="" target="_blank">
+                    <a href="https://play.google.com/store/apps/developer?id=PrivateDeals" class="" target="_blank">
                         <img src="{{ asset('website-assets/images/store-icon/android.svg') }}" alt="">
                     </a>
                     <a href="https://apps.apple.com/us/developer/shuru-advisory-private-limited/id1773764563" class=""
@@ -530,8 +530,8 @@ Home
         <div class="row d-flex align-items-center">
             <div class="col-lg-5 col-sm-12 col-md-12">
                 <h6 class="mb-4">Media</h6>
-                <h1 class="mb-4 heading">Shuru-up in the Spotlight: News & Media Highlights</h1>
-                <p class="paragraph">Stay updated with Shuru-up's journey through our latest press releases, breaking
+                <h1 class="mb-4 heading">PrivateDeals in the Spotlight: News & Media Highlights</h1>
+                <p class="paragraph">Stay updated with PrivateDeals's journey through our latest press releases, breaking
                     news, and insightful stories that spotlight our pioneering moves in the venture capital space and
                     dedication to empowering emerging startups.</p>
             </div>
@@ -585,7 +585,7 @@ Home
                 <h1 class="heading animate-child">News & <span class="highlight-blue">Media</span></h1>
                 <p class="paragraph animate-child">
                     Stay updated with the latest stories, market insights, and platform announcements from the world of
-                    private equity, startups, and Pre-IPOs. Explore expert opinions, company highlights, and Shuru-Up’s
+                    private equity, startups, and Pre-IPOs. Explore expert opinions, company highlights, and PrivateDeals’s
                     media coverage — all in one place.
                 </p>
             </div>

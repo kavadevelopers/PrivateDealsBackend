@@ -9,7 +9,7 @@
                         <h2>Fuel your startup by funding and great mentorship.</h2>
                         <p></p>
                         <div class="btn_group">
-                            <a class="btn_custom_line" href="#">Find out more about Shuru-Up Funding</a>
+                            <a class="btn_custom_line" href="#">Find out more about PrivateDeals Funding</a>
                             <a class="rise btn_custom" href="{{ url('raise/apply') }}">Apply to Raise</a>
                         </div>
                     </div>

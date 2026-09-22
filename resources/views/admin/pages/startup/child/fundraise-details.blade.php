@@ -54,7 +54,7 @@
         </div>
         <div class="row mb-7">
             <label class="col-lg-2 fw-semibold text-muted">
-                Funds Required From ShuruUp
+                Funds Required From PrivateDeals
             </label>
             <!--begin::Col-->
             <div class="col-lg-8">

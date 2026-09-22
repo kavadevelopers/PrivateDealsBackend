@@ -618,7 +618,7 @@ class TestController extends Controller
 
 
     //     // $list = PreIpoModel::where('status', '5')->get();
-    //     // $csvData = "Sr.No.,Investor,Company,Seller,Shares,Shuru Price,Share Price,Investment Amount,Date\n"; // CSV Header
+    //     // $csvData = "Sr.No.,Investor,Company,Seller,Shares,PrivateDeals Price,Share Price,Investment Amount,Date\n"; // CSV Header
     //     // foreach ($list as $key => $item) {
     //     //     $csvData .= ($key + 1) . "," .
     //     //         ($item->investor->name ?? '') . "," .
@@ -1297,7 +1297,7 @@ class TestController extends Controller
     //             'committed_investors.json' => 'Committed Investors name is required',
     //             'fund_utilisation_details' => 'Fund Utilisation Details is required',
     //             'current_fund_raise' => 'Current Fund Raise is required',
-    //             'funds_required_from_shuru' => 'Funds Required From Shuru is required',
+    //             'funds_required_from_shuru' => 'Funds Required From PrivateDeals is required',
     //             'min_ticket_size' => 'Min Ticket Size is required',
     //             'pre_money_valuation_basis' => 'Pre Money Valuation Basis is required',
     //             'instrument_and_conversion_condition' => 'Instrument And Conversion Condition is required',

@@ -17,10 +17,13 @@ erDiagram
   investor ||--o{ portfolio : holds
   investor ||--o{ portfolio_preipo : holds
   partner ||--o{ investor : manages
+  partner ||--o{ partner : "parent creates child"
   company ||--o{ pre_ipo_transaction : underlying
   startup ||--o{ primary_transaction : raises
   documents ||--o{ pre_ipo_transaction : attaches
 ```
+
+Partner network detail (types, Seller target role, hierarchy): [database/partner.md](partner.md).
 
 ## Key tables ↔ models (non-exhaustive)
 

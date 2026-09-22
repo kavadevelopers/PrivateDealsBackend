@@ -334,7 +334,7 @@
                 <h1 class="heading">News & <span class="highlight-blue">Media</span></h1>
                 <p class="paragraph">
                     Get the latest startup news, market trends, company updates, and Pre-IPO investment insights with
-                    Shuru-Up.
+                    PrivateDeals.
                 </p>
             </div>
             <div class="col-lg-7 col-md-12 col-sm-12">

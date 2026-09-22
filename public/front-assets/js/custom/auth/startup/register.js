@@ -231,7 +231,7 @@ $(function () {
       .find("input[name=funds_required_from_shuru]")
       .val();
     if (FundsRequiredFromShuru == "") {
-      showErrorMessage("Funds Required From Shuru is required");
+      showErrorMessage("Funds Required From PrivateDeals is required");
       return false;
     }
     let MinTicketSize = $(this).find("input[name=min_ticket_size]").val();

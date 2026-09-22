@@ -57,7 +57,7 @@ class NewInvestorRegisterJob implements ShouldQueue
                 InvestorModel::class,
                 'home',
                 'Registration Successful',
-                UtillsHelper::paramsToTemplate($params, 'We confirm that your registration with Shuru-Up has been successfully completed. Your account is now active and available for use. For any assistance related to your account, please contact our support team.')
+                UtillsHelper::paramsToTemplate($params, 'We confirm that your registration with PrivateDeals has been successfully completed. Your account is now active and available for use. For any assistance related to your account, please contact our support team.')
             );
 
 

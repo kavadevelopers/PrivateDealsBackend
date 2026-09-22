@@ -153,9 +153,9 @@
                             </div>
                             <div class="row mb-7">
                                 <div class="col-lg-6 fv-row">
-                                    <label class="form-label">Funds Required From ShuruUp</label>
+                                    <label class="form-label">Funds Required From PrivateDeals</label>
                                     <input name="funds_required_from_shuru" class="form-control mb-2 input"
-                                        placeholder="Enter Funds Required From ShuruUp" tabindex="0" type="text"
+                                        placeholder="Enter Funds Required From PrivateDeals" tabindex="0" type="text"
                                         value="{{ old('funds_required_from_shuru', $list->startup->StartupFundRaiseOne->funds_required_from_shuru) }}">
                                     @include('admin.partials.form.input-error-message', [
                                         'key' => 'funds_required_from_shuru',
@@ -930,7 +930,7 @@
                                     </div>
                                     <div class="col-md-3">
                                         <div class="form-group">
-                                            <label class="required form-label">Shuru-Up Research Report</label>
+                                            <label class="required form-label">PrivateDeals Research Report</label>
                                             <input type="file" name="shuruup_research_report" class="form-control"
                                                 onchange="fileExAllowedWithSize(this,'.pdf,.xlsx,.csv','{{ CommonHelper::appSettings('file_document_max_size') }}')">
                                         </div>

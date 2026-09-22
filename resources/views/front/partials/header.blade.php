@@ -3,7 +3,7 @@
         <div class="container_custom">
             <div class="content">
                 <a href="{{ route('front.home') }}" class="brand"><img src="{{ asset('core/images/logo.png') }}"
-                        alt="ShuruUp Logo" /></a>
+                        alt="PrivateDeals Logo" /></a>
                 <div class="social_link">
                     <p>Connect with us :</p>
                     <div class="links">

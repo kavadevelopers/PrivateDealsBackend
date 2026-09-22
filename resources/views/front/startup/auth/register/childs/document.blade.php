@@ -107,7 +107,7 @@
                                     </div>
 
                                     {{-- <div class="field_group">
-                                        <label for="image">Shuru-Up Research Report (PDF)</label>
+                                        <label for="image">PrivateDeals Research Report (PDF)</label>
                                         <input class="file" type="file" name="pancard"
                                             onchange="fileExAllowedWithSize(this,'.pdf','{{ CommonHelper::appSettings('file_document_max_size') }}')">
                                         <i class="fa-solid fa-file input_icon"></i>

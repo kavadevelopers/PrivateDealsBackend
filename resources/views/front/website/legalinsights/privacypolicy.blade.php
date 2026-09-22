@@ -18,7 +18,7 @@ Privacy Policy
                     registered
                     address at Office No: C-501, The First, B/h. ITC Narmada Hotel, Vastrapur, Ahmedabad 380015, Gujarat
                     India
-                    (hereinafter referred to as the "Shuru-Up," which expression shall be deemed to encompass that it
+                    (hereinafter referred to as the "PrivateDeals," which expression shall be deemed to encompass that it
                     includes
                     its successors and permitted assigns unless the context or meaning thereof requires otherwise), and
                     provide
@@ -45,7 +45,7 @@ Privacy Policy
                 <ol>
                     <li>
                         <b>Scope of application</b>
-                        <p>Shuru Advisory Private Limited ("Shuru-Up") shall utilize the user information provided by
+                        <p>Shuru Advisory Private Limited ("PrivateDeals") shall utilize the user information provided by
                             you
                             strictly in accordance with the purposes outlined in this Policy.</p>
                         <p>Access to the website/application is limited to registered users only. Specific features or
@@ -85,7 +85,7 @@ Privacy Policy
                                 required;
                             </li>
                             <li>
-                                Shuru-Up may collect automatically generated information that includes IP address, Web
+                                PrivateDeals may collect automatically generated information that includes IP address, Web
                                 request, Location (through GPS), browser type, exit pages and URLs, Domain names,
                                 landing pages,
                                 click paths, date/time of visit, and online activity. We collect user interaction data
@@ -108,7 +108,7 @@ Privacy Policy
                                 or any
                                 official entity. The information will be accessed only for reasons relating to the
                                 website/application and will not be used for any other purpose. Your information will be
-                                preserved until the termination of your membership or listing on the Shuru-Up platform,
+                                preserved until the termination of your membership or listing on the PrivateDeals platform,
                                 or for
                                 any further period that we deem crucial for the continuing functioning of the
                                 website/application.
@@ -149,7 +149,7 @@ Privacy Policy
                             </li>
 
                             <li>
-                                Shuru-Up might utilize user information or other data you provide to monitor the
+                                PrivateDeals might utilize user information or other data you provide to monitor the
                                 functioning
                                 of the website/application, carry out audits, conduct research and analysis, and put
                                 together
@@ -157,7 +157,7 @@ Privacy Policy
                                 enhance your
                                 experience on the website/application by remembering your preferences, also to confirm
                                 your
-                                identity to ensure eligibility for using the Shuru-Up platform, providing information
+                                identity to ensure eligibility for using the PrivateDeals platform, providing information
                                 that
                                 you've requested, notifying you of any changes, and enabling compliance with our legal
                                 and
@@ -170,7 +170,7 @@ Privacy Policy
                         <b>Information disclosure</b>
                         <ol>
                             <li>
-                                Shuru-Up may disclose user information to service providers or partners for purposes
+                                PrivateDeals may disclose user information to service providers or partners for purposes
                                 including, but not limited to, conducting research and analysis, creating content,
                                 providing
                                 customer or technical support, maintaining databases, fulfilling orders and requests,
@@ -179,7 +179,7 @@ Privacy Policy
                             </li>
 
                             <li>
-                                However, Shuru-Up will not provide, sell, rent, share or trade your personal information
+                                However, PrivateDeals will not provide, sell, rent, share or trade your personal information
                                 to
                                 any unrelated third party, except with your prior permission, or the third party and
                                 (including
@@ -190,10 +190,10 @@ Privacy Policy
                                 that it has previously been able to access.
                             </li>
                             <li>
-                                Shuru-Up does not modify, sell, or distribute your personal information by any means. If
+                                PrivateDeals does not modify, sell, or distribute your personal information by any means. If
                                 any
                                 user of the platform becomes aware of a breach of this policy, they have the right to
-                                immediately terminate their service agreement with Shuru-Up upon discovery of such
+                                immediately terminate their service agreement with PrivateDeals upon discovery of such
                                 breach.
                             </li>
                             <li>
@@ -220,7 +220,7 @@ Privacy Policy
                             <li>
                                 The collected information and materials about the user will be stored within the
                                 databases
-                                controlled by the Shuru-Up. However, the Shuru-Up may store information in locations
+                                controlled by the PrivateDeals. However, the PrivateDeals may store information in locations
                                 outside
                                 direct control.
                             </li>
@@ -247,8 +247,8 @@ Privacy Policy
                         <b>Notification and Updates sent by the website/application</b>
                         <ol>
                             <li>
-                                Shuru-Up may deliver notifications via email to users who claim to log onto the
-                                website/Application as Shuru-Up members. We may also send you emails, notifications,
+                                PrivateDeals may deliver notifications via email to users who claim to log onto the
+                                website/Application as PrivateDeals members. We may also send you emails, notifications,
                                 news
                                 stories, and promotional materials frequently to keep you updated regarding the platform
                                 changes
@@ -287,7 +287,7 @@ Privacy Policy
                             <li>
                                 The policy does not apply to any information other than such information collected by
                                 the
-                                Shuru Advisory Private Limited (“Shuru-Up”).
+                                Shuru Advisory Private Limited (“PrivateDeals”).
                             </li>
                         </ol>
                     </li>
@@ -297,7 +297,7 @@ Privacy Policy
                         <ol>
                             <li>
                                 The user agrees to indemnify and hold harmless Shuru Advisory Private Limited
-                                (“Shuru-Up”)
+                                (“PrivateDeals”)
                                 from any actions, claims, demands, lawsuits, penalties, losses, interest, and other
                                 charges
                                 (including legal fees and costs related to dispute resolution) incurred by any third

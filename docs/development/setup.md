@@ -18,7 +18,7 @@ Follow root `README.md` plus:
 ## Default superadmin (from README)
 
 - Username: `shuruup`
-- Password: `ShuruUp@123`  
+- Password: `PrivateDeals@123`  
   Change immediately on shared environments.
 
 ## Front-end assets

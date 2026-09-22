@@ -4,7 +4,7 @@ Approved for implementation. This records the analysis that produced the `docs/`
 
 ## 1. Project understanding
 
-ShuruUp V4 is a Laravel 11 private-markets investment platform: Pre-IPO/unlisted equity, startup primary fundraising, secondary share transfers, multi-actor portals (Admin, Investor, Partner, Startup), mobile APIs (v1/v2), and a public marketing site.
+PrivateDeals V1 is a Laravel 11 private-markets investment platform: Pre-IPO/unlisted equity, startup primary fundraising, secondary share transfers, multi-actor portals (Admin, Investor, Partner, Startup), mobile APIs (v1/v2), and a public marketing site.
 
 ## 2. Detected architecture
 
@@ -21,6 +21,8 @@ Pre-IPO, primary transactions, secondary market, KYC/demat, portfolio, companies
 ## 5. Important workflows
 
 Investor onboarding; Pre-IPO buy/sell; primary investment status chain; secondary trade (ROFR/escrow/receipts).
+
+**Stakeholder partner marketplace (docs-first, target model):** whole project flow + individual flows A–H under `docs/workflows/` and `docs/workflows/flows/`. Seller as partner role; WM creates Seller + Distributor; partners create investors and invest for them. Code implementation later. See [workflows/whole-project-flow.md](workflows/whole-project-flow.md), [actors/README.md](actors/README.md).
 
 ## 6. Database overview
 

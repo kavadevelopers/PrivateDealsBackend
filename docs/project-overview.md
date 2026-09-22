@@ -1,19 +1,21 @@
 # Project Overview
 
-## What ShuruUp is
+## What PrivateDeals is
 
-**ShuruUp V4** is an investment marketplace platform focused on Indian private markets:
+**PrivateDeals V1** is an investment marketplace platform focused on Indian private markets:
 
 1. **Pre-IPO / unlisted equity** — browse companies, buy/sell unlisted shares, track portfolio and prices.
 2. **Startup primary fundraising** — investors commit to startup rounds; paperwork (SSA, offer letter, MGT-14, PAS-3, SHA) and payments are tracked through statuses.
 3. **Secondary market** — investor-to-investor (or related) share transfers with ROFR, escrow, and share-receipt flows.
-4. **Partner / business network** — wealth managers, distributors, retailers, relation managers manage investors and earn on deals.
+4. **Partner / business network** — wealth managers, distributors, retailers, relation managers, and (target) **sellers** as a partner role. Partners create investors and invest for them. Sellers register companies that go live after approval.
 5. **Startup operators** — startups manage rounds, MIS, updates, cap table related flows (web; some routes historically commented).
-6. **Admin operations** — master data, KYC review, transaction ops, broadcasts, CMS, system settings.
+6. **Admin operations** — can see/monitor master data, KYC, transactions, broadcasts, CMS, settings.
+
+**Stakeholder walkthrough:** [Whole project flow](workflows/whole-project-flow.md) · [Actors hub](actors/README.md)
 
 Mobile clients consume **REST APIs** (`/api/v1`, `/api/v2`). Admins and some users use **Blade + Livewire** web UIs.
 
-Brand / app name in env: `APP_NAME` (example: `ShuruUp V4 Alpha`).
+Brand / app name in env: `APP_NAME` (example: `PrivateDeals V1 Alpha`).
 
 ---
 
@@ -23,7 +25,7 @@ Brand / app name in env: `APP_NAME` (example: `ShuruUp V4 Alpha`).
 |-------|------------|-----------|-----------|--------|
 | Admin | `UserAdminModel` (`user_admin`) | `admin` (session) | — | Spatie-style permission strings via `hasPermission` |
 | Investor | `InvestorModel` (`investor`) | `investor` | `investor-api-guard` (Sanctum) | MPIN, family profiles, KYC |
-| Partner (Business) | `PartnerModel` (`partner`) | `partner` | `partner-api-guard` | Types in `PartnerTypeEnum` |
+| Partner (Business) | `PartnerModel` (`partner`) | `partner` | `partner-api-guard` | Types: WM, Distributor, Retailer, RM; **Seller** = target partner role (code later). Partners create investors & invest for them. |
 | Startup | `StartupModel` (`startup`) | `startup` | `startup-api-guard` | Limited API surface today |
 | Guest / public | — | — | Header `headtoken` only | Marketing site + public master APIs |
 

@@ -136,7 +136,7 @@
                                 onchange="fileExAllowedWithSize(this,'{{ CommonHelper::appSettings('file_document_extensions_allowed') }}','{{ CommonHelper::appSettings('file_document_max_size') }}')">
                         </div>
                         <div class="fv-row w-100 flex-md-root">
-                            <label class="form-label">Shuruup Research Report</label>
+                            <label class="form-label">PrivateDeals Research Report</label>
                             <input name="shuruup_research_report" class="form-control mb-2 input" tabindex="0"
                                 type="file"
                                 onchange="fileExAllowedWithSize(this,'{{ CommonHelper::appSettings('file_document_extensions_allowed') }}','{{ CommonHelper::appSettings('file_document_max_size') }}')">

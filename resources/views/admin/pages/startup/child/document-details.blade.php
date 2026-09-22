@@ -56,7 +56,7 @@
                 'DD Report' => $startup->StartupDocumentOne->dd_report,
                 'Valuation Report' => $startup->StartupDocumentOne->valuation_report,
                 'DPIIT Certificate' => $startup->StartupDocumentOne->dpiit_certificate,
-                'Shuruup Research Report' => $startup->StartupDocumentOne->shuruup_research_report,
+                'PrivateDeals Research Report' => $startup->StartupDocumentOne->shuruup_research_report,
                 'Pitch Video' => $startup->StartupDocumentOne->pitch_deck_file,
             ];
         @endphp

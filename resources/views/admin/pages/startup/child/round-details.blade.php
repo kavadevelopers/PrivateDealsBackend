@@ -78,9 +78,9 @@
                                 placeholder="Enter Share Price">
                         </div>
                         <div class="fv-row w-100 flex-md-root">
-                            <label class="required form-label">Shuru Commission</label>
+                            <label class="required form-label">PrivateDeals Commission</label>
                             <input type="text" name="shuru_commission" id="shuru_commission"
-                                class="form-control input-decimal-number" placeholder="Enter Shuru Commission">
+                                class="form-control input-decimal-number" placeholder="Enter PrivateDeals Commission">
                         </div>
                         <div class="fv-row w-100 flex-md-root">
                             <label class="required form-label">Instrument Type</label>
@@ -134,7 +134,7 @@
                                 placeholder="Enter Total Fund Requirement">
                         </div>
                         <div class="fv-row w-100 flex-md-root">
-                            <label class="required form-label">Shuru Fund Requirement</label>
+                            <label class="required form-label">PrivateDeals Fund Requirement</label>
                             <input type="text" name="fund_requirement" id="fund_requirement"
                                 class="form-control input-decimal-number input-number-words"
                                 placeholder="Enter Fund Requirement">

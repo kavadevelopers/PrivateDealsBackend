@@ -96,7 +96,7 @@
                 <img src="{{ public_path('core/images/red-logo.png') }}" alt="Logo" class="logo-img">
             </td>
             <td class="title-cell">
-                SHURU-UP Daily Share Report<br>
+                PrivateDeals Daily Share Report<br>
                 <small>{{ now()->format('l, d F Y') }}</small>
             </td>
         </tr>
@@ -174,7 +174,7 @@
 
     <!-- Footer -->
     <div class="footer">
-        Generated on {{ now()->format('d M Y \a\t H:i:s') }} | SHURU-UP Investment Platform
+        Generated on {{ now()->format('d M Y \a\t H:i:s') }} | PrivateDeals Investment Platform
     </div>
 </body>
 

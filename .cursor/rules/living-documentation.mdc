@@ -3,7 +3,7 @@ description: Living docs — every code change must include a documentation impa
 alwaysApply: true
 ---
 
-# Living documentation (ShuruUp V4)
+# Living documentation (PrivateDeals V1)
 
 `docs/` is the living source of truth for this project (humans and AI agents).
 

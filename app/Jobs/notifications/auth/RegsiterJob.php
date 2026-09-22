@@ -58,7 +58,7 @@ class RegsiterJob implements ShouldQueue
                 InvestorModel::class,
                 'home',
                 'Registration Successful',
-                UtillsHelper::paramsToTemplate($params, 'Welcome to Shuru-Up! You’ve just stepped into a world of private equity opportunities — from pre-IPO investments to carefully curated private market deals that are typically beyond the reach of traditional investors.')
+                UtillsHelper::paramsToTemplate($params, 'Welcome to PrivateDeals! You’ve just stepped into a world of private equity opportunities — from pre-IPO investments to carefully curated private market deals that are typically beyond the reach of traditional investors.')
             );
 
 

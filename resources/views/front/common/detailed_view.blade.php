@@ -173,7 +173,7 @@
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#meet"
                                     type="button" role="tab" aria-controls="pills-contact"
-                                    aria-selected="false">Shuru-Meet</button>
+                                    aria-selected="false">PrivateDeals-Meet</button>
                             </li>
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"

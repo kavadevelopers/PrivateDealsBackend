@@ -35,7 +35,7 @@ About Us
             <div class="col-lg-10 col-md-12 text-center slide-from-bottom">
                 <h1 class="heading animate-child">About Us</h1>
                 <p class="paragraph animate-child">
-                    Shuru-Up is redefining private market investing by bridging the gap between ambitious investors and
+                    PrivateDeals is redefining private market investing by bridging the gap between ambitious investors and
                     tomorrow’s most promising companies. We make it simple to discover, evaluate, and invest in Pre-IPO,
                     startup, and private equity opportunities — all on a secure, transparent, and seamless digital
                     platform.
@@ -217,7 +217,7 @@ About Us
         <!-- Centered heading section -->
         <div class="row justify-content-center">
             <div class="col-lg-12 text-center mb-4">
-                <h2 class="main-heading">Why <span class="highlight-blue">Choose Shuru–Up?</span></h2>
+                <h2 class="main-heading">Why <span class="highlight-blue">Choose PrivateDeals?</span></h2>
             </div>
         </div>
 
@@ -230,7 +230,7 @@ About Us
                     <p class="paragraph">
                         Experience the future of startup investments with our platform. We provide curated, high-growth
                         opportunities with digital onboarding and transparent reporting. From advisory support to
-                        real-time tracking, Shuru-Up empowers investors and wealth managers to invest in the next
+                        real-time tracking, PrivateDeals empowers investors and wealth managers to invest in the next
                         generation of startups.
                     </p>
                 </div>
@@ -238,7 +238,7 @@ About Us
             <div class="col-lg-6 col-sm-12 col-md-12 order-2 order-lg-2 why-shuru-up-image-container slide-from-right">
                 <div class="img-container">
                     <img src="{{ asset('website-assets/images/mockups/aboutus/why-shuruup.png') }}"
-                        alt="Why Shuru-Up" />
+                        alt="Why PrivateDeals" />
                 </div>
             </div>
         </div>
@@ -328,9 +328,9 @@ About Us
                 </div>
             </div>
             <div class="col-lg-6 col-sm-12 col-md-12">
-                <h1 class="mb-4 heading">Why Choose Shuru-Up for Your Investment Journey</h1>
+                <h1 class="mb-4 heading">Why Choose PrivateDeals for Your Investment Journey</h1>
                 <p class="paragraph">Discover the unique advantages, expert insights, and growth-driven opportunities at
-                    your fingertips, making Shuru-Up the trusted partner for innovative and impactful investments.
+                    your fingertips, making PrivateDeals the trusted partner for innovative and impactful investments.
                 </p>
                 <a href="{{ url('contactus') }}" class="btn btn-light custom-button">Contact Us</a>
             </div>
@@ -354,7 +354,7 @@ About Us
             </div>
             <div class="col-lg-6 col-sm-12 col-md-12">
                 <div class="img-container">
-                    <img src="{{ asset('website-assets/images/portfolio-banner.svg') }}" alt="About Shuru">
+                    <img src="{{ asset('website-assets/images/portfolio-banner.svg') }}" alt="About PrivateDeals">
                 </div>
             </div>
         </div>

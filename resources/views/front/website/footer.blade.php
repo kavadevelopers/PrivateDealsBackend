@@ -5,7 +5,7 @@
             <div class="col-12 col-sm-12 col-md-6 col-lg-4 order-2 order-lg-1">
                 <div class="social-media-section">
                     <div class="logo">
-                        <img src="{{ asset('website-assets/images/logo.svg') }}" alt="Shuru Up Logo">
+                        <img src="{{ asset('website-assets/images/logo.svg') }}" alt="PrivateDeals Logo">
                     </div>
 
                     <div class="social-media">
@@ -19,7 +19,7 @@
                     </div>
 
                     <div class="store-buttons">
-                        <a href="https://play.google.com/store/apps/developer?id=Shuru-Up" target="_blank"
+                        <a href="https://play.google.com/store/apps/developer?id=PrivateDeals" target="_blank"
                             class="store-button">
                             <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor">
                                 <path
@@ -56,7 +56,7 @@
                 </ul>
             </div>
 
-            <!-- Column 2: About Shuru Up -->
+            <!-- Column 2: About PrivateDeals -->
             <div class="col-6 col-sm-6 col-md-6 col-lg-2 order-1 order-lg-3">
                 <h5>About Us</h5>
                 <ul class="footer-links">

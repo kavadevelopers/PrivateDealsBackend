@@ -57,7 +57,7 @@ class KycCompletedBroadcastJob implements ShouldQueue
                 InvestorModel::class,
                 'kyc-status',
                 'KYC Completed',
-                UtillsHelper::paramsToTemplate($params, 'Your KYC verification on Shuru-Up has been successfully completed. Your account is now fully verified, and you can smoothly proceed with transactions. For any assistance related to your account, please contact our support team.')
+                UtillsHelper::paramsToTemplate($params, 'Your KYC verification on PrivateDeals has been successfully completed. Your account is now fully verified, and you can smoothly proceed with transactions. For any assistance related to your account, please contact our support team.')
             );
 
 
@@ -84,7 +84,7 @@ class KycCompletedBroadcastJob implements ShouldQueue
                     'investors',
                     'KYC Completed',
                     // UtillsHelper::paramsToTemplate($params, 'A new user has just registered on the app. Here are the details: 👤 Name: {{2}} 📱 Mobile Number: {{3}}')
-                    UtillsHelper::paramsToTemplate($params, 'KYC has been completed for a user on Shuru Up. Name: {{2}} Ph. No: {{3}} Thank You.')
+                    UtillsHelper::paramsToTemplate($params, 'KYC has been completed for a user on PrivateDeals. Name: {{2}} Ph. No: {{3}} Thank You.')
                 );
             }
         }

@@ -28,7 +28,7 @@
     <link rel="stylesheet"
         href="{{ asset('website-assets/css/style.css') }}?v={{ filemtime(public_path('website-assets/css/style.css')) }}">
     <script script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <title>@yield('title')| Shuru-Up </title>
+    <title>@yield('title')| PrivateDeals </title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('core/favicon/apple-touch-icon.png') }}" />
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('core/favicon/favicon-32x32.png') }}" />

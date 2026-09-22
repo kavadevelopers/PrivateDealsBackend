@@ -15,22 +15,22 @@ Privacy Policy
             style="background: #0a0a0a; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); margin-bottom: 30px; border: 1px solid #3a3a3a;">
             <p style="line-height: 1.8; margin-bottom: 25px; font-size: 16px; color: #e0e0e0; text-align: justify;">
                 Investors bear full responsibility for conducting their own due diligence prior to making any investment
-                decisions concerning any shares offered by Shuru-Up. Investors are advised to carefully review all
+                decisions concerning any shares offered by PrivateDeals. Investors are advised to carefully review all
                 relevant
                 offering documents, including any underlying agreements and associated subscription materials related to
                 the
                 Funds. Investors should seek independent counsel from their own legal, tax, ERISA, and financial
                 advisors as
-                necessary. The information provided by Shuru-Up and its affiliates is not intended to serve as the
+                necessary. The information provided by PrivateDeals and its affiliates is not intended to serve as the
                 primary
-                basis for any investment decision. While Shuru-Up believes the information provided to be reliable, it
+                basis for any investment decision. While PrivateDeals believes the information provided to be reliable, it
                 makes
                 no representations or warranties regarding the accuracy, completeness, or timeliness of such
                 information.
             </p>
 
             <p style="line-height: 1.8; margin-bottom: 25px; font-size: 16px; color: #e0e0e0; text-align: justify;">
-                Shuru-Up disclaims any obligation to update or revise any opinions, analyses, or other information
+                PrivateDeals disclaims any obligation to update or revise any opinions, analyses, or other information
                 provided
                 in this material. The material is provided solely for general informational purposes and to assist you
                 in

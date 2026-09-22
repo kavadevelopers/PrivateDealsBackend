@@ -1,4 +1,4 @@
-# ShuruUp V4 — Documentation Index
+# PrivateDeals V1 — Documentation Index
 
 **Living source of truth** for humans and AI coding agents.  
 Source code always wins if docs and code disagree — update the docs.
@@ -28,11 +28,30 @@ See [maintenance/living-docs-rules.md](maintenance/living-docs-rules.md).
 
 ## Navigation
 
-### Start here
+### Start here (stakeholders — Partner marketplace)
+| Document | Purpose |
+|----------|---------|
+| [**workflows/whole-project-flow.md**](workflows/whole-project-flow.md) | **Whole project flow** — one page + flowchart (show in meetings) |
+| [actors/README.md](actors/README.md) | Who is who + links to every individual flow |
+| [database/partner.md](database/partner.md) | Partner network schema (Seller as partner role — target) |
+
+### Individual flows (click any step)
+| Document | Purpose |
+|----------|---------|
+| [flows/wm-create-seller-distributor.md](workflows/flows/wm-create-seller-distributor.md) | A — WM creates Seller & Distributor |
+| [flows/seller-register-company.md](workflows/flows/seller-register-company.md) | B — Seller registers company |
+| [flows/company-goes-live.md](workflows/flows/company-goes-live.md) | C — Company goes live |
+| [flows/seller-prices-and-deals.md](workflows/flows/seller-prices-and-deals.md) | D — Prices & deals |
+| [flows/partner-discovers-company.md](workflows/flows/partner-discovers-company.md) | E — Partner sees company |
+| [flows/partner-create-investor.md](workflows/flows/partner-create-investor.md) | F — Partner creates investor |
+| [flows/partner-invest-for-investor.md](workflows/flows/partner-invest-for-investor.md) | G — Partner invests for them |
+| [flows/order-to-complete.md](workflows/flows/order-to-complete.md) | H — Order completes |
+
+### Start here (engineering)
 | Document | Purpose |
 |----------|---------|
 | [documentation-plan.md](documentation-plan.md) | Approved analysis plan that produced this tree |
-| [project-overview.md](project-overview.md) | What ShuruUp is, actors, product domains |
+| [project-overview.md](project-overview.md) | What PrivateDeals is, actors, product domains |
 | [architecture/overview.md](architecture/overview.md) | System shape, layers, major dependencies |
 | [architecture/request-lifecycle.md](architecture/request-lifecycle.md) | How web/API requests flow |
 | [architecture/cross-cutting-risks.md](architecture/cross-cutting-risks.md) | Coupling, fat controllers, change risks |
@@ -42,7 +61,7 @@ See [maintenance/living-docs-rules.md](maintenance/living-docs-rules.md).
 |----------|---------|
 | [modules/admin.md](modules/admin.md) | Admin portal (`/admin`) |
 | [modules/investor.md](modules/investor.md) | Investor web + API |
-| [modules/partner-business.md](modules/partner-business.md) | Partner / business portal + API |
+| [modules/partner-business.md](modules/partner-business.md) | Partner network (incl. target Seller role) + business API |
 | [modules/startup.md](modules/startup.md) | Startup portal + API |
 | [modules/public-website.md](modules/public-website.md) | Public marketing site (migrated Blade site) |
 | [modules/shared-helpers-services.md](modules/shared-helpers-services.md) | Helpers, services, repositories |
@@ -66,6 +85,7 @@ See [maintenance/living-docs-rules.md](maintenance/living-docs-rules.md).
 | Document | Purpose |
 |----------|---------|
 | [database/overview.md](database/overview.md) | Schema domains, key tables/models |
+| [database/partner.md](database/partner.md) | Partner table, types, hierarchy (target Seller) |
 | [api/overview.md](api/overview.md) | API auth layers, versioning |
 | [api/v1.md](api/v1.md) | Investor / business / startup v1 |
 | [api/v2.md](api/v2.md) | Investor / business v2 |
@@ -74,6 +94,8 @@ See [maintenance/living-docs-rules.md](maintenance/living-docs-rules.md).
 ### Workflows
 | Document | Purpose |
 |----------|---------|
+| [workflows/whole-project-flow.md](workflows/whole-project-flow.md) | **Stakeholder:** full partner marketplace flow |
+| [workflows/flows/](workflows/flows/) | Individual flows A–H |
 | [workflows/investor-onboarding.md](workflows/investor-onboarding.md) | Register → MPIN → KYC |
 | [workflows/pre-ipo-buy-sell.md](workflows/pre-ipo-buy-sell.md) | Buy/sell/cancel Pre-IPO |
 | [workflows/primary-investment.md](workflows/primary-investment.md) | Commit → docs → payment |
@@ -106,7 +128,7 @@ See [maintenance/living-docs-rules.md](maintenance/living-docs-rules.md).
 | Entry routes | `routes/web.php`, `routes/api.php`, `routes/console.php` |
 | Models | ~136 Eloquent models under `app/Models/` |
 | Migrations | ~363 under `database/migrations/` |
-| Default admin (from root README) | username `shuruup` / password `ShuruUp@123` |
+| Default admin (from root README) | username `shuruup` / password `PrivateDeals@123` |
 
 ---
 

@@ -50,7 +50,7 @@
                                     <tbody>
                                         <tr>
                                             <td width="25%" data-label="User Name">
-                                                Shuruup
+                                                PrivateDeals
                                             </td>
                                             <td width="20%" data-label="Total invested">
                                                 00

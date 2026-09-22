@@ -107,8 +107,8 @@ class CommonController extends Controller
                 $payload = [
                     "userId" => $investor->uuid,
                     "originalUrl" => "https://www.shuruup.com/",
-                    "title" => "Shuru-Up: Pre-IPO&LP Secondary",
-                    "description" => "Join Shuruup - With " . $investor->name,
+                    "title" => "PrivateDeals: Pre-IPO&LP Secondary",
+                    "description" => "Join PrivateDeals - With " . $investor->name,
                     "iosAppStoreUrl" => "https://apps.apple.com/us/app/shuru-up-pre-ipo-lp-secondary/id6736905561",
                     "androidAppStoreUrl" => "https://play.google.com/store/apps/details?id=com.shuruup.investor",
                     "appScheme" => "shuruup",
@@ -225,8 +225,8 @@ class CommonController extends Controller
         $payload = [
             "userId" => $investor->uuid,
             "originalUrl" => $originalUrl,
-            "title" => "Shuru-Up: " . ($company->brand_name ?? $company->company_name),
-            "description" => "Check out " . ($company->brand_name ?? $company->company_name) . " on Shuru-Up. Shared by " . $investor->name,
+            "title" => "PrivateDeals: " . ($company->brand_name ?? $company->company_name),
+            "description" => "Check out " . ($company->brand_name ?? $company->company_name) . " on PrivateDeals. Shared by " . $investor->name,
             "iosAppStoreUrl" => "https://apps.apple.com/us/app/shuru-up-pre-ipo-lp-secondary/id6736905561",
             "androidAppStoreUrl" => "https://play.google.com/store/apps/details?id=com.shuruup.investor",
             "appScheme" => "shuruup",

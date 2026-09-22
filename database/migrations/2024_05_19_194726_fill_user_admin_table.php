@@ -16,11 +16,11 @@ return new class extends Migration
     {
         UserAdminModel::create([
             'role'                  => 'admin',
-            'name'                  => 'ShuruUp Administrator',
+            'name'                  => 'PrivateDeals Administrator',
             'username'              => 'shuruup',
             'mobile_no'             => '9867052562',
             'email'                 => 'tech@shuruup.com',
-            'password'              => Hash::make('ShuruUp@123'),
+            'password'              => Hash::make('PrivateDeals@123'),
             'ask_password_change'   => '1'
         ]);
     }

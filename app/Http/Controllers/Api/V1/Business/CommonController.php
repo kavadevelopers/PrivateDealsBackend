@@ -527,7 +527,7 @@ class CommonController extends Controller
         //         NotificationTypeEnum::regular,
         //         $transaction->investor->email,
         //         'Your Document - ' . strtoupper($docType),
-        //         "Dear {$transaction->investor->name},<br><br>This is your soft copy of your document – <b>{$document->type}</b>.<br><br>Regards,<br>Shuruup Team",
+        //         "Dear {$transaction->investor->name},<br><br>This is your soft copy of your document – <b>{$document->type}</b>.<br><br>Regards,<br>PrivateDeals Team",
         //         [
         //             [
         //                 'url' => $documentUrl,

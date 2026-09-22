@@ -9,7 +9,7 @@ Startup
             <div class="col-lg-5 col-sm-12 col-md-12 slide-from-left">
                 <h1 class="heading mb-4">Fuel Your <span class="highlight-blue"> Startup’s Growth</h1>
                 <p class="paragraph animate-child" style="margin-bottom: 3.5rem;">
-                    Launch and grow your venture with a platform built for speed, scale, and simplicity. Shuru-Up helps
+                    Launch and grow your venture with a platform built for speed, scale, and simplicity. PrivateDeals helps
                     startups access private investments, streamline fundraising, and focus on what matters most —
                     building the future.
                 </p>
@@ -47,7 +47,7 @@ Startup
                         operations. Our tech-driven tools reduce overhead, improve cash flow, optimize resources, and
                         keep your startup financially agile, scalable, and ready for sustainable growth.
                     </p>
-                    <a href="https://play.google.com/store/apps/developer?id=Shuru-Up" target="_blank"
+                    <a href="https://play.google.com/store/apps/developer?id=PrivateDeals" target="_blank"
                         class="common-cta-btn mt-4">Explore More <i class="fa fa-arrow-right"></i></a>
                 </div>
             </div>
@@ -65,7 +65,7 @@ Startup
                     </h1>
                 </div>
                 <div class="store-buttons animate-child">
-                    <a href="https://play.google.com/store/apps/developer?id=Shuru-Up" class="store-button play-store"
+                    <a href="https://play.google.com/store/apps/developer?id=PrivateDeals" class="store-button play-store"
                         target="_blank" onclick="addRipple(event, this)">
                         <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor">
                             <path
@@ -109,7 +109,7 @@ Startup
                 <h1 class="heading animate-child">Startup <span class="highlight-blue">Insights</span></h1>
                 <p class="paragraph animate-child">
                     Stay updated with the latest stories, market insights, and platform announcements from the world of
-                    private equity, startups, and Pre-IPOs. Explore expert opinions, company highlights, and Shuru-Up's
+                    private equity, startups, and Pre-IPOs. Explore expert opinions, company highlights, and PrivateDeals's
                     media coverage — all in one place.
                 </p>
             </div>

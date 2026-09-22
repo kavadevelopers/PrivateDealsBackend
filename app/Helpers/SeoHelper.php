@@ -12,7 +12,7 @@ class SeoHelper
      */
     public static function generateMetaTags($title, $description, $keywords = null, $image = null, $url = null)
     {
-        $appName = CommonHelper::appSettings('app_name') ?? 'Shuruup';
+        $appName = CommonHelper::appSettings('app_name') ?? 'PrivateDeals';
         $fullTitle = $title ? "$title | $appName" : $appName;
         $description = $description ?? CommonHelper::appSettings('app_meta_description') ?? 'India\'s premier platform for startup investments, primary transactions, secondary market, and pre-IPO opportunities.';
         $image = $image ?? asset('core/images/og-image.png');
@@ -36,7 +36,7 @@ class SeoHelper
         $baseSchema = [
             '@context' => 'https://schema.org',
             '@type' => $type,
-            'name' => CommonHelper::appSettings('app_name') ?? 'Shuruup',
+            'name' => CommonHelper::appSettings('app_name') ?? 'PrivateDeals',
             'url' => config('app.url'),
             'logo' => asset('core/images/logo.png'),
             'description' => CommonHelper::appSettings('app_meta_description'),

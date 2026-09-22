@@ -9,7 +9,7 @@
                  <div class="col-lg-4 col-sm-12 col-md-12">
                      <h6 class="">Primary Modules</h6>
                      <h1 class="heading mb-4">Primary Startup Shares</h1>
-                     <p class="paragraph">Shuru-Up offers investors the opportunity to discover, access & invest in
+                     <p class="paragraph">PrivateDeals offers investors the opportunity to discover, access & invest in
                          disruptive ventures”. Our
                          software fosters a dynamic investment ecosystem, enabling startups to secure essential funding
                          while offering investors access to early-stage opportunities. </p>
@@ -34,7 +34,7 @@
                  <div class="col-lg-6 col-sm-12 col-md-12 text-section">
                      <div class="mapped-context">
                          <h3>Get Scrutinized Deals</h3>
-                         <p class="paragraph">Shuru-Up offers investors carefully vetted startup opportunities. Our thorough
+                         <p class="paragraph">PrivateDeals offers investors carefully vetted startup opportunities. Our thorough
                              due diligence
                              ensures only high-potential deals, minimizing risks and providing investors with well-analyzed
                              ventures for better decision-making.
@@ -56,7 +56,7 @@
                      </div>
                      <div class="mapped-context">
                          <h3>Technology-Driven Platform for Making and Tracking Investments</h3>
-                         <p class="paragraph">Shuru-Up offers a tech-driven platform that simplifies the entire investment
+                         <p class="paragraph">PrivateDeals offers a tech-driven platform that simplifies the entire investment
                              process. Investors
                              can easily explore, invest in, and track startups through a user-friendly interface. The
                              platform provides real-time updates, performance analytics, and portfolio management tools,
@@ -65,7 +65,7 @@
                      </div>
                      <div class="mapped-context">
                          <h3>Direct Captable Investments / AIF</h3>
-                         <p class="paragraph">Shuru-Up enables investors to make direct equity investments via cap tables or
+                         <p class="paragraph">PrivateDeals enables investors to make direct equity investments via cap tables or
                              through
                              Alternative Investment Funds (AIF), offering flexibility in capital allocation, risk
                              management, and portfolio diversification, tailored to individual investment strategies and
@@ -175,7 +175,7 @@
                  <div class="col-lg-6 col-sm-12 col-md-12">
                      <h6 class="">Benefits</h6>
                      <h1 class="heading mb-4">Why Primary Startups Are the Key to Early Success</h1>
-                     <p class="paragraph">Investing with Shuru-Up offers early-stage advantages like first-mover access to
+                     <p class="paragraph">Investing with PrivateDeals offers early-stage advantages like first-mover access to
                          innovative startups, high growth potential, and entry into emerging markets. Enjoy favorable
                          valuations with the potential for exponential returns, while directly influencing business strategy
                          alongside founders. Plus, diversify your portfolio across cutting-edge industries and actively

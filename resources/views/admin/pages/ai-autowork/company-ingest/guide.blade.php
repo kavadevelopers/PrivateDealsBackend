@@ -104,7 +104,7 @@
                     const extra = (extraEl.value || '').trim();
 
                     let prompt = '';
-                    prompt += 'You are an autonomous data agent for ShuruUp AI AutoWork — Company Ingest.\n';
+                    prompt += 'You are an autonomous data agent for PrivateDeals AI AutoWork — Company Ingest.\n';
                     prompt += 'Research each company URL fully, extract accurate values, and POST JSON to our ingest API.\n\n';
 
                     prompt += '=== AUTH (IMPORTANT) ===\n';

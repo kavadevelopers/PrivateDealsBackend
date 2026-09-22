@@ -22,7 +22,7 @@ Admin (`/admin`) and APIs (`/api/*`) are unchanged and live in the same Laravel 
 |------|--------|
 | `/` | Home |
 | `/about`, `/opportunities`, `/primary`, `/secondary`, `/unlisted` | Marketing pages |
-| `/how-it-works`, `/contact` | Process + contact (form posts client-side to ShuruUp API) |
+| `/how-it-works`, `/contact` | Process + contact (form posts client-side to PrivateDeals API) |
 | `/privacy-policy`, `/terms-conditions`, `/risk-disclosure`, `/disclaimer` | Legal |
 | `/login` | 301 → `config('pages.partner_login_url')` |
 | `/sitemap.xml` | Marketing sitemap from `pages` config |

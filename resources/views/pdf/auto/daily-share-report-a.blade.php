@@ -138,7 +138,7 @@
                 <img src="{{ public_path('core/images/white-logo.svg') }}" alt="Logo" class="logo-img">
             </td>
             <td class="main-title-cell" style="width: 50%; text-align: right;">
-                <div style="font-size: 18px; font-weight: 700; color: #ffffff;">SHURU-UP Market Pulse</div>
+                <div style="font-size: 18px; font-weight: 700; color: #ffffff;">PrivateDeals Market Pulse</div>
                 <div style="font-size: 13px; color: #bbbbbb; margin-top: 4px;">
                     Tracking the day’s biggest market movers with precision.
                 </div>
@@ -360,7 +360,7 @@
     <!-- Footer -->
     <div class="footer" style="margin-top: 40px; text-align: center; font-size: 12px; color: #999; padding-top: 10px;">
         Report generated on <strong>{{ now()->format('d M Y \a\t H:i:s') }}</strong><br>
-        Powered by <span style="color: #f39c12; font-weight: 600;">SHURU-UP</span> Investment Intelligence Platform
+        Powered by <span style="color: #f39c12; font-weight: 600;">PrivateDeals</span> Investment Intelligence Platform
     </div>
 
 </body>

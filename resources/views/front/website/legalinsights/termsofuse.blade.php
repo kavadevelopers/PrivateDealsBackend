@@ -32,9 +32,9 @@ Privacy Policy
                     The Website is owned and operated by Shuru Advisory Private Limited, a company
                     incorporated under the Companies Act, 2013, via its registered address at Office No: C-501,
                     The First, B/h. ITC Narmada Hotel, Vastrapur, Ahmedabad 380015, Gujarat India
-                    (hereinafter referred to as the "Shuru-Up," and provide certain services on www.shuruup.com
+                    (hereinafter referred to as the "PrivateDeals," and provide certain services on www.shuruup.com
                     (the "website"). Shuru Advisory Private Limited administers the website and its feed. The
-                    Shuru-Up platform enables private companies to put forward their business achievement and
+                    PrivateDeals platform enables private companies to put forward their business achievement and
                     sell their shares on the Website, aiding potential investors in making educated investment
                     decisions in such projects.
                 </li>
@@ -75,12 +75,12 @@ Privacy Policy
                     style="line-height: 1.8; margin-bottom: 25px; font-size: 16px; color: #e0e0e0; text-align: justify; list-style: none; counter-increment: term-counter; position: relative; padding-left: 40px;">
                     <span
                         style="position: absolute; left: 0; top: 0; color: #4facfe; font-weight: 600; font-size: 18px;">6.</span>
-                    Shuru-Up is a technology platform, not a trading or exchange platform. We deliver
+                    PrivateDeals is a technology platform, not a trading or exchange platform. We deliver
                     technological solutions to facilitate transactions between Buyers and Sellers, which enable the
                     purchase and sale of assets including the startup shares (via primary and secondary
                     transactions), private equity, unlisted securities, and pre-IPO shares, whilst ensuring fund safety
-                    and security. The Shuru-Up platform does not operate as a repository or custodian for any
-                    assets transacted on its platform. For unlisted stocks, Shuru-Up has collaborated with SEBI
+                    and security. The PrivateDeals platform does not operate as a repository or custodian for any
+                    assets transacted on its platform. For unlisted stocks, PrivateDeals has collaborated with SEBI
                     registered Trustees and a nationalised bank to protect cash transferred into designated accounts
                     for platform transactions, assuring the security of all user transactions.
                 </li>
@@ -137,7 +137,7 @@ Privacy Policy
                     inaccurate, outdated, incomplete, or if we have reasonable grounds to believe that such
                     information is false, inaccurate, outdated, or incomplete, or otherwise not in compliance with
                     these Terms of Usage, we reserve the right to indefinitely suspend, terminate, or restrict your
-                    account's access to the Platform. Furthermore, Shuru-up shall bear no liability or responsibility
+                    account's access to the Platform. Furthermore, PrivateDeals shall bear no liability or responsibility
                     for any actions or consequences arising from the use or misuse of information linked to your
                     account, especially in cases where you have failed to keep your mobile phone number and/or
                     email address current on the Platform. You shall remain solely accountable for all activities
@@ -159,12 +159,12 @@ Privacy Policy
                     <span
                         style="position: absolute; left: 0; top: 0; color: #4facfe; font-weight: 600; font-size: 18px;">13.</span>
                     The Platform functions solely as a technological interface enabling Users to independently
-                    connect and engage with one another for their respective transactions. Shuru-up does not act
+                    connect and engage with one another for their respective transactions. PrivateDeals does not act
                     as a party to, nor does it exercise control over, any transaction between Users of the Platform.
                     The Platform merely provides a medium for Users to access a broader audience for the
                     purchase and sale of certain unlisted assets. It is expressly understood that any contract for the
                     sale of assets facilitated through the Platform is a direct and exclusive agreement between the
-                    Seller and the Buyer. Shuru-up's role is limited to providing a platform for communication.
+                    Seller and the Buyer. PrivateDeals's role is limited to providing a platform for communication.
                 </li>
                 <li
                     style="line-height: 1.8; margin-bottom: 25px; font-size: 16px; color: #e0e0e0; text-align: justify; list-style: none; counter-increment: term-counter; position: relative; padding-left: 40px;">
@@ -229,8 +229,8 @@ Privacy Policy
                     style="line-height: 1.8; margin-bottom: 25px; font-size: 16px; color: #e0e0e0; text-align: justify; list-style: none; counter-increment: term-counter; position: relative; padding-left: 40px;">
                     <span
                         style="position: absolute; left: 0; top: 0; color: #4facfe; font-weight: 600; font-size: 18px;">19.</span>
-                    Shuru-Up acts solely as a technology provider. By accepting these Terms of Use, you
-                    acknowledge and agree that Shuru-Up is a technology platform and does not exercise control
+                    PrivateDeals acts solely as a technology provider. By accepting these Terms of Use, you
+                    acknowledge and agree that PrivateDeals is a technology platform and does not exercise control
                     over or bear liability for the startup shares (via primary and secondary transactions), private
                     equity, unlisted securities, and pre-IPO shares displayed on the Platform. All payments made
                     by the buyer for these assets through the payment facility are solely the buyer's responsibility.
@@ -253,10 +253,10 @@ Privacy Policy
                     style="line-height: 1.8; margin-bottom: 25px; font-size: 16px; color: #e0e0e0; text-align: justify; list-style: none; counter-increment: term-counter; position: relative; padding-left: 40px;">
                     <span
                         style="position: absolute; left: 0; top: 0; color: #4facfe; font-weight: 600; font-size: 18px;">21.</span>
-                    Shuru-Up is not a broker, agent, trading platform, stockbroker, sub-broker, or stock exchange
+                    PrivateDeals is not a broker, agent, trading platform, stockbroker, sub-broker, or stock exchange
                     as defined under the Real Estate (Regulation and Development) Act, the Securities Contract
                     (Regulation) Act, 1956, the SEBI (Stockbrokers and Sub-brokers) Regulations, 1992, or any
-                    other applicable law. Shuru-Up does not act as a repository or custodian for any goods or
+                    other applicable law. PrivateDeals does not act as a repository or custodian for any goods or
                     assets transacted on the platform. Furthermore, nothing on the website
                     https://www.shuruup.com/ constitutes an offer to buy or sell any assets, including startup
                     shares (via primary and secondary transactions), private equity, unlisted securities, and pre
@@ -275,8 +275,8 @@ Privacy Policy
                     <span
                         style="position: absolute; left: 0; top: 0; color: #4facfe; font-weight: 600; font-size: 18px;">23.</span>
                     These Terms of Usage, along with the Privacy Policy and any other terms, policies, or
-                    disclaimers prescribed by Shuru-Up from time to time, constitute the entire agreement between
-                    you and Shuru-Up. This agreement governs your use of or access to the services and/or the
+                    disclaimers prescribed by PrivateDeals from time to time, constitute the entire agreement between
+                    you and PrivateDeals. This agreement governs your use of or access to the services and/or the
                     Platform, superseding any prior understandings or agreements regarding such use or access.
                 </li>
                 <li

@@ -87,13 +87,13 @@ Pre-IPO
                     <h1 class="heading">Invest Early in <span class="highlight-blue">India's Top Pre-IPO
                             Companies</span></h1>
                     <p class="paragraph">
-                        Invest early in tomorrow’s market leaders with Shuru-Up. Get access to exclusive Pre-IPO
+                        Invest early in tomorrow’s market leaders with PrivateDeals. Get access to exclusive Pre-IPO
                         opportunities shaping India’s future.
                     </p>
 
                     <div class="store-buttons animate-child"
                         style="display: flex; justify-content: center; gap: 20px; margin-top: 40px; flex-wrap: nowrap;">
-                        <a href="https://play.google.com/store/apps/developer?id=Shuru-Up"
+                        <a href="https://play.google.com/store/apps/developer?id=PrivateDeals"
                             class="store-button play-store" target="_blank" onclick="addRipple(event, this)">
                             <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor">
                                 <path

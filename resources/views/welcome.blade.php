@@ -30,7 +30,7 @@
         style="background-image: url('coming_soon/images/bg01.jpg');">
         <div class="wsize1">
             <p class="txt-center p-b-23">
-                <img src="{{ asset('website-assets/images/logo.svg') }}" alt="ShuruUp" class="logo">
+                <img src="{{ asset('website-assets/images/logo.svg') }}" alt="PrivateDeals" class="logo">
             </p>
 
             <h3 class="l1-txt1 txt-center p-b-22">

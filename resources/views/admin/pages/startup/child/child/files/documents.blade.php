@@ -23,7 +23,7 @@
     </div>
 </div>
 <div class="row mb-7">
-    <label class="col-lg-2 fw-semibold text-muted">Shuruup Research Report</label>
+    <label class="col-lg-2 fw-semibold text-muted">PrivateDeals Research Report</label>
     <div class="col-lg-8 fv-row">
         <span class="fw-semibold text-gray-800 fs-6">{!! FileUpDownHelper::get_startup_document_download_link($startup, 'shuruup_research_report') !!}</span>
     </div>

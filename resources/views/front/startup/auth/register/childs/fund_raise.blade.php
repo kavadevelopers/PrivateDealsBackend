@@ -86,7 +86,7 @@
                                      </div>
                                      <div class="group">
                                          <livewire:number-to-words name="funds_required_from_shuru"
-                                             label="Funds Required From ShuruUp" placeholder="Enter Funds Required" />
+                                             label="Funds Required From PrivateDeals" placeholder="Enter Funds Required" />
 
                                          <livewire:number-to-words name="min_ticket_size" label="Minimum Ticket Size"
                                              placeholder="Enter Minimum Ticket Size" />

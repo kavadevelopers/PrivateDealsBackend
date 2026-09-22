@@ -687,7 +687,7 @@ class AiCompanyIngestService
         try {
             $response = Http::timeout(20)
                 ->withHeaders([
-                    'User-Agent' => 'Mozilla/5.0 (compatible; ShuruUpBot/1.0)',
+                    'User-Agent' => 'Mozilla/5.0 (compatible; PrivateDealsBot/1.0)',
                     'Accept' => 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
                 ])
                 ->withOptions(['allow_redirects' => true])

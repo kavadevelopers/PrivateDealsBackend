@@ -1,4 +1,12 @@
-# Shuru-Up V4
+# PrivateDeals V1
+
+## Documentation (stakeholders)
+
+Start here for the partner marketplace story (Seller → company live → Partner invests):
+
+- [Whole project flow](docs/workflows/whole-project-flow.md)
+- [Actors hub](docs/actors/README.md)
+- [Full docs index](docs/README.md)
 
 ## Project Setup Guide
 
@@ -46,4 +54,4 @@
 ### Default Superadmin Login
 
 - **Username:** shuruup
-- **Password:** ShuruUp@123
+- **Password:** PrivateDeals@123

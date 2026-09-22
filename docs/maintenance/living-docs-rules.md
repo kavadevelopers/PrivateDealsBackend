@@ -48,4 +48,4 @@ Read docs first → plan → implement → docs impact → update → verify.
 
 ## AI agents
 
-Treat this file as a standing project rule for ShuruUp V4. Completing a code task without the docs impact check is incomplete work when behavior changed.
+Treat this file as a standing project rule for PrivateDeals V1. Completing a code task without the docs impact check is incomplete work when behavior changed.

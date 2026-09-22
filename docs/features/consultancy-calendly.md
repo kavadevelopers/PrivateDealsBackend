@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Let investors book consultancy slots via Calendly; sync bookings into ShuruUp.
+Let investors book consultancy slots via Calendly; sync bookings into PrivateDeals.
 
 ## Entry points
 

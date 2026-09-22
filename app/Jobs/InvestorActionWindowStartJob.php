@@ -48,7 +48,7 @@ class InvestorActionWindowStartJob implements ShouldQueue
                 InvestorModel::class,
                 'preipo-transaction',
                 'Private Equity Transaction',
-                UtillsHelper::paramsToTemplate($params, 'Your transaction (ID: {{2}}) has been successfully initiated by Shuru-Up. 🕐 You have a total of 24 hours to complete your transaction process. Please ensure you complete it within this window, as your transaction will automatically expire after 24 hours. Please log in to your account and complete the process at the earliest. Thank you for choosing Shuru-Up!')
+                UtillsHelper::paramsToTemplate($params, 'Your transaction (ID: {{2}}) has been successfully initiated by PrivateDeals. 🕐 You have a total of 24 hours to complete your transaction process. Please ensure you complete it within this window, as your transaction will automatically expire after 24 hours. Please log in to your account and complete the process at the earliest. Thank you for choosing PrivateDeals!')
             );
         }
     }

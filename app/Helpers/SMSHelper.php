@@ -12,7 +12,7 @@ class SMSHelper
 
     static function sendVerificationCode(string $code, string $item_id, string $mobile_no): void
     {
-        $body = 'Hello There, ' . $code . ' is the OTP on Shuru-up';
+        $body = 'Hello There, ' . $code . ' is the OTP on PrivateDeals';
         $data = [
             'class' => ReportsVerificationCodeModel::class,
             'id'    => $item_id

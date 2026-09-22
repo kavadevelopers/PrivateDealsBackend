@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Back-office operations for ShuruUp: users, companies, transactions, KYC reviews, CMS, broadcasts, masters, system settings.
+Back-office operations for PrivateDeals: users, companies, transactions, KYC reviews, CMS, broadcasts, masters, system settings.
 
 ## Entry points
 
