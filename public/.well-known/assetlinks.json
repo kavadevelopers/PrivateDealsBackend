@@ -1,0 +1,16 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.shuruup.investor",
+      "sha256_cert_fingerprints": [
+        "E2:DA:C5:35:F1:6F:8B:2C:64:07:9F:79:53:D9:EA:AC:57:39:47:C6:D1:D3:1E:4F:9E:2B:A8:BC:41:82:98:44",
+        "C4:BB:DB:AB:F3:A9:55:E3:D4:19:35:0D:FB:76:A0:CE:A8:28:84:E6:2E:14:B9:F9:35:4C:DA:A7:4A:60:19:65"
+      ]
+    }
+  }
+]

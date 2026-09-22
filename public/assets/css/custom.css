@@ -1,0 +1,112 @@
+.symbol > img {
+  object-fit: cover;
+}
+.lazy {
+  background: #f1f1f1;
+  border: 1px solid #f0f0f0;
+}
+.symbol.symbol-50px.symbol-2by3 > img {
+  height: auto;
+}
+
+div.dataTables_wrapper div.dataTables_length {
+  padding: 0;
+}
+div.dataTables_wrapper div.dataTables_filter {
+  padding: 0;
+}
+.shimmer {
+  border-radius: 0.475rem;
+  background: linear-gradient(-45deg, #eee 40%, #fafafa 50%, #eee 60%);
+  background-size: 300%;
+  background-position-x: 100%;
+  animation: shimmer 1s infinite linear;
+}
+
+@keyframes shimmer {
+  to {
+    background-position-x: 0%;
+  }
+}
+
+.childLoad {
+  top: 0;
+  z-index: 999999;
+  width: 100%;
+  height: 200px;
+  /*background: #ccc;*/
+}
+
+.childLoad .ajaxLoad-spinner {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.childLoad .ajaxLoad-spinner-round {
+  width: 40px;
+  height: 40px;
+  border: 4px #ddd solid;
+  border-top: 4px #ed1c24 solid;
+  border-radius: 50%;
+  animation: sp-anime 0.8s infinite linear;
+}
+
+@keyframes sp-anime {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#priceTable th,
+#priceTable td {
+  min-width: 200px;
+}
+#priceTable th:first-child,
+#priceTable td:first-child {
+  position: sticky;
+  left: 0;
+  background-color: white;
+  z-index: 10;
+  min-width: 200px;
+}
+
+.price-table-container {
+  max-width: 100%;
+  overflow-x: auto;
+  margin-right: 20px;
+}
+
+#spinningLoader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.ajaxLoad-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ajaxLoad-spinner-round {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 8px solid lightblue;
+  border-right-color: black;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}

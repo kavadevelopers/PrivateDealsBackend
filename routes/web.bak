@@ -1,0 +1,657 @@
+<?php
+
+use App\Http\Controllers\DownloadController;
+use App\Http\Controllers\Web\Admin\Auth\AuthenticatedSessionController as AdminAuthController;
+use App\Http\Controllers\Web\Admin\Auth\PasswordResetLinkController as AdminPasswordResetController;
+use App\Http\Controllers\Web\Admin\CmsReportController as AdminCmsReportController;
+use App\Http\Controllers\Web\Admin\Dashboard\DashboardController as AdminDashboardController;
+use App\Http\Controllers\Web\Admin\InvestorController as AdminInvestorController;
+use App\Http\Controllers\Web\Admin\Master\BankAccountTypeController as MasterBankAccountTypeController;
+use App\Http\Controllers\Web\Admin\Master\BankController as MasterBankController;
+use App\Http\Controllers\Web\Admin\Master\BlogController as MasterBlogController;
+use App\Http\Controllers\Web\Admin\Master\CityController as MasterCityController;
+use App\Http\Controllers\Web\Admin\Master\CountryController as MasterCountryController;
+use App\Http\Controllers\Web\Admin\Master\FamilyRelationController as MasterFamilyRelationController;
+use App\Http\Controllers\Web\Admin\Master\HeaderTokenController;
+use App\Http\Controllers\Web\Admin\Master\IndustryController as MasterIndustryController;
+use App\Http\Controllers\Web\Admin\Master\InstrumentTypeController as MasterInstrumentTypeController;
+use App\Http\Controllers\Web\Admin\Master\InvestorTypeController as MasterInvestorTypeController;
+use App\Http\Controllers\Web\Admin\Master\ManageInfoIconController as MasterManageInfoIconController;
+use App\Http\Controllers\Web\Admin\Master\PagesController as MasterPagesController;
+use App\Http\Controllers\Web\Admin\Master\SectorController as MasterSectorController;
+use App\Http\Controllers\Web\Admin\Master\SocialMediaLinkController as MasterSocialMediaLinkController;
+use App\Http\Controllers\Web\Admin\Master\StartupRoundTypeController as MasterStartupRoundTypeController;
+use App\Http\Controllers\Web\Admin\Master\StateController as MasterStateController;
+use App\Http\Controllers\Web\Admin\Master\WebsiteSocialMediaController as MasterWebsiteSocialMediaController;
+use App\Http\Controllers\Web\Admin\NotificationController as AdminNotificationController;
+use App\Http\Controllers\Web\Admin\ProfileMenu\NotificationController as AdminProfileNotificationController;
+use App\Http\Controllers\Web\Admin\Partner\DistributorController as AdminPartnerDistributorController;
+use App\Http\Controllers\Web\Admin\Partner\RetailersController as AdminPartnerRetailersController;
+use App\Http\Controllers\Web\Admin\Partner\WealthManagerController as AdminPartnerWealthManagerController;
+use App\Http\Controllers\Web\Admin\PortfolioController as AdminPortfolioController;
+use App\Http\Controllers\Web\Admin\PrimaryTransactionController as AdminPrimaryTransactionController;
+use App\Http\Controllers\Web\Admin\Setting\SettingController;
+use App\Http\Controllers\Web\Admin\Startup\MGT14Controller as AdminMGT14Controller;
+use App\Http\Controllers\Web\Admin\Startup\UpdateController as AdminStartupUpdateController;
+use App\Http\Controllers\Web\Admin\Startup\MISController as AdminStartupMISController;
+use App\Http\Controllers\Web\Admin\Startup\OfferRequestController as AdminOfferRequestController;
+use App\Http\Controllers\Web\Admin\Startup\Pas3Controller as AdminPas3Controller;
+use App\Http\Controllers\Web\Admin\Pitch\LivepitchController as AdminLivepitchController;
+use App\Http\Controllers\Web\Admin\StartupController;
+use App\Http\Controllers\Web\Front\Auth\Investor\LoginController as InvestorLoginController;
+use App\Http\Controllers\Web\Front\Auth\Investor\PasswordResetController as InvestorPasswordResetController;
+use App\Http\Controllers\Web\Front\Auth\Partner\LoginController as PartnerLoginController;
+use App\Http\Controllers\Web\Front\Auth\Partner\PasswordResetController as PartnerPasswordResetController;
+use App\Http\Controllers\Web\Front\Auth\Startup\LoginController as StartupLoginController;
+use App\Http\Controllers\Web\Front\Auth\Startup\PasswordResetController as StartupPasswordResetController;
+use App\Http\Controllers\Web\Front\Auth\Startup\RegisterController as StartupRegisterController;
+use App\Http\Controllers\Web\Front\User\CommonController as FrontUserCommonController;
+use App\Http\Controllers\Web\Front\HomeController;
+use App\Http\Controllers\Web\Front\PagesController;
+use App\Http\Controllers\Web\Front\User\Investor\BankMandateController as InvestorBankMandateController;
+use App\Http\Controllers\Web\Front\User\Investor\CommonController as InvestorCommonController;
+use App\Http\Controllers\Api\V1\Investor\CommonController as InvestorApiCommonController;
+use App\Http\Controllers\DynamicUrlController;
+use App\Http\Controllers\TestController;
+use App\Http\Controllers\Web\Admin\CompanyController;
+use App\Http\Controllers\Web\Admin\PaymentReceiptController as AdminPaymentReceiptController;
+use App\Http\Controllers\Web\Admin\PreIpoTransactionController as AdminPreIpoTransactionController;
+use App\Http\Controllers\Web\Admin\SecondaryPaymentReceiptController as AdminSecondaryPaymentReceiptController;
+use App\Http\Controllers\Web\Admin\Setting\AppVersionController;
+use App\Http\Controllers\Web\Front\User\Investor\DashboardController as InvestorDashboardController;
+use App\Http\Controllers\Web\Front\User\Investor\MandateController;
+use App\Http\Controllers\Web\Front\User\Investor\MISController as InvestorMISController;
+use App\Http\Controllers\Web\Front\User\Investor\PortfolioController as InvestorPortfolioController;
+use App\Http\Controllers\Web\Front\User\Investor\ProfileController as InvestorProfileController;
+use App\Http\Controllers\Web\Front\User\Partner\ChannelPartnerController;
+use App\Http\Controllers\Web\Front\User\Partner\CommonController as PartnerCommonController;
+use App\Http\Controllers\Web\Front\User\Partner\DashboardController as PartnerDashboardController;
+use App\Http\Controllers\Web\Front\User\PrimaryTransactionController as UsersPrimaryTransactionController;
+use App\Http\Controllers\Web\Front\User\Startup\CommonController as StartupCommonController;
+use App\Http\Controllers\Web\Front\User\Startup\DashboardController as StartupDashboardController;
+use App\Http\Controllers\Web\Front\User\Startup\LivepitchController as StartupLivepitchController;
+use App\Http\Controllers\Web\Front\User\Startup\ManageCaptableController as StartupManageCaptableController;
+use App\Http\Controllers\Web\Front\User\Startup\MISController as StartupMISController;
+use App\Http\Controllers\Web\Front\User\Startup\StartupMgt14Controller as StartupMgt14Controller;
+use App\Http\Controllers\Web\Front\User\Startup\Pas3Controller as StartupPas3Controller;
+use App\Http\Controllers\Web\Front\User\Startup\SecondaryController as StartupSecondaryController;
+use App\Http\Controllers\Web\Front\User\Startup\UpdatesController as StartupUpdatesController;
+use App\Http\Middleware\AdminRedirectIfAuthenticatedMiddleware;
+use App\Http\Middleware\CoreMiddleware;
+use Illuminate\Support\Facades\Route;
+use App\Http\Middleware\InvestorRedirectIfAuthenticatedMiddleware;
+use App\Http\Middleware\InvestorRedirectIfNotAuthenticatedMiddleware;
+use App\Http\Middleware\isMaintenanceMiddleware;
+use App\Http\Middleware\isUserMiddleware;
+use App\Http\Middleware\PartnerRedirectIfAuthenticatedMiddleware;
+use App\Http\Middleware\PartnerRedirectIfNotAuthenticatedMiddleware;
+use App\Http\Middleware\StartupRedirectIfAuthenticatedMiddleware;
+use App\Http\Middleware\StartupRedirectIfNotAuthenticatedMiddleware;
+
+Route::get('sync-data', [TestController::class, 'syncData']);
+
+Route::group(['middleware' => [CoreMiddleware::class]], function () {
+    Route::group(['middleware' => [AdminRedirectIfAuthenticatedMiddleware::class]], function () {
+        // Route::get('test', [TestController::class, 'details'])->name('test');
+    });
+    // Route::get('test', [TestController::class, 'fundRaise']);
+    // Route::get('test', [TestController::class, 'keyMetrics']);
+
+    Route::group(['middleware' => [isUserMiddleware::class]], function () {
+        Route::get('download', [DownloadController::class, 'web'])->name('download.web');
+
+        Route::post('notifications', [DownloadController::class, 'notifications'])->name('notifications');
+    });
+
+    Route::group(['middleware' => [isMaintenanceMiddleware::class]], function () {
+        Route::name('front.')->group(function () {
+            Route::get('', [HomeController::class, 'index'])->name('home');
+            Route::get('sector/{slug}')->name('sector.startups');
+            Route::get('deal/{slug}', [HomeController::class, 'deal'])->name('deal');
+
+            Route::name('investor.')->group(function () {
+                Route::group(['middleware' => [InvestorRedirectIfNotAuthenticatedMiddleware::class]], function () {
+                    Route::get('dashboard', [InvestorDashboardController::class, 'index'])->name('dashboard');
+                    Route::get('investment/{slug}', [InvestorDashboardController::class, 'investment'])->name('investment');
+
+                    Route::post('investment/step1', [InvestorDashboardController::class, 'step1save'])->name('investStep1');
+                    Route::post('investment/step2', [InvestorDashboardController::class, 'step2save'])->name('investStep2');
+
+                    Route::post('bank-mandates/check', [MandateController::class, 'mandateBankCheck'])->name('checkMandate');
+
+                    Route::post('mark-startup-fav', [InvestorCommonController::class, 'markstartupfavourite'])->name('markStartupFav');
+
+                    Route::get('favourite-startups', [InvestorCommonController::class, 'favouriteStartups'])->name('favStartupList');
+
+
+                    Route::name('kyc.')->prefix('kyc')->group(function () {
+                        Route::get('', [InvestorCommonController::class, 'investorKyc'])->name('get');
+                        Route::post('', [InvestorCommonController::class, 'investorKycSave'])->name('manual.save');
+
+                        Route::post('get-ekyc-token', [InvestorCommonController::class, 'getEkycToken'])->name('ekyc.token.get');
+                        Route::post('get-ekyc-data', [InvestorCommonController::class, 'getEkycData'])->name('ekyc.data.get');
+                    });
+
+                    Route::name('changepassword.')->prefix('change-password')->group(function () {
+                        Route::get('', [InvestorCommonController::class, 'changePassword'])->name('get');
+                        Route::post('', [InvestorCommonController::class, 'changePasswordSave'])->name('post');
+                    });
+
+                    Route::name('demat.')->prefix('demat-details')->group(function () {
+                        Route::get('', [InvestorCommonController::class, 'dematDetails'])->name('get');
+                        Route::post('', [InvestorCommonController::class, 'dematDetailsSave'])->name('post');
+                    });
+
+                    Route::name('profile.')->prefix('profile')->group(function () {
+                        Route::get('', [InvestorProfileController::class, 'profileView'])->name('profileview');
+                        Route::get('remove-profile-image', [InvestorProfileController::class, 'profileRemoveImage'])->name('removeprofileimage');
+                        Route::post('saveprofile', [InvestorProfileController::class, 'profileImageSave'])->name('saveprofile');
+                        Route::post('', [InvestorProfileController::class, 'profileViewSave'])->name('profileviewsave');
+                    });
+
+                    Route::get('primary-transaction', [UsersPrimaryTransactionController::class, 'list'])->name('primaryTransaction');
+                    Route::post('upload-payment-receipt', [InvestorCommonController::class, 'uploadPaymentReceipt'])->name('uploadPaymentReceipt');
+
+                    Route::get('portfolio', [InvestorPortfolioController::class, 'index'])->name('portfolio');
+                    Route::get('bank-mandate', [InvestorBankMandateController::class, 'mandateList'])->name('mandatelist');
+                    Route::get('mis', [InvestorMISController::class, 'index'])->name('mis');
+                    Route::get('notifications', [InvestorCommonController::class, 'notifications'])->name('notifications');
+
+                    Route::name('family.')->prefix('family')->group(function () {
+                        Route::get('list', [FrontUserCommonController::class, 'investorList'])->name('list');
+                        Route::get('add', [FrontUserCommonController::class, 'investorAdd'])->name('add');
+                        Route::post('save', [FrontUserCommonController::class, 'investorSave'])->name('save');
+                    });
+
+
+                    Route::get('document', [InvestorCommonController::class, 'document'])->name('document');
+                    Route::get('logout', [InvestorLoginController::class, 'logout'])->name('logout');
+                });
+
+                Route::group(['middleware' => [InvestorRedirectIfAuthenticatedMiddleware::class]], function () {
+                    Route::get('login', [InvestorLoginController::class, 'index'])->name('login');
+                    Route::get('forgot-password', [InvestorPasswordResetController::class, 'index'])->name('forgot');
+
+                    Route::name('post.')->group(function () {
+                        Route::post('login', [InvestorLoginController::class, 'login'])->name('login');
+                        Route::post('login-password', [InvestorLoginController::class, 'changePassword'])->name('login.password');
+                        Route::post('forgot-password', [InvestorPasswordResetController::class, 'forgot'])->name('forgot');
+                        Route::post('resend-otp', [InvestorPasswordResetController::class, 'resendOtp'])->name('resendotp');
+                        Route::post('verify-otp', [InvestorPasswordResetController::class, 'verifyOtp'])->name('verifyotp');
+                        Route::post('forget-change-password', [InvestorPasswordResetController::class, 'changePassword'])->name('changepassword');
+                    });
+                });
+            });
+
+            Route::prefix('raise')->name('raise.')->group(function () {
+                Route::group(['middleware' => [StartupRedirectIfNotAuthenticatedMiddleware::class]], function () {
+                    Route::get('dashboard', [StartupDashboardController::class, 'index'])->name('dashboard');
+                    Route::name('updates.')->prefix('updates')->group(function () {
+                        Route::get('', [StartupUpdatesController::class, 'list'])->name('list');
+                        Route::get('/{id}', [StartupUpdatesController::class, 'delete'])->name('delete');
+                        Route::post('', [StartupUpdatesController::class, 'save'])->name('save');
+                    });
+                    Route::name('mis.')->prefix('mis')->group(function () {
+                        Route::get('', [StartupMISController::class, 'list'])->name('list');
+                        Route::get('/{id}', [StartupMISController::class, 'delete'])->name('delete');
+                        Route::post('', [StartupMISController::class, 'save'])->name('save');
+                    });
+                    Route::name('changepassword.')->prefix('change-password')->group(function () {
+                        Route::get('', [StartupCommonController::class, 'changePassword'])->name('get');
+                        Route::post('', [StartupCommonController::class, 'changePasswordSave'])->name('post');
+                    });
+
+                    Route::name('livepitch.')->prefix('livepitch')->group(function () {
+                        Route::get('upcoming-pitch', [StartupLivepitchController::class, 'upcominglivepitch'])->name('upcomingpitch');
+                        Route::get('completed-pitch', [StartupLivepitchController::class, 'completedlivepitch'])->name('completedpitch');
+                        Route::get('rejected-pitch', [StartupLivepitchController::class, 'rejectedlivepitch'])->name('rejectedpitch');
+                        Route::get('create', [StartupLivepitchController::class, 'livepitchCreate'])->name('create');
+                        Route::post('', [StartupLivepitchController::class, 'livepitchSave'])->name('post');
+                    });
+
+                    Route::get('primary-transaction', [UsersPrimaryTransactionController::class, 'list'])->name('primaryTransaction');
+                    Route::name('sell_requests.')->prefix('sell-request')->group(function () {
+                        Route::get('', [StartupSecondaryController::class, 'sellRequest'])->name('list');
+                        Route::get('status/{request}/{status}', [StartupSecondaryController::class, 'status'])->name('status');
+                    });
+                    Route::name('manageCaptable.')->prefix('manage-captable')->group(function () {
+                        Route::get('', [StartupManageCaptableController::class, 'list'])->name('list');
+                        Route::get('download', [StartupManageCaptableController::class, 'download'])->name('download');
+                        Route::get('add-share-holder', [StartupManageCaptableController::class, 'addShareHolder'])->name('addShareHolder');
+
+                        Route::post('save', [StartupManageCaptableController::class, 'saveManual'])->name('savemanual');
+
+                        Route::post('upload-captable', [StartupManageCaptableController::class, 'uploadExcel'])->name('upload');
+                    });
+
+
+                    Route::get('notifications', [StartupCommonController::class, 'notifications'])->name('notifications');
+
+                    Route::name('mgt14.')->prefix('mgt14')->group(function () {
+                        Route::get('', [StartupMgt14Controller::class, 'list'])->name('list');
+                        Route::get('create', [StartupMgt14Controller::class, 'showForm'])->name('create');
+                        Route::post('save', [StartupMgt14Controller::class, 'save'])->name('save');
+                    });
+
+
+                    Route::name('offerletter.')->prefix('offerletter')->group(function () {
+                        Route::get('request', [StartupCommonController::class, 'requestOffer'])->name('request');
+                        Route::get('send', [StartupCommonController::class, 'sendOffer'])->name('send');
+                    });
+
+                    Route::name('pas3.')->prefix('pas3')->group(function () {
+                        Route::get('', [StartupPas3Controller::class, 'list'])->name('list');
+                        Route::get('create', [StartupPas3Controller::class, 'showForm'])->name('create');
+                        Route::post('save', [StartupPas3Controller::class, 'save'])->name('save');
+                    });
+                    Route::get('document', [StartupCommonController::class, 'document'])->name('document');
+                    Route::get('logout', [StartupLoginController::class, 'logout'])->name('logout');
+                });
+
+                Route::get('', [HomeController::class, 'startupHome'])->name('home');
+                Route::group(['middleware' => [StartupRedirectIfAuthenticatedMiddleware::class]], function () {
+                    Route::name('auth.')->group(function () {
+                        Route::get('login', [StartupLoginController::class, 'index'])->name('login');
+                        Route::get('apply', [StartupRegisterController::class, 'apply'])->name('apply');
+                        Route::get('forgot-password', [StartupPasswordResetController::class, 'index'])->name('forgot.get');
+
+                        Route::name('post.')->group(function () {
+                            Route::post('login', [StartupLoginController::class, 'action'])->name('login');
+                            Route::post('login-password', [StartupLoginController::class, 'changePassword'])->name('login.password');
+
+                            Route::name('register.')->group(function () {
+                                Route::post('details', [StartupRegisterController::class, 'detailsPost'])->name('details');
+                                Route::post('funddetails', [StartupRegisterController::class, 'fundDetailsPost'])->name('funddetails');
+                                Route::post('key-metrics', [StartupRegisterController::class, 'keyMetricsPost'])->name('keymetrics');
+                                Route::post('finacial', [StartupRegisterController::class, 'financialDetails'])->name('financialdetails');
+                                Route::post('other-details', [StartupRegisterController::class, 'otherDetails'])->name('otherdetails');
+
+                                Route::post('mobile', [StartupRegisterController::class, 'mobilePost'])->name('mobile');
+                                Route::post('resend-otp', [StartupRegisterController::class, 'resendOtp'])->name('resendotp');
+                                Route::post('verify-otp', [StartupRegisterController::class, 'verifyOtp'])->name('verifyotp');
+                                Route::post('set-password', [StartupRegisterController::class, 'setPassword'])->name('setPassword');
+                                // Route::post('team', [StartupRegisterController::class, 'team'])->name('team');
+                                // Route::post('details', [StartupRegisterController::class, 'details'])->name('details');
+                                Route::post('documents', [StartupRegisterController::class, 'storeDocuments'])->name('documents');
+                                // Route::post('social-media', [StartupRegisterController::class, 'socialmedia'])->name('socialmedia');
+                            });
+
+                            Route::name('forgot.')->prefix('forgot-password')->group(function () {
+                                Route::post('', [StartupPasswordResetController::class, 'forgot'])->name('post');
+                                Route::post('resend-otp', [StartupPasswordResetController::class, 'resendOtp'])->name('resendotp');
+                                Route::post('verify-otp', [StartupPasswordResetController::class, 'verifyOtp'])->name('verifyotp');
+                                Route::post('change-password', [StartupPasswordResetController::class, 'changePassword'])->name('changepassword');
+                            });
+                        });
+                    });
+                });
+            });
+
+            Route::prefix('business')->name('business.')->group(function () {
+                Route::group(['middleware' => [PartnerRedirectIfNotAuthenticatedMiddleware::class]], function () {
+                    Route::get('dashboard', [PartnerDashboardController::class, 'index'])->name('dashboard');
+                    Route::name('profile.')->prefix('profile')->group(function () {
+                        Route::get('', [PartnerCommonController::class, 'profile'])->name('get');
+                        Route::post('', [PartnerCommonController::class, 'profileSave'])->name('post');
+                    });
+                    Route::name('changepassword.')->prefix('change-password')->group(function () {
+                        Route::get('', [PartnerCommonController::class, 'changePassword'])->name('get');
+                        Route::post('', [PartnerCommonController::class, 'changePasswordSave'])->name('post');
+                    });
+
+                    Route::get('notifications', [PartnerCommonController::class, 'notifications'])->name('notifications');
+                    Route::get('document', [PartnerCommonController::class, 'document'])->name('document');
+                    Route::get('primary-transaction', [UsersPrimaryTransactionController::class, 'list'])->name('primaryTransaction');
+                    Route::name('channel_partner.')->prefix('channel-partner')->group(function () {
+                        Route::get('', [ChannelPartnerController::class, 'list'])->name('list');
+                        Route::get('create', [ChannelPartnerController::class, 'create'])->name('create');
+                        Route::post('save', [ChannelPartnerController::class, 'store'])->name('store');
+                    });
+                    Route::name('investor.')->prefix('investor')->group(function () {
+                        Route::get('', [FrontUserCommonController::class, 'investorList'])->name('list');
+                        Route::get('add', [FrontUserCommonController::class, 'investorAdd'])->name('add');
+                        Route::post('save', [FrontUserCommonController::class, 'investorSave'])->name('save');
+                    });
+                    Route::get('logout', [PartnerLoginController::class, 'logout'])->name('logout');
+                });
+
+
+                Route::get('', [HomeController::class, 'partnerHome'])->name('home');
+                Route::group(['middleware' => [PartnerRedirectIfAuthenticatedMiddleware::class]], function () {
+                    Route::name('auth.')->group(function () {
+                        Route::get('login', [PartnerLoginController::class, 'index'])->name('login');
+                        Route::get('forgot-password', [PartnerPasswordResetController::class, 'index'])->name('forgot.get');
+
+                        Route::name('post.')->group(function () {
+                            Route::post('login', [PartnerLoginController::class, 'action'])->name('login');
+                            Route::post('login-password', [PartnerLoginController::class, 'changePassword'])->name('login.password');
+                            Route::name('forgot.')->prefix('forgot-password')->group(function () {
+                                Route::post('', [PartnerPasswordResetController::class, 'forgot'])->name('post');
+                                Route::post('resend-otp', [PartnerPasswordResetController::class, 'resendOtp'])->name('resendotp');
+                                Route::post('verify-otp', [PartnerPasswordResetController::class, 'verifyOtp'])->name('verifyotp');
+                                Route::post('change-password', [PartnerPasswordResetController::class, 'changePassword'])->name('changepassword');
+                            });
+                        });
+                    });
+                });
+            });
+
+            Route::name('pages.')->group(function () {
+                //legal info
+                Route::get('risk-warnings', [PagesController::class, 'riskwarings'])->name('riskwarnings');
+                Route::get('privacy-notice', [PagesController::class, 'privacynotice'])->name('privacynotice');
+                Route::get('terms-of-service', [PagesController::class, 'termsofservice'])->name('termsofservice');
+                Route::get('how-to-invest', [PagesController::class, 'howtoinvest'])->name('howtoinvest');
+                //about shuruup v4
+                Route::get('about-us', [PagesController::class, 'aboutus'])->name('aboutus');
+                Route::get('careers', [PagesController::class, 'careers'])->name('careers');
+                Route::get('feedback', [PagesController::class, 'feedback'])->name('feedback');
+                Route::get('contact-us', [PagesController::class, 'contactus'])->name('contactus');
+                Route::post('feedback', [PagesController::class, 'feedbackSave'])->name('feedback.save');
+                Route::post('contact-us', [PagesController::class, 'contactusSave'])->name('contact.save');
+                Route::name('blog.')->prefix('insights')->group(function () {
+                    Route::get('', [PagesController::class, 'bloglist'])->name('list');
+                    Route::get('{slug}', [PagesController::class, 'blogview'])->name('view');
+                });
+            });
+        });
+    });
+
+    Route::prefix('admin')->name('admin.')->group(function () {
+
+
+
+        Route::get('', function () {
+            return redirect('admin/login');
+        });
+
+        Route::group(['middleware' => [App\Http\Middleware\AdminRedirectIfNotAuthenticatedMiddleware::class]], function () {
+            Route::get('dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
+
+            Route::name('partner.')->prefix('partner')->group(function () {
+                Route::name('wealthmanager.')->prefix('wealth-manager')->group(function () {
+                    Route::get('create', [AdminPartnerWealthManagerController::class, 'create'])->name('create');
+                    Route::get('list', [AdminPartnerWealthManagerController::class, 'list'])->name('list');
+                    Route::get('view/{uuid}', [AdminPartnerWealthManagerController::class, 'view'])->name('view');
+                    Route::get('edit/{uuid}', [AdminPartnerWealthManagerController::class, 'edit'])->name('edit');
+
+                    Route::post('save', [AdminPartnerWealthManagerController::class, 'store'])->name('store');
+                    Route::put('update/{uuid}', [AdminPartnerWealthManagerController::class, 'update'])->name('update');
+                    Route::delete('delete/{id}', [AdminPartnerWealthManagerController::class, 'delete'])->name('destroy');
+                });
+
+                Route::name('distributor.')->prefix('distributor')->group(function () {
+                    Route::get('list', [AdminPartnerDistributorController::class, 'list'])->name('list');
+                    Route::get('create', [AdminPartnerDistributorController::class, 'create'])->name('create');
+                    Route::get('view/{uuid}', [AdminPartnerDistributorController::class, 'view'])->name('view');
+                    Route::get('edit/{uuid}', [AdminPartnerDistributorController::class, 'edit'])->name('edit');
+
+                    Route::post('save', [AdminPartnerDistributorController::class, 'store'])->name('store');
+                    Route::put('update/{uuid}', [AdminPartnerDistributorController::class, 'update'])->name('update');
+                    Route::delete('delete/{id}', [AdminPartnerDistributorController::class, 'delete'])->name('destroy');
+                });
+
+                Route::name('retailers.')->prefix('retailers')->group(function () {
+                    Route::get('list', [AdminPartnerRetailersController::class, 'list'])->name('list');
+                    Route::get('create', [AdminPartnerRetailersController::class, 'create'])->name('create');
+                    Route::get('view/{uuid}', [AdminPartnerRetailersController::class, 'view'])->name('view');
+                    Route::get('update/{uuid}', [AdminPartnerRetailersController::class, 'edit'])->name('edit');
+
+                    Route::post('save', [AdminPartnerRetailersController::class, 'store'])->name('store');
+                    Route::put('update/{uuid}', [AdminPartnerRetailersController::class, 'update'])->name('update');
+                    Route::delete('delete/{id}', [AdminPartnerRetailersController::class, 'delete'])->name('destroy');
+                });
+            });
+
+            Route::name('investor.')->prefix('investor')->group(function () {
+                Route::get('create', [AdminInvestorController::class, 'create'])->name('create');
+                Route::get('active', [AdminInvestorController::class, 'list'])->name('active');
+                Route::get('inactive', [AdminInvestorController::class, 'list'])->name('inactive');
+                Route::get('rejected', [AdminInvestorController::class, 'list'])->name('rejected');
+                Route::get('pending-kyc', [AdminInvestorController::class, 'list'])->name('pendingkyc');
+                Route::get('update/{uuid}', [AdminInvestorController::class, 'edit'])->name('edit');
+                Route::get('active-status/{uuid}/{status}', [AdminInvestorController::class, 'activestatus'])->name('activestatus');
+                Route::get('view/{uuid}', [AdminInvestorController::class, 'view'])->name('view');
+
+                Route::post('store', [AdminInvestorController::class, 'store'])->name('store');
+                Route::put('update/{uuid}', [AdminInvestorController::class, 'update'])->name('update');
+                Route::delete('delete/{id}', [AdminInvestorController::class, 'delete'])->name('destroy');
+
+                Route::name('manualkyc.')->prefix('manual-kyc-request')->group(function () {
+                    Route::get('pending', [AdminInvestorController::class, 'manualKycPending'])->name('pending');
+                    Route::get('approved', [AdminInvestorController::class, 'manualKycApproved'])->name('approved');
+                    Route::get('rejected', [AdminInvestorController::class, 'manualKycRejected'])->name('rejected');
+                    Route::get('view/{uuid}', [AdminInvestorController::class, 'manualKycView'])->name('view');
+
+                    Route::get('reject-kyc/{id}', [AdminInvestorController::class, 'rejectManualKYC'])->name('reject');
+                    Route::post('approve-kyc', [AdminInvestorController::class, 'approveManualKYC'])->name('approve');
+                });
+
+                Route::name('paymentReceipt.')->prefix('payment-receipt')->group(function () {
+                    Route::get('pending', [AdminPaymentReceiptController::class, 'pending'])->name('pending');
+                    Route::get('approved', [AdminPaymentReceiptController::class, 'approved'])->name('approved');
+                    Route::get('rejected', [AdminPaymentReceiptController::class, 'rejected'])->name('rejected');
+                    Route::get('approve_status/{id}', [AdminPaymentReceiptController::class, 'approve'])->name('approve');
+                    Route::get('reject_status/{id}', [AdminPaymentReceiptController::class, 'reject'])->name('reject');
+                });
+                Route::name('secpaymentReceipt.')->prefix('secondary-payment-receipt')->group(function () {
+                    Route::get('pending', [AdminSecondaryPaymentReceiptController::class, 'pending'])->name('pending');
+                    Route::get('approved', [AdminSecondaryPaymentReceiptController::class, 'approved'])->name('approved');
+                    Route::get('rejected', [AdminSecondaryPaymentReceiptController::class, 'rejected'])->name('rejected');
+                    Route::get('approve_status/{id}', [AdminSecondaryPaymentReceiptController::class, 'approve'])->name('approve');
+                    Route::get('reject_status/{id}', [AdminSecondaryPaymentReceiptController::class, 'reject'])->name('reject');
+                });
+            });
+
+            Route::name('profile.')->prefix('profile')->group(function () {
+                Route::name('notification.')->prefix('notification')->group(function () {
+                    Route::get('', [AdminProfileNotificationController::class, 'list'])->name('list');
+                });
+            });
+
+            Route::name('primarytransactions.')->prefix('primary-transactions')->group(function () {
+                Route::get('pending', [AdminPrimaryTransactionController::class, 'list'])->name('pending');
+                Route::get('completed', [AdminPrimaryTransactionController::class, 'list'])->name('completed');
+            });
+
+            Route::name('preipotransaction.')->prefix('pre-ipo-transactions')->group(function () {
+                Route::get('status/{transaction}', [AdminPreIpoTransactionController::class, 'status'])->name('status');
+                Route::get('pending', [AdminPreIpoTransactionController::class, 'list'])->name('pending');
+                Route::get('completed', [AdminPreIpoTransactionController::class, 'list'])->name('completed');
+            });
+
+            Route::name('notification.')->prefix('notification')->group(function () {
+                Route::name('investor.')->prefix('investor')->group(function () {
+                    Route::get('create', [AdminNotificationController::class, 'create'])->name('create');
+                    Route::post('store', [AdminNotificationController::class, 'store'])->name('store');
+                });
+            });
+
+            Route::name('reports.')->prefix('reports')->group(function () {
+                Route::name('cms.')->prefix('cms')->group(function () {
+                    Route::get('feedbacklist', [AdminCmsReportController::class, 'feedbacklist'])->name('feedback.list');
+                    Route::get('contactlist', [AdminCmsReportController::class, 'contactlist'])->name('contact.list');
+                });
+            });
+
+            Route::name('startup.')->prefix('startup')->group(function () {
+
+                Route::name('updateteam.')->prefix('update-team')->group(function () {
+                    Route::get('{uuid}', [StartupController::class, 'editTeam'])->name('get');
+                    Route::post('', [StartupController::class, 'updateTeam'])->name('post');
+                });
+
+                Route::delete('delete/{id}', [StartupController::class, 'delete'])->name('destroy');
+                Route::name('shareprice.')->prefix('share-price')->group(function () {
+                    Route::get('{uuid}', [StartupController::class, 'sharePrice'])->name('get');
+                    Route::get('delete/{id}', [StartupController::class, 'sharePriceDelete'])->name('delete');
+                    Route::post('', [StartupController::class, 'sharePriceSave'])->name('post');
+                });
+                Route::name('manage.')->prefix('manage')->group(function () {
+                    Route::get('pending', [StartupController::class, 'list'])->name('pending');
+                    Route::get('coming_soon', [StartupController::class, 'list'])->name('coming_soon');
+                    Route::get('raising_now', [StartupController::class, 'list'])->name('raising_now');
+                    Route::get('completed', [StartupController::class, 'list'])->name('completed');
+                });
+
+                Route::name('update.')->prefix('update')->group(function () {
+                    Route::get('pending', [AdminStartupUpdateController::class, 'pending'])->name('pending');
+                    Route::get('approved', [AdminStartupUpdateController::class, 'approved'])->name('approved');
+                    Route::get('rejected', [AdminStartupUpdateController::class, 'rejected'])->name('rejected');
+
+                    Route::get('status/{id}/{status}', [AdminStartupUpdateController::class, 'status'])->name('status');
+                    Route::get('delete/{id}', [AdminStartupUpdateController::class, 'delete'])->name('delete');
+                });
+
+                Route::name('mgt14.')->prefix('mgt14')->group(function () {
+                    Route::get('pending', [AdminMGT14Controller::class, 'pending'])->name('pending');
+                    Route::get('approved', [AdminMGT14Controller::class, 'approved'])->name('approved');
+                    Route::get('rejected', [AdminMGT14Controller::class, 'rejected'])->name('rejected');
+                    Route::get('approve_status/{id}', [AdminMGT14Controller::class, 'approve'])->name('approve');
+                    Route::get('reject_status/{id}', [AdminMGT14Controller::class, 'reject'])->name('reject');
+                });
+
+                Route::name('offerrequest.')->prefix('offerrequest')->group(function () {
+                    Route::get('pending', [AdminOfferRequestController::class, 'pending'])->name('pending');
+                    Route::get('approved', [AdminOfferRequestController::class, 'approved'])->name('approved');
+                    Route::get('rejected', [AdminOfferRequestController::class, 'rejected'])->name('rejected');
+                    Route::get('approve_status/{id}', [AdminOfferRequestController::class, 'approve'])->name('approve');
+                    Route::get('reject_status/{id}', [AdminOfferRequestController::class, 'reject'])->name('reject');
+                    Route::post('approve', [AdminOfferRequestController::class, 'approveSave'])->name('approveSave');
+                });
+
+                Route::name('pas3.')->prefix('pas3')->group(function () {
+                    Route::get('pending', [AdminPas3Controller::class, 'pending'])->name('pending');
+                    Route::get('approved', [AdminPas3Controller::class, 'approved'])->name('approved');
+                    Route::get('rejected', [AdminPas3Controller::class, 'rejected'])->name('rejected');
+                    Route::get('approve_status/{id}', [AdminPas3Controller::class, 'approve'])->name('approve');
+                    Route::get('reject_status/{id}', [AdminPas3Controller::class, 'reject'])->name('reject');
+                });
+
+                Route::name('mis.')->prefix('mis')->group(function () {
+                    Route::get('create', [AdminStartupMISController::class, 'create'])->name('create');
+                    Route::get('pending', [AdminStartupMISController::class, 'pending'])->name('pending');
+                    Route::get('approved', [AdminStartupMISController::class, 'approved'])->name('approved');
+                    Route::get('rejected', [AdminStartupMISController::class, 'rejected'])->name('rejected');
+
+                    Route::post('save', [AdminStartupMISController::class, 'store'])->name('store');
+                    Route::get('status/{id}/{status}', [AdminStartupMISController::class, 'status'])->name('status');
+                    Route::get('delete/{id}', [AdminStartupMISController::class, 'delete'])->name('delete');
+                });
+
+                Route::name('livepitch.')->prefix('livepitch')->group(function () {
+                    Route::get('pending', [AdminLivepitchController::class, 'pending'])->name('pending');
+                    Route::get('approved', [AdminLivepitchController::class, 'approved'])->name('approved');
+                    Route::get('rejected', [AdminLivepitchController::class, 'rejected'])->name('rejected');
+                    Route::get('approve_status/{id}', [AdminLivepitchController::class, 'approve'])->name('approve');
+                    Route::get('reject_status/{id}', [AdminLivepitchController::class, 'reject'])->name('reject');
+                });
+                Route::get('view/{uuid}', [StartupController::class, 'view'])->name('view');
+                Route::post('store', [StartupController::class, 'store'])->name('store');
+                Route::get('update/{uuid}', [StartupController::class, 'edit'])->name('edit');
+                Route::put('update/{uuid}', [StartupController::class, 'update'])->name('update');
+            });
+
+            Route::name('company.')->prefix('company')->group(function () {
+                Route::get('view/{uuid}', [CompanyController::class, 'view'])->name('view');
+                Route::get('create', [CompanyController::class, 'create'])->name('create');
+                Route::get('list', [CompanyController::class, 'list'])->name('list');
+                Route::get('edit/{uuid}', [CompanyController::class, 'edit'])->name('edit');
+                Route::get('delete/{uuid}', [CompanyController::class, 'delete'])->name('delete');
+                Route::get('promoter/{uuid}', [CompanyController::class, 'promoter'])->name('promoter');
+                Route::get('peer-ratio/{uuid}', [CompanyController::class, 'peerRatio'])->name('peerRatio');
+                Route::get('share-price/{uuid}', [CompanyController::class, 'sharePrice'])->name('sharePrice');
+                Route::get('share-holders/{uuid}', [CompanyController::class, 'shareHolders'])->name('shareHolders');
+                Route::get('custom-data/{uuid}', [CompanyController::class, 'customData'])->name('customData');
+                Route::get('event/{uuid}', [CompanyController::class, 'event'])->name('event');
+                Route::get('news/{uuid}', [CompanyController::class, 'news'])->name('news');
+
+                Route::post('save', [CompanyController::class, 'save'])->name('save');
+                Route::post('update', [CompanyController::class, 'update'])->name('update');
+                Route::post('promoter', [CompanyController::class, 'promoterSave'])->name('promoterSave');
+                Route::post('peer-ratio', [CompanyController::class, 'peerRatioSave'])->name('peerRatioSave');
+                Route::post('share-price', [CompanyController::class, 'sharePriceSave'])->name('sharePriceSave');
+                Route::post('share-holders', [CompanyController::class, 'shareHoldersSave'])->name('shareHoldersSave');
+                Route::post('custom-data', [CompanyController::class, 'customDataSave'])->name('customDataSave');
+                Route::post('event', [CompanyController::class, 'eventSave'])->name('eventSave');
+                Route::post('news', [CompanyController::class, 'newsSave'])->name('newsSave');
+            });
+
+            Route::name('portfolio.')->prefix('portfolio')->group(function () {
+                Route::get('list', [AdminPortfolioController::class, 'list'])->name('list');
+                Route::get('create', [AdminPortfolioController::class, 'create'])->name('create');
+                Route::get('view/{id}', [AdminPortfolioController::class, 'view'])->name('view');
+                Route::get('update/{id}', [AdminPortfolioController::class, 'edit'])->name('edit');
+
+                Route::post('save', [AdminPortfolioController::class, 'store'])->name('store');
+                Route::put('update/{id}', [AdminPortfolioController::class, 'update'])->name('update');
+                Route::delete('delete/{id}', [AdminPortfolioController::class, 'delete'])->name('destroy');
+            });
+
+
+            Route::name('master.')->prefix('master')->group(function () {
+                Route::resource('country', MasterCountryController::class);
+                Route::resource('state', MasterStateController::class);
+                Route::resource('city', MasterCityController::class);
+                Route::resource('bank', MasterBankController::class);
+                Route::resource('bank-account-type', MasterBankAccountTypeController::class);
+                Route::resource('family-relation', MasterFamilyRelationController::class);
+                Route::resource('investor-type', MasterInvestorTypeController::class);
+                Route::resource('startup-round-type', MasterStartupRoundTypeController::class);
+                Route::resource('instrument-type', MasterInstrumentTypeController::class);
+                Route::resource('industry', MasterIndustryController::class);
+                Route::resource('sector', MasterSectorController::class);
+                Route::resource('social-media', MasterSocialMediaLinkController::class);
+                Route::name('headertoken.')->prefix('headertoken')->group(function () {
+                    Route::get('list', [HeaderTokenController::class, 'list'])->name('list');
+                    Route::get('create', [HeaderTokenController::class, 'create'])->name('create');
+                    Route::get('delete/{id}', [HeaderTokenController::class, 'delete'])->name('delete');
+                });
+            });
+
+            Route::name('cms.')->prefix('cms')->group(function () {
+                Route::resource('blog', MasterBlogController::class);
+                Route::resource('website-social-media', MasterWebsiteSocialMediaController::class);
+                Route::resource('pages', MasterPagesController::class);
+                Route::resource('manage-info-icon', MasterManageInfoIconController::class);
+            });
+
+            Route::get('app-settings', [SettingController::class, 'index'])->name('app-settings');
+            Route::post('app-settings', [SettingController::class, 'store'])->name('app-settings.post');
+
+            Route::name('app_version_control.')->prefix('app-version-control')->group(function () {
+                Route::get('list', [AppVersionController::class, 'list'])->name('list');
+                Route::get('create', [AppVersionController::class, 'create'])->name('create');
+
+
+                Route::post('store', [AppVersionController::class, 'store'])->name('store');
+            });
+
+
+            Route::post('logout', [AdminAuthController::class, 'destroy'])->name('logout');
+
+            Route::name('user-management.')->group(function () {
+                Route::resource('/user-management/users', AdminDashboardController::class);
+                Route::resource('/user-management/roles', AdminDashboardController::class);
+                Route::resource('/user-management/permissions', AdminDashboardController::class);
+            });
+        });
+
+
+        // Auth Routes
+        Route::group(['middleware' => [App\Http\Middleware\AdminRedirectIfAuthenticatedMiddleware::class]], function () {
+            Route::get('login', [AdminAuthController::class, 'create'])->name('login');
+            Route::get('register', [AdminAuthController::class, 'create'])->name('register');
+            Route::get('forgot-password', [AdminPasswordResetController::class, 'create'])->name('password.request');
+            Route::get('reset-password/{token}', [AdminAuthController::class, 'create'])->name('password.reset');
+
+            Route::post('login', [AdminAuthController::class, 'store']);
+            Route::post('register', [AdminAuthController::class, 'store']);
+            Route::post('forgot-password', [AdminAuthController::class, 'store'])->name('password.email');
+            Route::post('reset-password', [AdminAuthController::class, 'store'])->name('password.update');
+        });
+    });
+});
+
+Route::get('test', [TestController::class, 'test']);
+Route::get('t/{token}', [DynamicUrlController::class, 'index']);

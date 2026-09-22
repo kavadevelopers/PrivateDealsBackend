@@ -1,0 +1,19 @@
+---
+description: Living docs — every code change must include a documentation impact check
+alwaysApply: true
+---
+
+# Living documentation (ShuruUp V4)
+
+`docs/` is the living source of truth for this project (humans and AI agents).
+
+## Before finishing any development task
+
+1. Check whether the change affects documented behavior (features, APIs, DB, auth, workflows, integrations, config, jobs/schedules, business rules).
+2. If **yes**, update the relevant files under `docs/` in the **same task**.
+3. If a new feature needs docs, create/update module + feature + index (`docs/README.md`) as needed.
+4. Update existing canonical docs — do not create duplicate `*-v2.md` / `*-updated.md` files.
+5. If code and docs disagree, **code wins** — fix the docs. Do not change working code only to match outdated docs unless the user asks.
+
+Full process: `docs/maintenance/living-docs-rules.md`  
+Start here: `docs/README.md`

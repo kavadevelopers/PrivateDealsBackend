@@ -1,0 +1,123 @@
+<x-default-layout>
+    @section('title')
+        {{ getPageTitle() }}
+    @endsection
+
+    @section('breadcrumbs')
+        {{ Breadcrumbs::render('common') }}
+    @endsection
+
+    <div class="d-flex flex-column flex-lg-row">
+        <div class="w-100 flex-lg-row-auto w-lg-1200px mb-7 me-7 me-lg-10">
+            <form class="form" method="POST" action="{{ route('admin.manual.secondary-market.save') }}"
+                enctype="multipart/form-data">
+                @csrf
+                <div class="card card-flush py-4">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <h2>Create</h2>
+                        </div>
+                    </div>
+                    <div class="card-body pt-0">
+
+                        <div class="d-flex flex-wrap gap-10 mb-5">
+
+
+                            <div class="fv-row w-100 flex-md-root">
+                                <label class="required form-label">Investor</label>
+                                <select class="form-select" data-control="select2" data-placeholder="Select an investor"
+                                    name="investor_id" aria-label="Select example">
+                                    <option value="">-- Select Investor --</option>
+                                    @foreach ($investors as $investor)
+                                        <option value="{{ $investor->id }}"
+                                            {{ old('investor_id') == $investor->id ? 'selected' : '' }}>
+                                            {{ $investor->name }}
+                                        </option>
+                                    @endforeach
+                                </select>
+                                @include('admin.partials.form.input-error-message', [
+                                    'key' => 'investor_id',
+                                ])
+                            </div>
+
+                            <div class="fv-row w-100 flex-md-root">
+                                <label class="required form-label">Startup</label>
+                                <select class="form-select" data-control="select2" name="startup_id"
+                                    data-placeholder="Select startup" aria-label="Select example">
+                                    <option value="">-- Select Startup --</option>
+                                    @foreach ($startups as $startup)
+                                        <option value="{{ $startup->id }}"
+                                            {{ old('startup_id') == $startup->id ? 'selected' : '' }}>
+                                            {{ $startup->brand_name }}
+                                        </option>
+                                    @endforeach
+                                </select>
+                                @include('admin.partials.form.input-error-message', [
+                                    'key' => 'startup_id',
+                                ])
+                            </div>
+
+                            <div class="fv-row w-100 flex-md-root">
+                                <label class="required form-label">Shares</label>
+                                <input name="shares" class="form-control mb-2 input input-number  input-number-words"
+                                    placeholder="Enter Shares" tabindex="0" type="text"
+                                    value="{{ old('shares') }}">
+                                @include('admin.partials.form.input-error-message', ['key' => 'shares'])
+                            </div>
+
+
+                        </div>
+
+                        <div class="d-flex flex-wrap gap-10 mb-5">
+
+                            <div class="fv-row w-100 flex-md-root">
+                                <label class="required form-label">Exit Share Price</label>
+                                <input name="exit_amount"
+                                    class="form-control mb-2 input input-decimal-number input-number-words"
+                                    placeholder="Enter Exit Share Price" tabindex="0" type="text"
+                                    value="{{ old('exit_amount') }}">
+                                @include('admin.partials.form.input-error-message', [
+                                    'key' => 'exit_amount',
+                                ])
+                            </div>
+
+                            <div class="fv-row w-100 flex-md-root">
+                                <label class="required form-label">Types Of Shares</label>
+                                <select class="form-select" name="instrument" aria-label="Select example">
+                                    <option value="">-- Select Type --</option>
+                                    @foreach (App\Enums\InstrumentTypeEnum::cases() as $instrument)
+                                        <option value="{{ $instrument }}"
+                                            {{ old('instrument') == $instrument->value ? 'selected' : '' }}>
+                                            {{ $instrument }}
+                                        </option>
+                                    @endforeach
+                                </select>
+                                @include('admin.partials.form.input-error-message', [
+                                    'key' => 'instrument',
+                                ])
+                            </div>
+                            <div class="fv-row w-100 flex-md-root">
+                                <label class="required form-label">Transaction Date</label>
+                                <input name="date" class="form-control mb-2 input flat-datepicker"
+                                    placeholder="Enter Transaction Date" tabindex="0" type="text"
+                                    value="{{ old('date') }}">
+                                @include('admin.partials.form.input-error-message', [
+                                    'key' => 'date',
+                                ])
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-end">
+                            <button type="submit" class="btn btn-primary">
+                                <span class="indicator-label">
+                                    Submit
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</x-default-layout>

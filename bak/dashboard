@@ -1,0 +1,142 @@
+@push('custom-scripts')
+    <script>
+        //getrandom color
+
+        function getColorsA(length) {
+            var letters = '0123456789ABCDEF';
+
+            let colors = [];
+            for (let i = 0; i < length; i++) {
+                var color = '#';
+                for (var j = 0; j < 6; j++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                colors.push(color);
+            }
+
+            return colors;
+        }
+
+
+        //getrandom color
+
+        // barchart
+        google.charts.load('current', {
+            packages: ['corechart', 'bar']
+        });
+        google.charts.setOnLoadCallback(drawChart);
+        datas = JSON.parse('{!! $barchart !!}');
+
+        function drawChart() {
+            //var data = google.visualization.arrayToDataTable(datas);
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', '');
+            data.addColumn('number', 'Investment');
+            data.addColumn('number', 'Investment');
+
+            data.addRows(datas);
+            var options = {
+                'vAxis': {
+                    format: 'decimal'
+                },
+                'legend': {
+                    position: 'none'
+                },
+                bars: 'vertical',
+                colors: ['#EB9C5C', '#53917E'],
+            };
+            var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+            chart.draw(data, google.charts.Bar.convertOptions(options));
+        }
+
+        // barchart
+
+        // linechart
+
+        google.charts.load('current', {
+            packages: ['corechart', 'bar']
+        });
+        google.charts.setOnLoadCallback(lineQuater);
+        adatas = JSON.parse('{!! $line_graph !!}');
+
+        function lineQuater() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Date');
+            data.addColumn('number', 'Investment');
+
+            data.addRows(adatas[1]);
+            var options = {
+                hAxis: {
+                    title: 'Quarter'
+                },
+                vAxis: {
+                    title: 'Investments'
+                },
+                colors: ['#00008B', '#0000FF'],
+                legend: 'none'
+            };
+            var chart = new google.visualization.LineChart(document.getElementById('linechart_material'));
+            chart.draw(data, options);
+        }
+
+        function lineYear() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Date');
+            data.addColumn('number', 'Investment');
+
+            data.addRows(adatas[2]);
+            var options = {
+                hAxis: {
+                    title: 'Year'
+                },
+                vAxis: {
+                    title: 'Investments'
+                },
+                colors: ['#00008B', '#0000FF'],
+                legend: 'none'
+            };
+            var chart = new google.visualization.LineChart(document.getElementById('linechart_material'));
+            chart.draw(data, options);
+        }
+
+        function lineMonth() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Date');
+            data.addColumn('number', 'Investment');
+
+            data.addRows(adatas[0]);
+            var options = {
+                hAxis: {
+                    title: 'Months'
+                },
+                vAxis: {
+                    title: 'Investments'
+                },
+                colors: ['#00008B', '#0000FF'],
+                legend: 'none'
+            };
+            var chart = new google.visualization.LineChart(document.getElementById('linechart_material'));
+            chart.draw(data, options);
+        }
+
+        function lineOnChange($val) {
+            switch ($val) {
+
+                case "0":
+                    lineQuater();
+                    break;
+
+                case "1":
+                    lineMonth();
+                    break;
+
+                case "2":
+                    lineYear();
+                    break;
+
+            }
+        }
+
+        //linechart
+    </script>
+@endpush

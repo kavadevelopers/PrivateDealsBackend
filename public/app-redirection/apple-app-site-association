@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "YY46V62AC2.com.shuruup.investor",
+        "paths": ["/app/*"]
+      }
+    ]
+  }
+}
