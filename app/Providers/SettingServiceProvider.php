@@ -22,9 +22,9 @@ class SettingServiceProvider extends ServiceProvider
         //     });
         // }
 
-        $this->app->singleton(GlobalSettingModel::class, function ($app) {
-            return new GlobalSettingModel(AppSettingsModel::all());
-        });
+        // $this->app->singleton(GlobalSettingModel::class, function ($app) {
+        //     return new GlobalSettingModel(AppSettingsModel::all());
+        // });
     }
 
     /**
@@ -35,7 +35,7 @@ class SettingServiceProvider extends ServiceProvider
         // if ($this->databaseExists(config('database.connections.mysql.database')) && Schema::hasTable('app_settings')) {
         //     View::share('globalsettings', $settinsInstance);
         // }
-        View::share('globalsettings', $settinsInstance);
+        // View::share('globalsettings', $settinsInstance);
     }
 
     protected function databaseExists(string $databaseName): bool
