@@ -44,7 +44,7 @@ See [maintenance/living-docs-rules.md](maintenance/living-docs-rules.md).
 | [modules/investor.md](modules/investor.md) | Investor web + API |
 | [modules/partner-business.md](modules/partner-business.md) | Partner / business portal + API |
 | [modules/startup.md](modules/startup.md) | Startup portal + API |
-| [modules/public-website.md](modules/public-website.md) | Marketing / CMS front |
+| [modules/public-website.md](modules/public-website.md) | Public marketing site (migrated Blade site) |
 | [modules/shared-helpers-services.md](modules/shared-helpers-services.md) | Helpers, services, repositories |
 
 ### Features
