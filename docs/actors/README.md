@@ -42,19 +42,19 @@ flowchart TB
 
 ---
 
-## Individual flows (click any)
+## Detail pages (click any)
 
-| # | Flow | Link |
-|---|------|------|
-| A | Channel hierarchy — Admin/WM/Seller, Distributor, Retailer, investors | [Open](../workflows/flows/wm-create-seller-distributor.md) |
-| B | Seller registers a company (duplicate check; live immediately) | [Open](../workflows/flows/seller-register-company.md) |
-| C | Company goes live — *no separate approval; see Flow B* | [Open](../workflows/flows/company-goes-live.md) |
-| D | Seller uploads prices & deals (select selling company; bank/demat) | [Open](../workflows/flows/seller-prices-and-deals.md) |
-| E | Partner home — companies & Hot deals | [Open](../workflows/flows/partner-discovers-company.md) |
-| F | Partner creates an investor | [Open](../workflows/flows/partner-create-investor.md) |
-| G | WM / Distributor / Retailer invests (Pre-IPO or LP Secondary; deal slip bank+demat) | [Open](../workflows/flows/partner-invest-for-investor.md) |
-| H | Order completes (transaction-level deal slip) | [Open](../workflows/flows/order-to-complete.md) |
-| I | Partner sell request for specific shares | [Open](../workflows/flows/partner-sell-request.md) |
+| Topic | Link |
+|-------|------|
+| Channel hierarchy — Admin/WM/Seller, Distributor, Retailer, investors | [Open](../workflows/flows/wm-create-seller-distributor.md) |
+| Seller registers a company (duplicate check; live immediately) | [Open](../workflows/flows/seller-register-company.md) |
+| Company goes live — *no separate approval* | [Open](../workflows/flows/company-goes-live.md) |
+| Seller uploads prices & deals (select selling company; bank/demat) | [Open](../workflows/flows/seller-prices-and-deals.md) |
+| Partner home — companies & Hot deals | [Open](../workflows/flows/partner-discovers-company.md) |
+| Create investor | [Open](../workflows/flows/partner-create-investor.md) |
+| Invest (Pre-IPO or LP Secondary; deal slip bank+demat) | [Open](../workflows/flows/partner-invest-for-investor.md) |
+| Order completes | [Open](../workflows/flows/order-to-complete.md) |
+| Sell request for specific shares | [Open](../workflows/flows/partner-sell-request.md) |
 
 ---
 

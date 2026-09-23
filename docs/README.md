@@ -36,18 +36,18 @@ See [maintenance/living-docs-rules.md](maintenance/living-docs-rules.md).
 | [actors/README.md](actors/README.md) | Who is who + links to every individual flow |
 | [database/partner.md](database/partner.md) | Partner network schema (Seller as partner role — target) |
 
-### Individual flows (click any step)
+### Individual flows (topic pages)
 | Document | Purpose |
 |----------|---------|
-| [flows/wm-create-seller-distributor.md](workflows/flows/wm-create-seller-distributor.md) | A — Admin/WM/Seller hierarchy (Distributor, Retailer, investors) |
-| [flows/seller-register-company.md](workflows/flows/seller-register-company.md) | B — Seller registers company (no approval; block duplicates) |
-| [flows/company-goes-live.md](workflows/flows/company-goes-live.md) | C — No separate approval (points to Flow B) |
-| [flows/seller-prices-and-deals.md](workflows/flows/seller-prices-and-deals.md) | D — Prices, deals, selling company, bank/demat |
-| [flows/partner-discovers-company.md](workflows/flows/partner-discovers-company.md) | E — Partner home: companies & Hot deals |
-| [flows/partner-create-investor.md](workflows/flows/partner-create-investor.md) | F — Partner creates investor |
-| [flows/partner-invest-for-investor.md](workflows/flows/partner-invest-for-investor.md) | G — WM/Distributor/Retailer invests (Pre-IPO or LP Secondary; deal slip) |
-| [flows/order-to-complete.md](workflows/flows/order-to-complete.md) | H — Deal slip → payment → complete |
-| [flows/partner-sell-request.md](workflows/flows/partner-sell-request.md) | I — Partner sell request for specific shares |
+| [flows/wm-create-seller-distributor.md](workflows/flows/wm-create-seller-distributor.md) | Channel hierarchy (Admin/WM/Seller, Distributor, Retailer, investors) |
+| [flows/seller-register-company.md](workflows/flows/seller-register-company.md) | Seller registers company (no approval; block duplicates) |
+| [flows/company-goes-live.md](workflows/flows/company-goes-live.md) | Go-live note (no separate approval) |
+| [flows/seller-prices-and-deals.md](workflows/flows/seller-prices-and-deals.md) | Prices, deals, selling company, bank/demat |
+| [flows/partner-discovers-company.md](workflows/flows/partner-discovers-company.md) | Partner home: companies & Hot deals |
+| [flows/partner-create-investor.md](workflows/flows/partner-create-investor.md) | Create investor |
+| [flows/partner-invest-for-investor.md](workflows/flows/partner-invest-for-investor.md) | Invest (Pre-IPO or LP Secondary; deal slip) |
+| [flows/order-to-complete.md](workflows/flows/order-to-complete.md) | Deal slip → payment → complete |
+| [flows/partner-sell-request.md](workflows/flows/partner-sell-request.md) | Sell request for specific shares |
 
 ### Start here (engineering)
 | Document | Purpose |
@@ -97,7 +97,7 @@ See [maintenance/living-docs-rules.md](maintenance/living-docs-rules.md).
 | Document | Purpose |
 |----------|---------|
 | [workflows/whole-project-flow.md](workflows/whole-project-flow.md) | **Stakeholder:** full partner marketplace flow |
-| [workflows/flows/](workflows/flows/) | Individual flows A–I |
+| [workflows/flows/](workflows/flows/) | Topic detail pages (hierarchy, company, deals, invest, …) |
 | [workflows/investor-onboarding.md](workflows/investor-onboarding.md) | Register → MPIN → KYC |
 | [workflows/pre-ipo-buy-sell.md](workflows/pre-ipo-buy-sell.md) | Buy/sell/cancel Pre-IPO |
 | [workflows/primary-investment.md](workflows/primary-investment.md) | Commit → docs → payment |

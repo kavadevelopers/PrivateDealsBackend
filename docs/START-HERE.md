@@ -1,48 +1,55 @@
 # START HERE — Partner marketplace (whole story)
 
 **Open this file first.**  
-One page for stakeholders to understand the full product story. Every other doc is linked from here.
+One page for stakeholders. Everything else is linked from here.
 
 ---
 
 ## How to use this page
 
-1. Read the **big picture** flowchart (2 minutes).  
-2. Skim the **rules** boxes.  
-3. Click any **child flow** for detail when someone asks “how does X work?”  
-4. Use **Who is who** if roles are confusing.
+Read the flowchart and the story below. When you need detail on one topic, open the matching **detail page** in the list at the bottom.
 
 ---
 
-## Big picture (whole story)
+## Whole story (flowchart)
 
 ```mermaid
 flowchart TD
-  A[1 Admin creates WM and/or Seller] --> B[2 Seller registers company]
-  B --> Dup{Same company already exists?}
+  Setup[Admin creates WM and/or Seller — channel hierarchy] --> Company[Seller registers company]
+  Company --> Dup{Same company already exists?}
   Dup -->|Yes| Stop[Do not add]
-  Dup -->|No| Live[Company live — no approval]
-  Live --> D[3 Seller uploads prices and deals]
-  D --> Select[Select company selling shares + bank/demat]
-  Select --> E[4 Partner home — companies and Hot deals]
-  E --> F[5 WM Distributor or Retailer creates investor]
-  F --> G[6 Invest Pre-IPO or LP Secondary]
-  G --> Slip[7 Deal slip shows bank and demat]
-  Slip --> H[8 Order completes]
-  E --> I[Branch — Sell request for specific shares]
+  Dup -->|No| Live[Company is live — no approval]
+  Live --> Commercial[Seller uploads prices and deals]
+  Commercial --> Bound[Select selling company + bank and demat]
+  Bound --> Home[Partner home — companies and Hot deals]
+  Home --> Investor[WM Distributor or Retailer creates investor]
+  Investor --> Invest[Invest — Pre-IPO / unlisted or LP Secondary]
+  Invest --> Slip[Deal slip shows bank and demat]
+  Slip --> Done[Order completes]
+  Home --> SellReq[Sell request for specific shares]
 ```
 
-### Story in plain English
+---
 
-1. **Admin** creates a **Wealth Manager** and/or a **Seller** (Seller can be created like WM).  
-2. **Channel tree** is built (see hierarchy below).  
-3. **Seller** registers a company → if new, it is **live immediately** (no approval). If it already exists, **do not add**.  
-4. **Seller** uploads **prices** and **deals**, picks **which company is selling**, using their **bank/demat** accounts.  
-5. **WM / Distributor / Retailer** see companies on **home** and **Hot deals**.  
-6. They **create their own investors** and **invest** for them (**Pre-IPO / unlisted** or **LP Secondary** — same process).  
-7. On invest, the **deal slip** shows that transaction’s **bank + demat**.  
-8. Order goes to **complete**.  
-9. Or they raise a **sell request** for specific shares (separate from invest).
+## Whole story (plain English)
+
+**Setup**  
+Admin creates a **Wealth Manager** and/or a **Seller** (Seller can be created like WM). The channel tree is built — who sits under whom is in [Channel hierarchy](#channel-hierarchy-who-sits-where) and [Hierarchy detail](workflows/flows/wm-create-seller-distributor.md).
+
+**Seller adds inventory**  
+Seller registers a company. If it is **new**, it is **live immediately** (no approval). If the **same company already exists**, it is **not** added.  
+Then the Seller uploads **prices** and **deals**, chooses **which company is selling the shares**, and uses their **bank / demat** accounts.  
+→ [Register company](workflows/flows/seller-register-company.md) · [Prices and deals](workflows/flows/seller-prices-and-deals.md)
+
+**Partners use the marketplace**  
+**WM / Distributor / Retailer** see companies on **home** and **Hot deals**. They create **their own investors** and **invest** for them.  
+**Pre-IPO / unlisted** and **LP Secondary** use the **same** invest process.  
+On invest, the **deal slip** shows that transaction’s **bank + demat**. Then the order completes.  
+→ [Home and Hot deals](workflows/flows/partner-discovers-company.md) · [Create investor](workflows/flows/partner-create-investor.md) · [Invest](workflows/flows/partner-invest-for-investor.md) · [Order complete](workflows/flows/order-to-complete.md)
+
+**Sell path (separate)**  
+They can also raise a **sell request** for **specific shares** (not the same as investing).  
+→ [Sell request](workflows/flows/partner-sell-request.md)
 
 ---
 
@@ -71,53 +78,40 @@ Admin panel creates:
 | Retailer | **Yes** | Under WM, Seller, or Distributor |
 | Admin | — | Creates WM/Seller; **sees/monitors** (does not approve companies to go live) |
 
-Full hierarchy detail → [Flow A](workflows/flows/wm-create-seller-distributor.md)
-
 ---
 
-## Child flows (click for detail)
-
-| # | What it covers | Open |
-|---|----------------|------|
-| **A** | Admin / WM / Seller hierarchy, Distributor, Retailer, investors | [Flow A](workflows/flows/wm-create-seller-distributor.md) |
-| **B** | Seller registers company — no approval; block duplicates | [Flow B](workflows/flows/seller-register-company.md) |
-| **C** | Note only — go-live is part of B (no separate approval) | [Flow C](workflows/flows/company-goes-live.md) |
-| **D** | Prices, deals, selling company, bank/demat | [Flow D](workflows/flows/seller-prices-and-deals.md) |
-| **E** | Partner home — companies & Hot deals | [Flow E](workflows/flows/partner-discovers-company.md) |
-| **F** | WM / Distributor / Retailer create investor | [Flow F](workflows/flows/partner-create-investor.md) |
-| **G** | Invest (Pre-IPO or LP Secondary) + deal slip bank/demat | [Flow G](workflows/flows/partner-invest-for-investor.md) |
-| **H** | Deal slip → payment → complete | [Flow H](workflows/flows/order-to-complete.md) |
-| **I** | Sell request for specific shares | [Flow I](workflows/flows/partner-sell-request.md) |
-
-Same story also lives at: [workflows/whole-project-flow.md](workflows/whole-project-flow.md) (duplicate entry for the docs index).
-
----
-
-## Important rules (quick)
+## Important rules
 
 | Topic | Rule |
 |-------|------|
 | Company create | Live immediately — **no approval** |
 | Duplicate company | If same company exists → **do not add** |
 | Seller commercial | Same seller uploads **prices + deals**; multi companies; multi bank/demat; **select selling company** on deal |
-| Invest types | Home companies **or** Hot deals |
+| Invest from | Home companies **or** Hot deals |
 | Products | **Pre-IPO / unlisted** and **LP Secondary** — **same invest process** |
 | Deal slip | **Transaction-level** bank + demat for that deal |
 | Who invests | WM / Distributor / Retailer only — **not Seller** |
 
 ---
 
-## Other useful files (after this page)
+## Detail pages (open when you need more)
 
-| File | When to open |
-|------|----------------|
-| [actors/README.md](actors/README.md) | Role cards + same flow links |
-| [modules/partner-business.md](modules/partner-business.md) | Partner module capabilities |
-| [database/partner.md](database/partner.md) | Simple data / relationship picture |
-| [docs/README.md](README.md) | Full documentation index (engineering + stakeholders) |
+| Topic | Open |
+|-------|------|
+| Channel hierarchy (Admin / WM / Seller / Distributor / Retailer) | [Hierarchy](workflows/flows/wm-create-seller-distributor.md) |
+| Seller registers company | [Register company](workflows/flows/seller-register-company.md) |
+| Go-live note (no separate approval) | [Go-live note](workflows/flows/company-goes-live.md) |
+| Prices, deals, selling company, bank/demat | [Prices and deals](workflows/flows/seller-prices-and-deals.md) |
+| Partner home and Hot deals | [Home and Hot deals](workflows/flows/partner-discovers-company.md) |
+| Create investor | [Create investor](workflows/flows/partner-create-investor.md) |
+| Invest + deal slip | [Invest](workflows/flows/partner-invest-for-investor.md) |
+| Order complete | [Order complete](workflows/flows/order-to-complete.md) |
+| Sell request | [Sell request](workflows/flows/partner-sell-request.md) |
+
+Also: [Actors hub](actors/README.md) · [Partner module](modules/partner-business.md) · [Database schema](database/partner.md) · [Docs index](README.md)
 
 ---
 
 ## For technical team
 
-These pages describe the **target** product. Application code may still differ (`seller_master`, company approval, etc.) until implementation. Code changes are a later task.
+These pages describe the **target** product. Application code may still differ until implementation. Code changes are a later task.
