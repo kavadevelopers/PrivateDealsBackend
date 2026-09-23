@@ -14,11 +14,10 @@ The **partner network** runs the marketplace channel: Wealth Managers, Distribut
 
 | Type | Plain language |
 |------|----------------|
-| Wealth Manager | Can **create Seller** and **Distributor** (target) |
-| **Seller** (target) | Registers companies → go live → prices/deals → track orders |
-| Distributor | Channel partner |
-| Retailer | Channel partner |
-| Relation Manager | Channel partner |
+| Wealth Manager | **Main.** Created by **Admin**. Creates Seller, Distributor, Retailer; **own investors** |
+| **Seller** (target) | Created by **Admin** (like WM) **or** under WM. Has Distributor + Retailer below. Prices/deals. **No own investors** |
+| Distributor | Under WM **or** Seller. **Own investors** + **own retailers** |
+| Retailer | Under WM, Seller, or Distributor. **Own investors** only |
 
 > **Current vs target:** Today’s enum may not yet include `seller`; some seller APIs still use `seller_master`. These docs describe the **intended** model. Code later.
 
@@ -43,25 +42,47 @@ Admin UI historically splits types under `/admin/partner/...`.
 
 ## Capabilities by role (stakeholder view)
 
-### Wealth Manager
+### Wealth Manager (main)
 
-- Create **Seller** and **Distributor** (target)
+- Created from **Admin panel**
+- Create **Seller**, **Distributor**, and **Retailer** (direct under WM)
+- Has **own investors** and can invest for them
 - Channel / MIS as applicable
 
 ### Seller (target role)
 
-- Register company (pending → live after approval)
-- Set prices and deals
+- Created from **Admin panel** (same idea as creating WM) **or** under WM
+- Can have **Distributor** and **Retailer** below
+- **Does not** have own investors
+- Register company — **live immediately**, **no approval**; if the **same company already exists**, do not add
+- Upload **prices**, **deals**, and related deals (same Seller)
+- Hold **multiple companies selling shares** and **multiple bank / demat** accounts
+- On deal create: **must select the company who is selling the shares**
 - Track orders linked to them  
-Detail: [Flows B–D, H](../workflows/whole-project-flow.md)
+Detail: [Flows B–D, H](../workflows/whole-project-flow.md) · Hierarchy: [Flow A](../workflows/flows/wm-create-seller-distributor.md)
 
-### Channel partners (Distributor / Retailer / RM / WM acting as partner)
+### Distributor
 
-- See **live** companies
-- Optional enquiry
-- **Create investor**
-- **Invest for that investor**  
-Detail: [Flows E–G](../workflows/whole-project-flow.md)
+- Under **WM** or under **Seller**
+- Has **own investors**
+- Has **own retailers**
+- Invest for own investors (home / Hot deals; Pre-IPO or LP Secondary; deal slip bank+demat)
+
+### Retailer
+
+- Under **WM**, **Seller**, or **Distributor**
+- Has **own investors** only
+- Invest for own investors (same invest pattern)
+
+### Who invests / sell requests (WM, Distributor, Retailer — not Seller)
+
+- See **home** companies and **Hot deals**
+- **Create investor** under themselves and **invest for them**
+- Product types: **Pre-IPO / unlisted** and **LP Secondary** — **same invest process**
+- On invest: receive that deal’s **bank and demat** on the **deal slip** (transaction level)
+- Raise a **sell request** for **specific shares**  
+Detail: [Flows E–G, I](../workflows/whole-project-flow.md) + [Flow H](../workflows/flows/order-to-complete.md)  
+Hierarchy detail: [Flow A](../workflows/flows/wm-create-seller-distributor.md)
 
 ---
 

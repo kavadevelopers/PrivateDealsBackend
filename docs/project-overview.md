@@ -7,7 +7,7 @@
 1. **Pre-IPO / unlisted equity** — browse companies, buy/sell unlisted shares, track portfolio and prices.
 2. **Startup primary fundraising** — investors commit to startup rounds; paperwork (SSA, offer letter, MGT-14, PAS-3, SHA) and payments are tracked through statuses.
 3. **Secondary market** — investor-to-investor (or related) share transfers with ROFR, escrow, and share-receipt flows.
-4. **Partner / business network** — wealth managers, distributors, retailers, relation managers, and (target) **sellers** as a partner role. Partners create investors and invest for them. Sellers register companies that go live after approval.
+4. **Partner / business network** — wealth managers, distributors, retailers, relation managers, and (target) **sellers** as a partner role. Partners create investors and invest for them. Sellers register companies that are **live immediately** (no approval; block if company already exists).
 5. **Startup operators** — startups manage rounds, MIS, updates, cap table related flows (web; some routes historically commented).
 6. **Admin operations** — can see/monitor master data, KYC, transactions, broadcasts, CMS, settings.
 

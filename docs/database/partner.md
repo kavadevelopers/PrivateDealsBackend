@@ -21,10 +21,14 @@ erDiagram
 
 **Plain language:**
 
-- A **Wealth Manager** partner can create child partners: **Seller** and **Distributor** (target rules).  
-- A **Partner** creates **investors** linked to them.  
-- A **Seller** registers **companies** that go live after approval.  
-- Investments reference the investor and company (and later the seller on the order).
+- **Admin** can create **Wealth Manager** or **Seller** (Seller like WM).  
+- **Wealth Manager** creates Seller / Distributor / Retailer and has **own investors**.  
+- **Seller** (Admin-created or under WM) can have **Distributor** and **Retailer** below, but **no own investors**.  
+- **Distributor** (under WM or Seller) has **own investors** and **own retailers**.  
+- **Retailer** (under WM, Seller, or Distributor) has **own investors** only.  
+- Seller registers companies and uploads prices/deals (multi selling companies, multi bank/demat; select selling company on deal).  
+- When WM/Distributor/Retailer invests, the **deal slip** carries that transaction’s **bank and demat**.  
+- **LP Secondary** uses the same invest → deal slip → complete path as Pre-IPO / unlisted.
 
 ---
 
@@ -32,11 +36,10 @@ erDiagram
 
 | Type | Meaning |
 |------|---------|
-| Wealth Manager | Creates Seller and Distributor |
-| Seller | Registers companies, prices, deals, tracks orders |
-| Distributor | Channel partner |
-| Retailer | Channel partner |
-| Relation Manager | Channel partner |
+| Wealth Manager | Created by **Admin**. Creates Seller, Distributor, Retailer; **own investors** |
+| Seller | Created by **Admin** or under WM. Has Distributor + Retailer. **No own investors** |
+| Distributor | Under WM **or** Seller. **Own investors** + **own retailers** |
+| Retailer | Under WM, Seller, or Distributor. **Own investors** only |
 
 ---
 
@@ -58,11 +61,13 @@ erDiagram
 
 | Table / concept | Role |
 |-----------------|------|
-| `company` | Submitted by seller; pending then live |
-| Share price / seller quotes | Commercial prices |
-| `company_deals` | Deals on companies |
-| `pre_ipo_transaction` | Orders partners place for investors |
-| Enquiries | Optional partner interest (not an order) |
+| `company` | Created by seller; live on create; duplicate check |
+| Selling companies under seller | Multiple companies that sell shares |
+| Bank / demat accounts (seller) | Multiple accounts; chosen for deal / transaction |
+| Share price / seller quotes | Prices uploaded by Seller |
+| `company_deals` | Deals (and hot/other deals); **select selling company** on create |
+| Investment transaction | Order; deal slip shows **bank + demat** at transaction level |
+| Enquiries / sell requests | Partner sell request for specific shares |
 
 ---
 

@@ -1,13 +1,16 @@
 # Flow F — Partner creates an investor
 
-**In one sentence:** The Partner creates an investor record that belongs to them — investors do not self-register in this product path.
+**In one sentence:** Wealth Manager, Distributor, or Retailer creates an investor under **themselves** — that partner owns the investor and invests for them.
 
 ## Who is involved
 
 | Role | What they do |
 |------|----------------|
-| Partner | Creates the investor |
-| Investor (record) | Belongs to the partner; does not drive this flow |
+| Wealth Manager | Can create **own investors** |
+| Distributor | Can create **own investors** |
+| Retailer | Can create **own investors** |
+| Seller | **Cannot** create investors |
+| Investor (record) | Belongs to WM, Distributor, or Retailer |
 | Admin | Can see investor records |
 
 ## Flowchart

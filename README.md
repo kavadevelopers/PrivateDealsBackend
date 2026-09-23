@@ -2,11 +2,11 @@
 
 ## Documentation (stakeholders)
 
-Start here for the partner marketplace story (Seller → company live → Partner invests):
+**Start with one file only:**
 
-- [Whole project flow](docs/workflows/whole-project-flow.md)
-- [Actors hub](docs/actors/README.md)
-- [Full docs index](docs/README.md)
+- **[docs/START-HERE.md](docs/START-HERE.md)** — whole story + links to every child flow
+
+Then (optional): [Actors hub](docs/actors/README.md) · [Full docs index](docs/README.md)
 
 ## Project Setup Guide
 

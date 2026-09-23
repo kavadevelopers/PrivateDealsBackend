@@ -9,8 +9,8 @@ This hub explains **who is who**, then sends you to the **whole project flow** a
 
 | Document | Use in meetings |
 |----------|-----------------|
-| [**Whole project flow**](../workflows/whole-project-flow.md) | Full story + one flowchart |
-| Individual flows (below) | Deep dive on one step |
+| [**START-HERE.md**](../START-HERE.md) | **One file** — full story + all child links |
+| [Whole project flow](../workflows/whole-project-flow.md) | Same journey under workflows/ |
 
 ---
 
@@ -18,24 +18,26 @@ This hub explains **who is who**, then sends you to the **whole project flow** a
 
 | Role | In plain language |
 |------|-------------------|
-| **Wealth Manager** | Top channel role. Can **create Seller** and **Distributor**. |
-| **Seller** | Partner role that **registers companies**, sets prices/deals, and tracks orders. *(Target model — code later.)* |
-| **Distributor** | Channel partner under the network (created by Wealth Manager). |
-| **Retailer** | Channel partner type (as today). |
-| **Relation Manager** | Channel partner type (as today). |
-| **Partner (general)** | Anyone in the partner network acting on business flows — especially **creating investors** and **investing for them**. |
-| **Investor** | A record **created by a Partner** in this product path (not a self-serve journey in these docs). |
-| **Admin** | Can **see and monitor** companies and orders. Not the main driver of this story. |
+| **Wealth Manager** | **Main** channel. Created from **Admin**. Creates Seller, Distributor, Retailer (direct). Has **own investors**. |
+| **Seller** | Created from **Admin** (like WM) **or** under WM. Has **Distributor** + **Retailer** below. Uploads prices/deals. **No own investors.** |
+| **Distributor** | Under WM **or** Seller. Own investors + own retailers. |
+| **Retailer** | Under WM, Seller, or Distributor. Own investors only. |
+| **Investor** | Under WM, Distributor, or Retailer only (never under Seller). |
+| **Admin** | Creates WM and Seller from admin panel; can see/monitor companies and orders. |
 
 ```mermaid
 flowchart TB
-  WM[Wealth Manager] -->|creates| Seller[Seller]
-  WM -->|creates| Dist[Distributor]
-  Seller -->|registers| Company[Company]
-  Company -->|goes live| Live[Live company]
-  Partner[Partner] -->|sees| Live
-  Partner -->|creates| Inv[Investor]
-  Partner -->|invests for| Inv
+  Admin[Admin panel] --> WM[Wealth Manager]
+  Admin --> SellerA[Seller via Admin]
+  WM --> SellerW[Seller under WM]
+  WM --> WMInv[WM Investors]
+  WM --> DistWM[Distributor]
+  WM --> RetWM[Retailer]
+  SellerA --> DistS[Distributor under Seller]
+  SellerA --> RetS[Retailer under Seller]
+  SellerW --> DistS2[Distributor under Seller]
+  DistWM --> DistInv[Investors]
+  DistS --> DistInv2[Investors]
 ```
 
 ---
@@ -44,14 +46,15 @@ flowchart TB
 
 | # | Flow | Link |
 |---|------|------|
-| A | Wealth Manager creates Seller and Distributor | [Open](../workflows/flows/wm-create-seller-distributor.md) |
-| B | Seller registers a company | [Open](../workflows/flows/seller-register-company.md) |
-| C | Company goes live | [Open](../workflows/flows/company-goes-live.md) |
-| D | Seller sets prices and deals | [Open](../workflows/flows/seller-prices-and-deals.md) |
-| E | Partner sees the company | [Open](../workflows/flows/partner-discovers-company.md) |
+| A | Channel hierarchy — Admin/WM/Seller, Distributor, Retailer, investors | [Open](../workflows/flows/wm-create-seller-distributor.md) |
+| B | Seller registers a company (duplicate check; live immediately) | [Open](../workflows/flows/seller-register-company.md) |
+| C | Company goes live — *no separate approval; see Flow B* | [Open](../workflows/flows/company-goes-live.md) |
+| D | Seller uploads prices & deals (select selling company; bank/demat) | [Open](../workflows/flows/seller-prices-and-deals.md) |
+| E | Partner home — companies & Hot deals | [Open](../workflows/flows/partner-discovers-company.md) |
 | F | Partner creates an investor | [Open](../workflows/flows/partner-create-investor.md) |
-| G | Partner invests for that investor | [Open](../workflows/flows/partner-invest-for-investor.md) |
-| H | Order completes | [Open](../workflows/flows/order-to-complete.md) |
+| G | WM / Distributor / Retailer invests (Pre-IPO or LP Secondary; deal slip bank+demat) | [Open](../workflows/flows/partner-invest-for-investor.md) |
+| H | Order completes (transaction-level deal slip) | [Open](../workflows/flows/order-to-complete.md) |
+| I | Partner sell request for specific shares | [Open](../workflows/flows/partner-sell-request.md) |
 
 ---
 
@@ -65,5 +68,5 @@ flowchart TB
 
 ## Current vs target (one note)
 
-**Target (these docs):** Seller is a **partner role**; WM creates Seller + Distributor.  
-**Today’s code:** Seller capabilities may still live on a separate seller account (`seller_master`). Partner types may not yet include `seller`. Implementation comes later — docs describe the intended product.
+**Target (these docs):** Seller is a **partner role**. Admin creates WM or Seller; Seller has Distributor/Retailer below but **no investors**; WM/Distributor/Retailer invest.  
+**Today’s code:** Seller may still be `seller_master`; partner types may not yet include `seller`. Implementation comes later.
