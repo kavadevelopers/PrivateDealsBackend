@@ -10,6 +10,7 @@ This hub explains **who is who**, then sends you to the **whole project flow** a
 | Document | Use in meetings |
 |----------|-----------------|
 | [**START-HERE.md**](../START-HERE.md) | **One file** — full story + all child links |
+| [Diagrams](../diagrams/README.md) | Swimlane · Use Case · Flowchart |
 | [Whole project flow](../workflows/whole-project-flow.md) | Same journey under workflows/ |
 
 ---
@@ -62,7 +63,7 @@ flowchart TB
 
 - [Partner module](../modules/partner-business.md)  
 - [Partner database / schema](../database/partner.md)  
-- [Documentation index](../README.md)
+- [Documentation index](../../README.md)
 
 ---
 

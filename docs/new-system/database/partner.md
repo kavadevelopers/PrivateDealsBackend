@@ -86,7 +86,9 @@ erDiagram
 - [Actors hub](../actors/README.md)  
 - [Whole project flow](../workflows/whole-project-flow.md)  
 - [Partner module](../modules/partner-business.md)  
-- [Database overview](overview.md)
+- [Database overview](../../database/overview.md)  
+- [START-HERE](../START-HERE.md)  
+- [Diagrams](../diagrams/README.md)
 
 ---
 

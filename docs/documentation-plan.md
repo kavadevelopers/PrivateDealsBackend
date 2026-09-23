@@ -22,7 +22,7 @@ Pre-IPO, primary transactions, secondary market, KYC/demat, portfolio, companies
 
 Investor onboarding; Pre-IPO buy/sell; primary investment status chain; secondary trade (ROFR/escrow/receipts).
 
-**Stakeholder partner marketplace (docs-first, target model):** whole project flow + individual flows A–H under `docs/workflows/` and `docs/workflows/flows/`. Seller as partner role; WM creates Seller + Distributor; partners create investors and invest for them. Code implementation later. See [workflows/whole-project-flow.md](workflows/whole-project-flow.md), [actors/README.md](actors/README.md).
+**Stakeholder partner marketplace (docs-first, target model under `docs/new-system/`):** [new-system/START-HERE.md](new-system/START-HERE.md), diagrams in [new-system/diagrams/](new-system/diagrams/), workflows under [new-system/workflows/](new-system/workflows/). Seller as partner role; Admin creates WM or Seller; code implementation later.
 
 ## 6. Database overview
 

@@ -1,12 +1,16 @@
 # PrivateDeals V1
 
-## Documentation (stakeholders)
+## Documentation (new system)
 
 **Start with one file only:**
 
-- **[docs/START-HERE.md](docs/START-HERE.md)** — whole story + links to every child flow
+- **[docs/new-system/START-HERE.md](docs/new-system/START-HERE.md)** — whole story
 
-Then (optional): [Actors hub](docs/actors/README.md) · [Full docs index](docs/README.md)
+**Diagrams:**
+
+- [Swimlane · Use Case · Flowchart](docs/new-system/diagrams/README.md)
+
+Then (optional): [Full docs index](docs/README.md)
 
 ## Project Setup Guide
 

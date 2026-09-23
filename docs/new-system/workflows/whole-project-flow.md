@@ -63,7 +63,8 @@ flowchart TD
 ## Related
 
 - [START-HERE.md](../START-HERE.md)  
+- [Diagrams — Swimlane · Use Case · Flowchart](../diagrams/README.md)  
 - [Actors hub](../actors/README.md)  
 - [Partner module](../modules/partner-business.md)  
 - [Partner database](../database/partner.md)  
-- [Documentation index](../README.md)
+- [Documentation index](../../README.md)

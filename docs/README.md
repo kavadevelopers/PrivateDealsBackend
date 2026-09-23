@@ -28,26 +28,20 @@ See [maintenance/living-docs-rules.md](maintenance/living-docs-rules.md).
 
 ## Navigation
 
-### Start here (stakeholders — Partner marketplace)
+### New system (target partner marketplace)
 | Document | Purpose |
 |----------|---------|
-| [**START-HERE.md**](START-HERE.md) | **Open this first** — whole story + every child flow link |
-| [workflows/whole-project-flow.md](workflows/whole-project-flow.md) | Same whole flow (linked from START-HERE) |
-| [actors/README.md](actors/README.md) | Who is who + links to every individual flow |
-| [database/partner.md](database/partner.md) | Partner network schema (Seller as partner role — target) |
+| [**new-system/START-HERE.md**](new-system/START-HERE.md) | **Open this first** — whole story |
+| [new-system/diagrams/README.md](new-system/diagrams/README.md) | **Swimlane · Use Case · Flowchart** |
+| [new-system/diagrams/flowchart.md](new-system/diagrams/flowchart.md) | Flowchart |
+| [new-system/diagrams/swimlane-activity.md](new-system/diagrams/swimlane-activity.md) | Swimlane activity |
+| [new-system/diagrams/use-case.md](new-system/diagrams/use-case.md) | Use case |
+| [new-system/actors/README.md](new-system/actors/README.md) | Who is who |
+| [new-system/database/partner.md](new-system/database/partner.md) | Partner schema (target) |
+| [new-system/modules/partner-business.md](new-system/modules/partner-business.md) | Partner module (target) |
+| [new-system/workflows/](new-system/workflows/) | Whole flow + topic detail pages |
 
-### Individual flows (topic pages)
-| Document | Purpose |
-|----------|---------|
-| [flows/wm-create-seller-distributor.md](workflows/flows/wm-create-seller-distributor.md) | Channel hierarchy (Admin/WM/Seller, Distributor, Retailer, investors) |
-| [flows/seller-register-company.md](workflows/flows/seller-register-company.md) | Seller registers company (no approval; block duplicates) |
-| [flows/company-goes-live.md](workflows/flows/company-goes-live.md) | Go-live note (no separate approval) |
-| [flows/seller-prices-and-deals.md](workflows/flows/seller-prices-and-deals.md) | Prices, deals, selling company, bank/demat |
-| [flows/partner-discovers-company.md](workflows/flows/partner-discovers-company.md) | Partner home: companies & Hot deals |
-| [flows/partner-create-investor.md](workflows/flows/partner-create-investor.md) | Create investor |
-| [flows/partner-invest-for-investor.md](workflows/flows/partner-invest-for-investor.md) | Invest (Pre-IPO or LP Secondary; deal slip) |
-| [flows/order-to-complete.md](workflows/flows/order-to-complete.md) | Deal slip → payment → complete |
-| [flows/partner-sell-request.md](workflows/flows/partner-sell-request.md) | Sell request for specific shares |
+Pointer stub: [START-HERE.md](START-HERE.md) → redirects to new-system.
 
 ### Start here (engineering)
 | Document | Purpose |
@@ -63,7 +57,7 @@ See [maintenance/living-docs-rules.md](maintenance/living-docs-rules.md).
 |----------|---------|
 | [modules/admin.md](modules/admin.md) | Admin portal (`/admin`) |
 | [modules/investor.md](modules/investor.md) | Investor web + API |
-| [modules/partner-business.md](modules/partner-business.md) | Partner network (incl. target Seller role) + business API |
+| [modules/partner-business.md](modules/partner-business.md) | Pointer → new-system partner module |
 | [modules/startup.md](modules/startup.md) | Startup portal + API |
 | [modules/public-website.md](modules/public-website.md) | Public marketing site (migrated Blade site) |
 | [modules/shared-helpers-services.md](modules/shared-helpers-services.md) | Helpers, services, repositories |
@@ -87,7 +81,7 @@ See [maintenance/living-docs-rules.md](maintenance/living-docs-rules.md).
 | Document | Purpose |
 |----------|---------|
 | [database/overview.md](database/overview.md) | Schema domains, key tables/models |
-| [database/partner.md](database/partner.md) | Partner table, types, hierarchy (target Seller) |
+| [new-system/database/partner.md](new-system/database/partner.md) | New-system partner schema (target) |
 | [api/overview.md](api/overview.md) | API auth layers, versioning |
 | [api/v1.md](api/v1.md) | Investor / business / startup v1 |
 | [api/v2.md](api/v2.md) | Investor / business v2 |
@@ -96,8 +90,8 @@ See [maintenance/living-docs-rules.md](maintenance/living-docs-rules.md).
 ### Workflows
 | Document | Purpose |
 |----------|---------|
-| [workflows/whole-project-flow.md](workflows/whole-project-flow.md) | **Stakeholder:** full partner marketplace flow |
-| [workflows/flows/](workflows/flows/) | Topic detail pages (hierarchy, company, deals, invest, …) |
+| [new-system/workflows/whole-project-flow.md](new-system/workflows/whole-project-flow.md) | **New system:** full partner marketplace flow |
+| [new-system/workflows/flows/](new-system/workflows/flows/) | New-system topic detail pages |
 | [workflows/investor-onboarding.md](workflows/investor-onboarding.md) | Register → MPIN → KYC |
 | [workflows/pre-ipo-buy-sell.md](workflows/pre-ipo-buy-sell.md) | Buy/sell/cancel Pre-IPO |
 | [workflows/primary-investment.md](workflows/primary-investment.md) | Commit → docs → payment |

@@ -23,7 +23,7 @@ erDiagram
   documents ||--o{ pre_ipo_transaction : attaches
 ```
 
-Partner network detail (types, Seller target role, hierarchy): [database/partner.md](partner.md).
+Partner network detail (types, Seller target role, hierarchy): [new-system/database/partner.md](../new-system/database/partner.md).
 
 ## Key tables ↔ models (non-exhaustive)
 
