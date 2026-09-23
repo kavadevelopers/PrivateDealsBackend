@@ -13,8 +13,8 @@ Back to: [Diagrams index](README.md) · [START-HERE](../START-HERE.md)
 flowchart TB
   subgraph AdminLane [Admin]
     direction TB
-    A1[Create Wealth Manager]
-    A2[Create Seller like WM]
+    A1[Create WM Seller Distributor Retailer]
+    A2[Seller is inventory only]
     A3[See / monitor companies and orders]
     A1 --> A2
   end
@@ -30,16 +30,24 @@ flowchart TB
     S2 -->|Yes| S4
   end
 
-  subgraph ChannelLane [WM / Distributor / Retailer]
+  subgraph ChannelLane [WM / Distributor / Retailer — channel partners]
     direction TB
-    C0[Build channel under WM or Seller]
+    C0[Build channel — WM: Dist/Retailer/RM — Dist: Retailer/RM]
     C0 --> C1[Wait for live companies]
+  end
+
+  subgraph RMLane [RM]
+    direction TB
+    R1[Manage company data]
+    R2[Assign investors]
+    R1 --> R2
   end
 
   A2 --> S1
   A1 --> C0
   S3 --> C1
   S3 -.-> A3
+  C0 -.-> R1
 ```
 
 ---
@@ -68,6 +76,11 @@ flowchart TB
     P1 --> P2 --> P3 --> P4 --> P5
   end
 
+  subgraph RMLane [RM]
+    direction TB
+    R1[Manage company data / assign investors as needed]
+  end
+
   subgraph SystemLane [System]
     direction TB
     Y1[Show live catalog and Hot deals]
@@ -89,6 +102,7 @@ flowchart TB
   P5 --> Y4
   Y2 -.-> A1
   Y4 --> S5
+  R1 -.-> P2
 ```
 
 ---
@@ -132,10 +146,11 @@ flowchart TB
 
 | Lane | Meaning |
 |------|---------|
-| **Admin** | Creates WM/Seller; monitors |
-| **Seller** | Companies, prices, deals, settlement accounts; no own investors |
-| **WM / Distributor / Retailer** | Channel partners who create investors and invest (or sell-request) |
-| **System** | Catalog, transaction, deal slip, completion |
+| **Admin** | Creates WM, Seller, Distributor, Retailer; monitors |
+| **Seller** | Inventory only — **no users** |
+| **WM / Distributor / Retailer** | Channel partners |
+| **RM** | Company data + assign investors for WM/Distributor |
+| **System** | Catalog, transaction, deal slip |
 
 ---
 

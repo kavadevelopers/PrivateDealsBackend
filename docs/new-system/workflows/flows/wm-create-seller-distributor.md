@@ -1,105 +1,120 @@
-# Flow A — Channel hierarchy (WM, Admin Seller, Distributor, Retailer)
+# Channel hierarchy — New system
 
-**In one sentence:** **Wealth Manager** is the main channel character (own investors + Distributor/Retailer/Seller). **Seller** can also be created from the **Admin panel** (like WM). Seller has **Distributor** and **Retailer** below them, but **no own investors**.
+**In one sentence:** **Admin** creates **WM**, **Seller**, **Distributor**, and **Retailer**. **WM cannot create Seller**. **Seller** is inventory-only (no users under them). **Channel partners** (WM / Distributor / Retailer) own investors; **RM** manages company data and assigns investors for WM and Distributor.
 
-## Confirmed hierarchy
+---
 
-### Path 1 — Wealth Manager (main channel)
+## Two kinds of roles
+
+| Kind | Roles | Meaning |
+|------|--------|---------|
+| **Channel partner** | Wealth Manager, Distributor, Retailer | Build channel, own investors, invest / sell-request |
+| **RM (Relation Manager)** | Relation Manager | Manage **company data** for their WM or Distributor; **assign investors** |
+| **Seller** | Seller | Inventory only (companies, prices, deals). **Cannot create any other user** |
+
+---
+
+## Who creates whom
+
+| Role | Created by | Can create below | Own investors? | Has RM? |
+|------|------------|------------------|----------------|---------|
+| **Wealth Manager** | **Admin only** | Distributor, Retailer, own investors, **RM** | **Yes** | **Yes** — RM manages WM company data & assigns investors |
+| **Seller** | **Admin only** | **Nobody** (Seller only) | **No** | No |
+| **Distributor** | **Admin** *or* **WM** (as channel partner) | Retailers (channel), own investors, **RM** | **Yes** | **Yes** — same idea as WM |
+| **Retailer** | **Admin** *or* **WM** (as channel partner) *or* **Distributor** | Own investors only | **Yes** | No (only manages investors) |
+| **RM** | **WM** or **Distributor** (for their company) | Assigns / manages investors for that partner’s company data | Works on behalf of WM/Distributor | — |
+
+**Rules confirmed**
+- WM **cannot** create Seller  
+- Seller **cannot** create another user — Seller is simple, only Seller  
+- Else channel rules as above  
+
+---
+
+## Trees
+
+### Admin creates top partners
 
 ```text
-Wealth Manager (main)
-├── Seller (created by WM)
-│   ├── Distributor (under Seller)
-│   │   ├── Distributor’s Investors
-│   │   └── Distributor’s Retailers → Investors
-│   └── Retailer (direct under Seller) → Investors
-├── Wealth Manager’s own Investors
-├── Distributor (direct under WM)
-│   ├── Distributor’s Investors
-│   └── Distributor’s Retailers → Investors
-└── Retailer (direct under WM) → Investors
-```
-
-### Path 2 — Seller created from Admin panel
-
-```text
-Admin creates Seller  (same idea as creating WM)
-├── Distributor (under Seller)
-│   ├── Distributor’s Investors
-│   └── Distributor’s Retailers → Investors
-└── Retailer (direct under Seller) → Investors
-   (Seller does NOT have own investors)
+Admin panel
+├── Wealth Manager
+│     ├── RM (manage company data, assign investors)
+│     ├── WM’s own Investors
+│     ├── Distributor (WM channel partner)
+│     │     ├── RM
+│     │     ├── Distributor’s Investors
+│     │     └── Retailers → Investors
+│     └── Retailer (WM channel partner) → Investors
+├── Seller                    ← inventory only; no users below
+├── Distributor               ← can also be created by Admin
+│     ├── RM
+│     ├── Investors
+│     └── Retailers → Investors
+└── Retailer                  ← can also be created by Admin
+      └── Investors only
 ```
 
 ```mermaid
 flowchart TB
-  Admin[Admin panel] --> WM[Wealth Manager]
-  Admin --> SellerAdmin[Seller created by Admin]
-  WM --> SellerWM[Seller under WM]
-  WM --> WMInv[WM own Investors]
-  WM --> DistWM[Distributor under WM]
-  WM --> RetWM[Retailer under WM]
-  SellerAdmin --> DistS1[Distributor]
-  SellerAdmin --> RetS1[Retailer under Seller]
-  SellerWM --> DistS2[Distributor]
-  SellerWM --> RetS2[Retailer under Seller]
-  DistWM --> DistInv1[Investors]
-  DistWM --> RetD1[Retailers]
-  DistS1 --> DistInv2[Investors]
-  DistS1 --> RetD2[Retailers]
-  DistS2 --> DistInv3[Investors]
-  DistS2 --> RetD3[Retailers]
+  Admin[Admin] --> WM[Wealth Manager]
+  Admin --> Seller[Seller — no users below]
+  Admin --> DistAdmin[Distributor]
+  Admin --> RetAdmin[Retailer]
+  WM --> RM_WM[RM]
+  WM --> WMInv[WM Investors]
+  WM --> DistWM[Distributor]
+  WM --> RetWM[Retailer]
+  DistWM --> RM_D[RM]
+  DistWM --> DistInv[Investors]
+  DistWM --> RetFromD[Retailer]
+  DistAdmin --> RM_D2[RM]
+  DistAdmin --> DistInv2[Investors]
+  DistAdmin --> RetFromD2[Retailer]
+  RetWM --> RetInv[Investors]
+  RetAdmin --> RetInv2[Investors]
+  RetFromD --> RetInv3[Investors]
 ```
 
-## Who creates whom
+---
 
-| Actor | Created by | Can create / have below | Own investors? |
-|-------|------------|-------------------------|----------------|
-| **Wealth Manager** | **Admin panel** | Seller, Distributor, Retailer (direct); own investors | **Yes** |
-| **Seller** | **Admin panel** *or* **WM** | Distributor, Retailer (direct); companies/prices/deals | **No** |
-| **Distributor** | WM or Seller | Own retailers; own investors | **Yes** |
-| **Retailer** | WM, Seller, or Distributor | Own investors only | **Yes** |
+## What each role does
 
-## Steps
+### Wealth Manager (channel partner)
+- Created by **Admin**
+- Creates **Distributor**, **Retailer**, **own investors**, and **RM**
+- RM manages **company data** for the WM and **assigns investors**
+- Invests / sell-requests like other channel partners
 
-1. **What happens:** Admin creates a **Wealth Manager** and/or a **Seller** from the admin panel (Seller creation is like creating WM).  
-   **Result:** Top partners exist.
+### Seller
+- Created by **Admin only**
+- Registers companies, uploads prices/deals, bank/demat
+- **Does not** create WM, Distributor, Retailer, RM, or investors
 
-2. **What happens (WM path):** WM creates Seller / Distributor / Retailer and **own investors**.  
-   **Result:** Full WM channel tree.
+### Distributor (channel partner)
+- Created by **Admin** or by **WM**
+- Creates **Retailers**, **own investors**, and **RM**
+- RM manages distributor company data and assigns investors
 
-3. **What happens (Seller path):** Seller (from Admin or under WM) creates **Distributor** and **Retailer** below them — **not** own investors.  
-   **Result:** Channel under Seller; investing is done by Distributor/Retailer for *their* investors.
+### Retailer (channel partner)
+- Created by **Admin**, **WM**, or **Distributor**
+- **Only** manages **own investors** (no RM in this story)
 
-4. **What happens:** Distributor creates own investors and own retailers; Retailer creates own investors.  
-   **Result:** Investors always sit under WM, Distributor, or Retailer — never under Seller.
+### RM (Relation Manager)
+- Belongs to a **WM** or **Distributor**
+- Manages **all company data** for that partner
+- **Assigns investors** for that partner’s company
 
-## Rules to remember
-
-| Rule | Meaning |
-|------|---------|
-| Admin creates WM **or** Seller | Seller can start from admin like WM |
-| Both paths | WM can still create Seller under WM |
-| Seller channel | Seller can have **Distributor** and **Retailer** below |
-| Seller investors | **No** — Seller does not have own investors |
-| Who invests | WM / Distributor / Retailer for their own investors |
-
-## When this flow ends
-
-Channel ownership and who may create investors is clear.
-
-## Next flow
-
-→ [Seller registers a company](seller-register-company.md)
+---
 
 ## Related
 
-- [Whole project flow](../whole-project-flow.md)  
-- [Actors hub](../../actors/README.md)  
-- [Partner module](../../modules/partner-business.md)
+- [START-HERE](../START-HERE.md)
+- [Actors](../actors/README.md)
+- [Diagrams](../diagrams/README.md)
+- [Partner module](../modules/partner-business.md)
 
 ---
 
 ## For technical team
 
-**Target:** Admin partner CRUD creates WM and Seller; Seller `parent_id` may be null (admin-created) or WM; Distributor/Retailer `parent_id` → WM or Seller; investors never `partner_id` of a Seller type. Code later.
+**Target:** Admin creates WM/Seller/Distributor/Retailer; WM does not create Seller; Seller has no child partners; RM under WM/Distributor for company data + investor assignment. Code later.

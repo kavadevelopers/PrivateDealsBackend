@@ -42,22 +42,23 @@ flowchart TD
 
 ```mermaid
 flowchart TB
-  Admin[Admin panel] --> WM[Wealth Manager]
-  Admin --> SellerTop[Seller]
-  WM --> SellerUnder[Seller under WM]
-  WM --> WMInv[WM investors]
-  WM --> DistWM[Distributor]
-  WM --> RetWM[Retailer]
-  SellerTop --> DistS[Distributor]
-  SellerTop --> RetS[Retailer]
-  SellerUnder --> DistS2[Distributor]
-  SellerUnder --> RetS2[Retailer]
-  DistWM --> DistInv[Investors]
-  DistWM --> RetFromDist[Retailers]
-  DistS --> DistInv2[Investors]
-  DistS --> RetFromDist2[Retailers]
+  Admin[Admin] --> WM[Wealth Manager]
+  Admin --> Seller[Seller — no users]
+  Admin --> DistA[Distributor]
+  Admin --> RetA[Retailer]
+  WM --> RM[RM]
+  WM --> WMInv[Investors]
+  WM --> Dist[Distributor]
+  WM --> Ret[Retailer]
+  Dist --> RMd[RM]
+  Dist --> DistInv[Investors]
+  Dist --> RetD[Retailer]
+  DistA --> RMd2[RM]
+  DistA --> DistInv2[Investors]
+  Ret --> RetInv[Investors]
 ```
 
+**Note:** WM does **not** create Seller. Seller creates **no** users. RM under WM/Distributor only.
 ---
 
 ## Related detail pages

@@ -1,16 +1,16 @@
 # Flow F — Partner creates an investor
 
-**In one sentence:** Wealth Manager, Distributor, or Retailer creates an investor under **themselves** — that partner owns the investor and invests for them.
+**In one sentence:** Wealth Manager, Distributor, or Retailer creates an investor under **themselves**. RM may **assign** investors for WM/Distributor company management — Seller never owns investors.
 
 ## Who is involved
 
 | Role | What they do |
 |------|----------------|
-| Wealth Manager | Can create **own investors** |
-| Distributor | Can create **own investors** |
-| Retailer | Can create **own investors** |
+| Wealth Manager | Own investors |
+| Distributor | Own investors |
+| Retailer | Own investors |
+| RM | Assign / manage investors for WM or Distributor company data |
 | Seller | **Cannot** create investors |
-| Investor (record) | Belongs to WM, Distributor, or Retailer |
 | Admin | Can see investor records |
 
 ## Flowchart

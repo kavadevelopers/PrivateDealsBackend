@@ -1,17 +1,26 @@
-# Actors hub — Partner marketplace
+# Actors hub — New system
 
-**Start here for stakeholders.**  
-This hub explains **who is who**, then sends you to the **whole project flow** and each **individual flow**.
+**Who is who** for the partner marketplace. Full story: [START-HERE](../START-HERE.md).
 
 ---
 
 ## Show this first
 
-| Document | Use in meetings |
-|----------|-----------------|
-| [**START-HERE.md**](../START-HERE.md) | **One file** — full story + all child links |
+| Document | Use |
+|----------|-----|
+| [START-HERE](../START-HERE.md) | Whole story |
 | [Diagrams](../diagrams/README.md) | Swimlane · Use Case · Flowchart |
-| [Whole project flow](../workflows/whole-project-flow.md) | Same journey under workflows/ |
+| [Hierarchy](../workflows/flows/wm-create-seller-distributor.md) | Channel partner + RM trees |
+
+---
+
+## Two kinds + Seller
+
+| Kind | Roles |
+|------|--------|
+| **Channel partner** | Wealth Manager, Distributor, Retailer |
+| **RM** | Relation Manager — company data + assign investors (for WM / Distributor) |
+| **Seller** | Inventory only — **no users below** |
 
 ---
 
@@ -19,55 +28,55 @@ This hub explains **who is who**, then sends you to the **whole project flow** a
 
 | Role | In plain language |
 |------|-------------------|
-| **Wealth Manager** | **Main** channel. Created from **Admin**. Creates Seller, Distributor, Retailer (direct). Has **own investors**. |
-| **Seller** | Created from **Admin** (like WM) **or** under WM. Has **Distributor** + **Retailer** below. Uploads prices/deals. **No own investors.** |
-| **Distributor** | Under WM **or** Seller. Own investors + own retailers. |
-| **Retailer** | Under WM, Seller, or Distributor. Own investors only. |
-| **Investor** | Under WM, Distributor, or Retailer only (never under Seller). |
-| **Admin** | Creates WM and Seller from admin panel; can see/monitor companies and orders. |
+| **Admin** | Creates WM, Seller, Distributor, Retailer. Monitors. |
+| **Wealth Manager** | Channel partner. Creates Distributor, Retailer, own investors, **RM**. **Cannot create Seller.** |
+| **Seller** | Admin only. Companies / prices / deals. **Cannot create any other user.** |
+| **Distributor** | Admin **or** WM. Own investors, retailers, **RM**. |
+| **Retailer** | Admin **or** WM **or** Distributor. **Own investors only.** |
+| **RM** | Under WM or Distributor. Manages **company data**; **assigns investors**. |
+| **Investor** | Owned by WM, Distributor, or Retailer (never Seller). |
 
 ```mermaid
 flowchart TB
-  Admin[Admin panel] --> WM[Wealth Manager]
-  Admin --> SellerA[Seller via Admin]
-  WM --> SellerW[Seller under WM]
-  WM --> WMInv[WM Investors]
-  WM --> DistWM[Distributor]
-  WM --> RetWM[Retailer]
-  SellerA --> DistS[Distributor under Seller]
-  SellerA --> RetS[Retailer under Seller]
-  SellerW --> DistS2[Distributor under Seller]
-  DistWM --> DistInv[Investors]
-  DistS --> DistInv2[Investors]
+  Admin[Admin] --> WM[Wealth Manager]
+  Admin --> Seller[Seller — no users]
+  Admin --> DistA[Distributor]
+  Admin --> RetA[Retailer]
+  WM --> RM[RM]
+  WM --> Inv[Investors]
+  WM --> Dist[Distributor]
+  WM --> Ret[Retailer]
+  Dist --> RM2[RM]
+  Dist --> Inv2[Investors]
+  Dist --> Ret2[Retailer]
 ```
 
 ---
 
-## Detail pages (click any)
+## Detail pages
 
 | Topic | Link |
 |-------|------|
-| Channel hierarchy — Admin/WM/Seller, Distributor, Retailer, investors | [Open](../workflows/flows/wm-create-seller-distributor.md) |
-| Seller registers a company (duplicate check; live immediately) | [Open](../workflows/flows/seller-register-company.md) |
-| Company goes live — *no separate approval* | [Open](../workflows/flows/company-goes-live.md) |
-| Seller uploads prices & deals (select selling company; bank/demat) | [Open](../workflows/flows/seller-prices-and-deals.md) |
-| Partner home — companies & Hot deals | [Open](../workflows/flows/partner-discovers-company.md) |
+| Hierarchy + RM | [Open](../workflows/flows/wm-create-seller-distributor.md) |
+| Register company | [Open](../workflows/flows/seller-register-company.md) |
+| Prices and deals | [Open](../workflows/flows/seller-prices-and-deals.md) |
+| Home and Hot deals | [Open](../workflows/flows/partner-discovers-company.md) |
 | Create investor | [Open](../workflows/flows/partner-create-investor.md) |
-| Invest (Pre-IPO or LP Secondary; deal slip bank+demat) | [Open](../workflows/flows/partner-invest-for-investor.md) |
-| Order completes | [Open](../workflows/flows/order-to-complete.md) |
-| Sell request for specific shares | [Open](../workflows/flows/partner-sell-request.md) |
+| Invest + deal slip | [Open](../workflows/flows/partner-invest-for-investor.md) |
+| Order complete | [Open](../workflows/flows/order-to-complete.md) |
+| Sell request | [Open](../workflows/flows/partner-sell-request.md) |
 
 ---
 
 ## More detail
 
 - [Partner module](../modules/partner-business.md)  
-- [Partner database / schema](../database/partner.md)  
-- [Documentation index](../../README.md)
+- [Partner database](../database/partner.md)  
+- [Docs index](../../README.md)
 
 ---
 
-## Current vs target (one note)
+## Current vs target
 
-**Target (these docs):** Seller is a **partner role**. Admin creates WM or Seller; Seller has Distributor/Retailer below but **no investors**; WM/Distributor/Retailer invest.  
-**Today’s code:** Seller may still be `seller_master`; partner types may not yet include `seller`. Implementation comes later.
+**Target:** WM cannot create Seller; Seller creates no users; RM under WM/Distributor for company data + investor assignment; Distributor/Retailer creatable by Admin or channel.  
+**Code later.**
