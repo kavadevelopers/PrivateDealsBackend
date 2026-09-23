@@ -1,0 +1,16 @@
+@startuml
+|Seller|
+start
+:Choose price record\n(eligibility unconfirmed);
+:Enter new share price;
+:Submit update;
+|System|
+:Apply update\n(validation unconfirmed);
+:Store result\n(history unconfirmed);
+:Impact on deals/transactions\nunconfirmed;
+stop
+note right
+  Do not infer permissions
+  from company-edit rights
+end note
+@enduml

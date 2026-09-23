@@ -22,11 +22,11 @@ erDiagram
 
 | Type | Kind | Created by | Own investors | Notes |
 |------|------|------------|---------------|--------|
-| Wealth Manager | Channel partner | Admin | Yes | Distributor, Retailer, RM. **Not Seller** |
+| Wealth Manager | Channel partner | Admin | Yes | Inv, Relationship Manager, Dist, Retailer. **Not Seller** |
 | Seller | Inventory | Admin | No | **No child users** |
-| Distributor | Channel partner | Admin or WM | Yes | Retailers + RM |
+| Distributor | Channel partner | Admin or WM | Yes | Retailers + Relationship Manager |
 | Retailer | Channel partner | Admin, WM, or Distributor | Yes | Investors only |
-| Relation Manager (RM) | RM | WM or Distributor | Assigns for parent | Company data + assign investors |
+| Relationship Manager | RM | WM or Distributor | Assigned only | Manages assigned Investors |
 
 ---
 

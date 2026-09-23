@@ -1,120 +1,71 @@
 # Channel hierarchy — New system
 
-**In one sentence:** **Admin** creates **WM**, **Seller**, **Distributor**, and **Retailer**. **WM cannot create Seller**. **Seller** is inventory-only (no users under them). **Channel partners** (WM / Distributor / Retailer) own investors; **RM** manages company data and assigns investors for WM and Distributor.
+Aligned with [business-diagrams/role-permissions.md](../business-diagrams/role-permissions.md).  
+Uses **Relationship Manager** naming.
 
 ---
 
-## Two kinds of roles
+## Two kinds + Seller
 
-| Kind | Roles | Meaning |
-|------|--------|---------|
-| **Channel partner** | Wealth Manager, Distributor, Retailer | Build channel, own investors, invest / sell-request |
-| **RM (Relation Manager)** | Relation Manager | Manage **company data** for their WM or Distributor; **assign investors** |
-| **Seller** | Seller | Inventory only (companies, prices, deals). **Cannot create any other user** |
+| Kind | Roles |
+|------|--------|
+| **Channel partner** | Wealth Manager, Distributor, Retailer |
+| **Relationship Manager** | Manages **assigned** Investors; company data for WM/Distributor |
+| **Seller** | Inventory only — **no subordinate users** |
 
 ---
 
 ## Who creates whom
 
-| Role | Created by | Can create below | Own investors? | Has RM? |
-|------|------------|------------------|----------------|---------|
-| **Wealth Manager** | **Admin only** | Distributor, Retailer, own investors, **RM** | **Yes** | **Yes** — RM manages WM company data & assigns investors |
-| **Seller** | **Admin only** | **Nobody** (Seller only) | **No** | No |
-| **Distributor** | **Admin** *or* **WM** (as channel partner) | Retailers (channel), own investors, **RM** | **Yes** | **Yes** — same idea as WM |
-| **Retailer** | **Admin** *or* **WM** (as channel partner) *or* **Distributor** | Own investors only | **Yes** | No (only manages investors) |
-| **RM** | **WM** or **Distributor** (for their company) | Assigns / manages investors for that partner’s company data | Works on behalf of WM/Distributor | — |
+| Actor | Creates | Notes |
+|-------|---------|--------|
+| **Admin** | WM, Seller, Distributor, Retailer | Not Investors or RMs. Dist/Retailer need **no** parent |
+| **Wealth Manager** | Investor, Relationship Manager, Distributor, Retailer | **Cannot** create Seller. Areas from Admin |
+| **Distributor** | Retailer, Investor, Relationship Manager | Areas ⊆ parent’s (or independent setup **unconfirmed**) |
+| **Retailer** | Investor | |
+| **Relationship Manager** | — | Manages assigned Investors only |
+| **Seller** | — | No user create |
 
-**Rules confirmed**
-- WM **cannot** create Seller  
-- Seller **cannot** create another user — Seller is simple, only Seller  
-- Else channel rules as above  
+WM / Distributor **assign/reassign** Investors to Relationship Manager. Retailer→RM assignment **unconfirmed**.
 
 ---
 
-## Trees
-
-### Admin creates top partners
+## Tree
 
 ```text
-Admin panel
-├── Wealth Manager
-│     ├── RM (manage company data, assign investors)
-│     ├── WM’s own Investors
-│     ├── Distributor (WM channel partner)
-│     │     ├── RM
-│     │     ├── Distributor’s Investors
-│     │     └── Retailers → Investors
-│     └── Retailer (WM channel partner) → Investors
-├── Seller                    ← inventory only; no users below
-├── Distributor               ← can also be created by Admin
-│     ├── RM
+Admin
+├── Wealth Manager (investment areas set by Admin)
+│     ├── Relationship Manager
 │     ├── Investors
-│     └── Retailers → Investors
-└── Retailer                  ← can also be created by Admin
-      └── Investors only
+│     ├── Distributor (subset of WM areas)
+│     │     ├── Relationship Manager
+│     │     ├── Investors
+│     │     └── Retailers → Investors
+│     └── Retailer → Investors
+├── Seller (no users)
+├── Distributor (independent OK)
+└── Retailer (independent OK)
 ```
 
 ```mermaid
 flowchart TB
   Admin[Admin] --> WM[Wealth Manager]
-  Admin --> Seller[Seller — no users below]
-  Admin --> DistAdmin[Distributor]
-  Admin --> RetAdmin[Retailer]
-  WM --> RM_WM[RM]
-  WM --> WMInv[WM Investors]
-  WM --> DistWM[Distributor]
-  WM --> RetWM[Retailer]
-  DistWM --> RM_D[RM]
-  DistWM --> DistInv[Investors]
-  DistWM --> RetFromD[Retailer]
-  DistAdmin --> RM_D2[RM]
-  DistAdmin --> DistInv2[Investors]
-  DistAdmin --> RetFromD2[Retailer]
-  RetWM --> RetInv[Investors]
-  RetAdmin --> RetInv2[Investors]
-  RetFromD --> RetInv3[Investors]
+  Admin --> Seller[Seller — no users]
+  Admin --> DistA[Distributor independent]
+  Admin --> RetA[Retailer independent]
+  WM --> RM[Relationship Manager]
+  WM --> Inv[Investors]
+  WM --> Dist[Distributor]
+  WM --> Ret[Retailer]
+  Dist --> RM2[Relationship Manager]
+  Dist --> Inv2[Investors]
+  Dist --> Ret2[Retailer]
 ```
-
----
-
-## What each role does
-
-### Wealth Manager (channel partner)
-- Created by **Admin**
-- Creates **Distributor**, **Retailer**, **own investors**, and **RM**
-- RM manages **company data** for the WM and **assigns investors**
-- Invests / sell-requests like other channel partners
-
-### Seller
-- Created by **Admin only**
-- Registers companies, uploads prices/deals, bank/demat
-- **Does not** create WM, Distributor, Retailer, RM, or investors
-
-### Distributor (channel partner)
-- Created by **Admin** or by **WM**
-- Creates **Retailers**, **own investors**, and **RM**
-- RM manages distributor company data and assigns investors
-
-### Retailer (channel partner)
-- Created by **Admin**, **WM**, or **Distributor**
-- **Only** manages **own investors** (no RM in this story)
-
-### RM (Relation Manager)
-- Belongs to a **WM** or **Distributor**
-- Manages **all company data** for that partner
-- **Assigns investors** for that partner’s company
 
 ---
 
 ## Related
 
-- [START-HERE](../START-HERE.md)
-- [Actors](../actors/README.md)
-- [Diagrams](../diagrams/README.md)
-- [Partner module](../modules/partner-business.md)
-
----
-
-## For technical team
-
-**Target:** Admin creates WM/Seller/Distributor/Retailer; WM does not create Seller; Seller has no child partners; RM under WM/Distributor for company data + investor assignment. Code later.
+- [Business diagrams](../business-diagrams/README.md)  
+- [START-HERE](../START-HERE.md)  
+- [Actors](../actors/README.md)  

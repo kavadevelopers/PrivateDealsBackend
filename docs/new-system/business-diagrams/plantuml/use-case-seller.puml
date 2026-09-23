@@ -1,0 +1,21 @@
+@startuml
+left to right direction
+actor "Seller" as Seller
+rectangle "Private Deal Seller application" {
+  usecase "Login to dashboard" as L
+  usecase "Create company" as CCo
+  usecase "Use existing company if duplicate" as Use
+  usecase "Edit own companies only" as Edit
+  usecase "Create deal" as Deal
+  usecase "Update share price" as Price
+  usecase "View relevant users in process" as View
+}
+Seller --> L
+Seller --> CCo
+Seller --> Use
+Seller --> Edit
+Seller --> Deal
+Seller --> Price
+Seller --> View
+note right of Seller : No subordinate users
+@enduml

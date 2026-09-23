@@ -32,10 +32,9 @@ See [maintenance/living-docs-rules.md](maintenance/living-docs-rules.md).
 | Document | Purpose |
 |----------|---------|
 | [**new-system/START-HERE.md**](new-system/START-HERE.md) | **Open this first** — whole story |
-| [new-system/diagrams/README.md](new-system/diagrams/README.md) | **Swimlane · Use Case · Flowchart** |
-| [new-system/diagrams/flowchart.md](new-system/diagrams/flowchart.md) | Flowchart |
-| [new-system/diagrams/swimlane-activity.md](new-system/diagrams/swimlane-activity.md) | Swimlane activity |
-| [new-system/diagrams/use-case.md](new-system/diagrams/use-case.md) | Use case |
+| [**new-system/business-diagrams/README.md**](new-system/business-diagrams/README.md) | **Use cases · Swimlanes A–F · Permissions · PlantUML** |
+| [new-system/business-diagrams/role-permissions.md](new-system/business-diagrams/role-permissions.md) | Role–permission table |
+| [new-system/diagrams/README.md](new-system/diagrams/README.md) | Older Mermaid diagram pack |
 | [new-system/actors/README.md](new-system/actors/README.md) | Who is who |
 | [new-system/database/partner.md](new-system/database/partner.md) | Partner schema (target) |
 | [new-system/modules/partner-business.md](new-system/modules/partner-business.md) | Partner module (target) |

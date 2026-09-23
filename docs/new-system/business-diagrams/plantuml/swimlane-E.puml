@@ -1,0 +1,18 @@
+@startuml
+|Seller|
+start
+:Select company;
+:Enter deal details\n(fields unconfirmed);
+:Submit create deal;
+|System|
+:Validate and save;
+:Publish — no Admin approval;
+:Make available in Wealth Manager app;
+|Wealth Manager application|
+:Authorised users may see deal;
+note right
+  Exact visibility filters: unconfirmed
+  Area access does not imply every deal
+end note
+stop
+@enduml

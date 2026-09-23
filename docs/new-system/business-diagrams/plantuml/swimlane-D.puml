@@ -1,0 +1,29 @@
+@startuml
+|Admin|
+start
+:Create company;
+|System|
+:Save shared company record;
+stop
+|Seller|
+start
+:Start create company;
+if (Company already exists?\ncriteria unconfirmed) then (yes)
+  :Use existing — no duplicate;
+  stop
+else (no)
+  :Create company\nownership = this Seller;
+  |System|
+  :Save shared company;
+endif
+stop
+|Seller|
+start
+:Edit company?;
+if (Originally created by this Seller?) then (yes)
+  :Allow edit;
+else (no)
+  :Deny edit\n(Admin or other Seller);
+endif
+stop
+@enduml

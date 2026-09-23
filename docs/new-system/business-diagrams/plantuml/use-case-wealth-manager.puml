@@ -1,0 +1,47 @@
+@startuml
+left to right direction
+actor "Wealth Manager" as WM
+actor "Distributor" as Dist
+actor "Retailer" as Ret
+actor "Relationship Manager" as RM
+rectangle "Wealth Manager application" {
+  usecase "Login then area selection" as L
+  usecase "Create Investor" as CInv
+  usecase "Create Relationship Manager" as CRM
+  usecase "Create Distributor" as CDist
+  usecase "Create Retailer" as CRet
+  usecase "Grant investment areas subset" as Grant
+  usecase "Assign Investors to RM" as Assign
+  usecase "Browse in authorised areas" as Browse
+  usecase "Invest for Investor" as Invest
+  usecase "Sell request" as Sell
+  usecase "Manage assigned Investors" as Manage
+}
+WM --> L
+WM --> CInv
+WM --> CRM
+WM --> CDist
+WM --> CRet
+WM --> Grant
+WM --> Assign
+WM --> Browse
+WM --> Invest
+WM --> Sell
+Dist --> L
+Dist --> CInv
+Dist --> CRM
+Dist --> CRet
+Dist --> Grant
+Dist --> Assign
+Dist --> Browse
+Dist --> Invest
+Dist --> Sell
+Ret --> L
+Ret --> CInv
+Ret --> Browse
+Ret --> Invest
+Ret --> Sell
+RM --> L
+RM --> Manage
+note bottom of WM : Cannot create Seller
+@enduml

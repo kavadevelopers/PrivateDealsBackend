@@ -8,9 +8,8 @@
 
 **Diagrams:**
 
-- [Swimlane · Use Case · Flowchart](docs/new-system/diagrams/README.md)
-
-Then (optional): [Full docs index](docs/README.md)
+- **[Business diagrams](docs/new-system/business-diagrams/README.md)** — Use cases, swimlanes A–F, permissions, PlantUML
+- [START-HERE](docs/new-system/START-HERE.md)
 
 ## Project Setup Guide
 

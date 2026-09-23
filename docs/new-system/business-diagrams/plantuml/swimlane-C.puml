@@ -1,0 +1,16 @@
+@startuml
+|Wealth Manager or Distributor|
+start
+:Select Investor;
+:Select Relationship Manager;
+:Assign or reassign;
+|System|
+:Update Investor assignment;
+|Relationship Manager|
+:Sees Investor in assigned list;
+:Manages assigned Investor\n(cannot create users);
+stop
+note left
+  Retailer assign-to-RM: unconfirmed
+end note
+@enduml

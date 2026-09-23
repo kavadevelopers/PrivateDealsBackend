@@ -1,0 +1,26 @@
+@startuml
+|WM or Distributor or Retailer|
+start
+:Choose create Investor / RM / Dist / Retailer;
+if (Allowed for this role?) then (no)
+  :Stop — not permitted;
+  stop
+endif
+:Create user;
+|System|
+:Save user and parent link if any;
+|WM or Distributor or Retailer|
+if (Grant investment areas?) then (yes)
+  :Select only areas creator has;
+  |System|
+  :Save granted areas;
+  note right
+    Provisional: cascade revoke
+    when parent loses an area
+  end note
+else (N/A or unconfirmed)
+endif
+|User receiving access|
+:Can log in later (mobile + password);
+stop
+@enduml

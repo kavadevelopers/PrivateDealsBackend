@@ -1,0 +1,35 @@
+@startuml
+|Admin|
+start
+:Create account\n(WM / Seller / Dist / Retailer);
+if (Wealth Manager?) then (yes)
+  :Assign investment areas\n(one two or all three);
+endif
+|System|
+:Store account;
+|User receiving access|
+:Enter mobile and password;
+|System|
+:Authenticate;
+|User receiving access|
+if (Valid credentials?) then (no)
+  :Show invalid credentials;
+  stop
+endif
+if (Blocked or deleted?) then (yes)
+  :Show blocked or deleted;
+  stop
+endif
+if (Application?) then (Wealth Manager app)
+  :Always show area selection page;
+  :Enter only authorised areas;
+else (Seller app)
+  :Go to Seller dashboard;
+endif
+stop
+note right
+  No onboarding/KYC/password-change
+  in this proposed flow.
+  Credential delivery: unconfirmed.
+end note
+@enduml
